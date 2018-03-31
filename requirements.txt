@@ -1,0 +1,69 @@
+NEED:
+	(+)need node express
+	(+)need mysql (sequelize)
+	need GET and POST
+	need basic testing
+	must be deployed in heroku
+	need new library, package, technology
+	(+)must have polished frontend/ui
+	folder structure that meets MVC paradigm
+	(+)must have good quality coding standards
+-----------------
+NICE:
+	use handlebars
+	incorporate authentication
+	existing public dataset
+	migration strategy (for sharing data across team members);
+---------------------------
+PRESENT:
+	formal
+	detail
+		concept
+		development
+		design process
+		technologies
+		directions for future dev
+	demonstration
+---------------------------------
+ideas:
+	inventory management 
+		open-source (?)
+	order-ahead app
+		no need to handle payment in the app
+----------------------------------
+inventory tracking system
+	- sales automatically deduct from inventory (PUT)
+	- 
+	- low-stock level alert (possibly manual / automatic in the future)
+----------------------------
+handling node API
+-----------------------
+-----------------------
+add inventory
+	-name (auto populate)
+		-error check to see if there
+		-return similar needs
+	-supplier
+		-auto populate
+	-SKU
+	-Type
+		-herb
+		-essential oil
+		-product
+	-date purchased
+	-amount purchased
+	-lot number (optional)
+	-cost
+	-discount
+	-qty purchased
+	-inventory location
+	-channel (amazon/online/shop)
+	-date added (auto populate)
+Add new product
+	-name
+	-raw materials
+	-save for a custom tea
+	-total price / retail
+	-output qty, cost, retail, profit
+	-save for a custom tea?
+	-person's name
