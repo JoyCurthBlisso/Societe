@@ -59,6 +59,8 @@ add inventory
 	-inventory location
 	-channel (amazon/online/shop)
 	-date added (auto populate)
+	-reorder point?
+	-point of contact
 Add new product
 	-name
 	-raw materials
@@ -67,3 +69,5 @@ Add new product
 	-output qty, cost, retail, profit
 	-save for a custom tea?
 	-person's name
+	-reorder point
+Customer search screen?
