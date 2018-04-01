@@ -10,6 +10,7 @@ const request = require('request-promise');
 const apiKey = process.env.SHOPIFY_API_KEY;
 const apiSecret = process.env.SHOPIFY_API_SECRET;
 
+const PORT = (process.env.PORT || 80);
 const scopes = 'read_products';
 const forwardingAddress = "societe-portsmouth.herokuapp.com"; // Replace this with your HTTPS Forwarding address
 
@@ -17,7 +18,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Example app listening on port 3000!');
 });
 app.get('/shopify', (req, res) => {
