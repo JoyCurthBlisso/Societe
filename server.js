@@ -11,7 +11,7 @@ const apiKey = process.env.SHOPIFY_API_KEY;
 const apiSecret = process.env.SHOPIFY_API_SECRET;
 
 const scopes = 'read_products';
-const forwardingAddress = "225e21bf.ngrok.io/"; // Replace this with your HTTPS Forwarding address
+const forwardingAddress = "societe-portsmouth.herokuapp.com"; // Replace this with your HTTPS Forwarding address
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -24,7 +24,7 @@ app.get('/shopify', (req, res) => {
   const shop = req.query.shop;
   if (shop) {
     const state = nonce();
-    const redirectUri = "https://" + forwardingAddress + 'shopify/callback';
+    const redirectUri = "https://" + forwardingAddress + '/shopify/callback';
     const installUrl = 'https://' + shop +
       '/admin/oauth/authorize?client_id=' + apiKey +
       '&scope=' + scopes +
@@ -68,6 +68,7 @@ app.get('/shopify/callback', (req, res) => {
       client_secret: apiSecret,
       code,
     };
+    console.log(accessTokenPayload)
 
     request.post(accessTokenRequestUrl, { json: accessTokenPayload })
     .then((accessTokenResponse) => {
