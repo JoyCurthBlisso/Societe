@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log('Example app listening on port 3000!');
+  console.log('Example app listening on port '+PORT);
 });
 app.get('/shopify', (req, res) => {
   const shop = req.query.shop;
@@ -79,7 +79,7 @@ app.get('/shopify/callback', (req, res) => {
       const shopRequestHeaders = {
         'X-Shopify-Access-Token': accessToken,
       };
-
+      console.log(accessToken)
       request.get(shopRequestUrl, { headers: shopRequestHeaders })
       .then((shopResponse) => {
         res.status(200).end(shopResponse);
