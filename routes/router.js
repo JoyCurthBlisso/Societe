@@ -16,7 +16,7 @@ const router = express.Router();
 //begin route listing
 router.get('/', (req, res) => {
 	if (res.app.get('token')){
-   		res.sendFile(__dirname+"/demolinks.html");
+   		res.sendFile(__dirname+"../public/demolinks.html");
    	}
    	else{
    		res.redirect("/shopify?shop=societe-portsmouth.myshopify.com")
