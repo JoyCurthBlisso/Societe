@@ -14,9 +14,9 @@ const scopes = 'read_products,write_products';
 const forwardingAddress = process.env.DYNO ? "https://societe-portsmouth.herokuapp.com" : "https://localhost"
 const router = express.Router();
 //begin route listing
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
 	if (res.app.get('token')){
-   		res.sendFile(__dirname+"../public/demolinks.html");
+   		res.redirect("/demolinks.html")
    	}
    	else{
    		res.redirect("/shopify?shop=societe-portsmouth.myshopify.com")
