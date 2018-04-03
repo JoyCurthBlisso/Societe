@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>-->
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<center>
+			<div class="jumbotron alert-success">
+				<h2>Societe Portsmouth</h2>
+				<h4>Database Editor</h4>
+			</div>
+		</center>
+		<center>
+			<br>
+			<button class="btn-block" id="databaseOpener">View Database</button>
+			<button class="btn-block" id="addToDB">Submit New Item</button>
+			<button class="btn-block" id="editDBItem">Edit an Entry</button>
+			<button class="btn-block" id="manualEntry">Manual Entry</button>
+			<br>
+			<br>
+			<div id="databaseDiv">
+				<table id="dbTable" class="DatabaseTable hidden">
+					<tr>
+						<strong>
+						<th>Entry</th>
+						<th>Entry</th>
+						<th>Entry</th>
+						<th>Entry</th>
+						<th>Entry</th>
+						</strong>
+					</tr>
+					<tr>
+						<th>Data</th>
+						<th>Data</th>
+						<th>Data</th>
+						<th>Data</th>
+						<th>Data</th>
+					</tr>
+				</table>
+			</div>
+			<div id="addItem">
+			  <form action="/action_page.php" id="newRecipe" class="hidden">
+				<input list="items" name="addtheItem" id="itemlist" size="35">
+				<datalist id="items">
+					<option value="Add Item">
+					<option value="Delete Item">
+					<option value="Lily of the Valley">
+				</datalist>
+				<input type="text" class="hidden" id="ifAddItemIsSelected" name="newItemTXT" value="Enter New Item" maxlength="90">
+					<br>
+					<br>
+				<input list="rawMaterials" name="rawMAT" id="rawMaterialsOne">
+				<datalist id="rawMaterials">
+					<option value="Lavender">
+					<option value="Agave">
+					<option value="Maple Leaves">
+					<option value="Cumin">
+				</datalist>
+				<input type="number" name="quantity" value="0" maxlength="5" size="5">
+				<input list="measure" name="measureOne" size="5">
+				<datalist id="measure">
+					<option value="US Fl oZ">
+					<option value="US Wt oZ">
+					<option value="Grams">
+					<option value="mG">
+					<option value="Kg">
+					<option value="Other">
+				</datalist>
+				<br>
+				<br>
+				<input list="rawMaterials" name="rawMATTwo" class="hidden" id="rawMaterialsTwo">
+				<input type="number" name="quantityTwo" value="0" class="hidden" maxlength="5" size="5" id="qtyTwo">
+				<input list="measure" name="measureTwo" size="5" class="hidden" id="measureTwo">
+				<br>
+				<br>
+				<input list="rawMaterials" name="rawMATThree" class="hidden" id="rawMaterialsThree">
+				<input type="number" name="quantityThree" value="0" class="hidden" maxlength="5" size="5" id="qtyThree">
+				<input list="measure" name="measureThree" size="5" class="hidden" id="measureThree">
+				<br>
+				<br>
+				<input list="rawMaterials" name="rawMATFour" class="hidden" id="rawMaterialsFour">
+				<input type="number" name="quantityFour" value="0" class="hidden" maxlength="5" size="5" id="qtyFour">
+				<input list="measure" name="measureFour" size="5" class="hidden" id="measureFour">
+				<br>
+				<br>
+				<input list="rawMaterials" name="rawMATFive" class="hidden" id="rawMaterialsFive">
+				<input type="number" name="quantityFive" value="0" class="hidden" maxlength="5" size="5" id="qtyFive">
+				<input list="measure" name="measureFive" size="5" class="hidden" id="measureFive">
+				
+				
+				<!-- More Will Go Here -->
+			  </form>
+			</div>
+			<div id="manualEnter" class="hidden">
+				<form action="/action_page.php">
+				<input type="text" id="itemName" name="NITM" value="Enter New Item" maxlength="90">
+				<input type="text" id="amountMAN" name="amt" value="Enter Amount" maxlength="90">
+				<input type="text" id="measuringCup" name="meas" value="Enter Unit of Measurement" maxlength="90">
+				<input type="text" id="dop" name="datum" value="Enter Date of Purchase" maxlength="90">
+				<input type="text" id="latin" name="lat" value="Enter Latin Name" maxlength="90">
+				<input type="text" id="dealerName" name="dlrN" value="Enter Dealer Name" maxlength="90">
+				<input type="text" id="dealerAddress" name="dlrA" value="Enter Dealer Address" maxlength="90">
+				<input type="text" id="dealerPhone" name="dlrP" value="Enter Dealer Phone" maxlength="90">
+				<input type="text" id="notes" name="notz" value="Enter Notes" maxlength="90">
+				<button type="button" id="manualSubmit" class="btn-primary">Submit Manual Entries</button>
+				</form>
+			</div>
+		</center>
+	</div>
+	<div class="footer">
+		<center>
+			<p>Copyright&#169; 2018 Societe Portsmouth. All Rights Reserved</p>
+		</center>
+	</div>
+	<script src="functionality.js"></script>
+</body>
+</html>
