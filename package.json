@@ -21,8 +21,10 @@
     "cookie": "^0.3.1",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
+    "mysql2": "^1.5.3",
     "nonce": "^1.0.4",
     "request": "^2.85.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "sequelize": "^4.37.5"
   }
 }
