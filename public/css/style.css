@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color: blanchedalmond;
+}
+
+.semiTran {
+	opacity: 0.9;
+}
+
+input[type=number] {
+	width: 80px;
+}
+
+.hidden {
+	display: none;
+}
+
+.DatabaseTable {
+	width: 100%;
+}
+
+th, td {
+	border-bottom: 1px solid lightgray;
+	padding: 10px;
+}
+
+tr:nth-child(even) {
+	background-color: lightseagreen;
+}
