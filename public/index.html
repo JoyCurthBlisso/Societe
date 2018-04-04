@@ -15,27 +15,43 @@
 	<div class="container">
 		<center>
 			<div class="jumbotron alert-success">
-				<h2>Societe Portsmouth</h2>
-				<h4>Database Editor</h4>
+				<h2>Societe</h2>
 			</div>
 		</center>
 		<center>
 			<br>
-			<button class="btn-block" id="databaseOpener">View Database</button>
+<!--
+			<button class="btn-block" id="databaseOpener">Search By</button>
 			<button class="btn-block" id="addToDB">Submit New Item</button>
 			<button class="btn-block" id="editDBItem">Edit an Entry</button>
 			<button class="btn-block" id="manualEntry">Manual Entry</button>
+-->
+			<select id="actionSelector">
+				<option value="searchBy">Search By</option>
+				<option value="addRecipe">Add New Societe Product</option>
+				<option value="editDBItem">Edit an Existing Raw Product</option>
+				<option value="editDBRecipe">Edit an Existing Recipe</option>
+				<option value="manualEntry">Add New Raw Product</option>
+				<option value="addOther">Add Other Product</option>
+				<option value="profitReport">Profit Report</option>
+				<option value="currentInventory">Current Inventory</option>
+				<option value="lowInventory">See What's Low</option>
+			</select>
 			<br>
 			<br>
 			<div id="databaseDiv">
+				<form action="/action_page.php">
+					<input type="text" name="searchQuery" id="query" class="hidden">
+					<button type="button" id="submitQuery" class="hidden">Submit</button>
+				</form>
 				<table id="dbTable" class="DatabaseTable hidden">
 					<tr>
 						<strong>
-						<th>Entry</th>
-						<th>Entry</th>
-						<th>Entry</th>
-						<th>Entry</th>
-						<th>Entry</th>
+							<th>Herb Name</th>
+							<th>Amount</th>
+							<th>Entry</th>
+							<th>Entry</th>
+							<th>Entry</th>
 						</strong>
 					</tr>
 					<tr>
@@ -118,7 +134,7 @@
 	</div>
 	<div class="footer">
 		<center>
-			<p>Copyright&#169; 2018 Societe Portsmouth. All Rights Reserved</p>
+			<p>Copyright&#169; 2018 Societe. All Rights Reserved</p>
 		</center>
 	</div>
 	<script src="js/functionality.js"></script>
