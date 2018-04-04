@@ -8,7 +8,8 @@ module.exports = function(sequelize, DataTypes)
 		qtyOnHand: DataTypes.DECIMAL,
 		reorderPoint: DataTypes.DECIMAL,
 		locationId: DataTypes.INTEGER,
-		channelId: DataTypes.INTEGER
+		channelId: DataTypes.INTEGER,
+		sku: DataTypes.STRING
 	});
 
 	return retail;
