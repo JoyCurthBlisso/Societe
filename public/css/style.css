@@ -13,9 +13,9 @@ input[type=number] {
 	width: 80px;
 }
 
-.hidden {
+/*.hidden {
 	display: none;
-}
+}*/
 
 .DatabaseTable {
 	width: 100%;

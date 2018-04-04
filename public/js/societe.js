@@ -4,7 +4,7 @@ $(function()
 	{
 		console.log("button clicked");
 		var commonName = $("#itemName").val().trim();
-		var qtyOnHand = $("#amountMan").val().trim();
+		var qtyOnHand = $("#amountMAN").val().trim();
 		// var measuringCup = $("#measuringCup").val().trim();
 		// var dop = $("#dop").val().trim();
 
@@ -16,7 +16,7 @@ $(function()
 			// dop
 		};
 
-		$.ajax("/", {
+		$.ajax("/index.html", {
 			type: "PUT",
 			data: itemObject
 		}).then(function()
