@@ -15,6 +15,7 @@ $(function()
 		var	packedDate = $("#packedDate").val().trim();
 		var	supplierId = $("#supplierId").val().trim();
 		var	sourcing = $("#sourcing").val().trim();
+		var sku = $("#sku").val().trim();
 		var method = "POST";
 
 		var itemObject = 
@@ -30,7 +31,8 @@ $(function()
 			purchaseDate,
 			packedDate,
 			supplierId,
-			sourcing 
+			sourcing,
+			sku
 			
 		};
 
