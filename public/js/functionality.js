@@ -2,22 +2,73 @@
 
 console.log("Javascript Initiated.");
 
-$("#databaseOpener").on("click", function() {
-	$("#activityDiv").html("Database Open");
+$("actionSelector").on("change", function() {
+	var actionTaken = document.getElementById("actionSelector")[0].value;
+	
+	// Declaring If statements to Decide Action to Take
+	
+	if (actionTaken === "searchBy") {
+		console.log("Search Initiated.");
+		document.getElementById("query").classList.remove("hidden");
+	}
+	
+	else if (actionTaken === "addRecipe") {
+		console.log("Add Recipe Initiated.");
+	}
+	
+	else if (actionTaken === "editDBItem") {
+		console.log("Editing Database Entry.");
+	}
+	
+	else if (actionTaken === "editDBRecipe") {
+		console.log("Editing Database Recipe.");
+	}
+	
+	else if (actionTaken === "manualEntry") {
+		console.log("Manual Entry Mode Initiated.");
+		document.getElementById("manualEnter").classList.remove("hidden");
+	}
+	
+	else if (actionTaken === "addOther") {
+		console.log("Add Other Product Initiated.");
+	}
+	
+	else if (actionTaken === "profitReport") {
+		console.log("P&L Report Initiated.");
+	}
+	
+	else if (actionTaken === "currentInventory") {
+		console.log("Accessing Inventory.");
+		document.getElementById("dbTable").classList.remove("hidden");
+	}
+	
+	else if (actionTaken === "lowInventory") {
+		console.log("Accessing Low Inventory.");
+	}
+	
+	else {
+//		Error Handler
+		console.log("Internal Server Error. Please refresh.");
+	}
 });
 
-$("#addToDB").on("click", function() {
-	$("#activityDiv").html("Adding to Database");
-	document.getElementById("newRecipe").classList.remove("hidden");
-});
-
-$("#databaseOpener").on("click", function() {
-	document.getElementById("dbTable").classList.remove("hidden");
-});
-
-$("#manualEntry").on("click", function() {
-	document.getElementById("manualEnter").classList.remove("hidden");
-});
+//$("#databaseOpener").on("click", function() {
+//	$("#activityDiv").html("Database Open");
+//	document.getElementById("query").classList.remove("hidden");
+//	document.getElementById("submitQuery").classList.remove("hidden");
+//	document.getElementById("dbTable").classList.remove("hidden");
+//	
+//});
+//
+//$("#addToDB").on("click", function() {
+//	$("#activityDiv").html("Adding to Database");
+//	document.getElementById("newRecipe").classList.remove("hidden");
+//});
+//
+//$("#manualEntry").on("click", function() {
+//	console.log("Manual Entry Mode Active");
+//	document.getElementById("manualEnter").classList.remove("hidden");
+//});
 
 $("#itemlist").on("change", function() {
 	var listValue = document.getElementsByName("addtheItem")[0].value;

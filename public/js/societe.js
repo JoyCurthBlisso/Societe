@@ -4,6 +4,7 @@ $(function()
 	{
 		console.log("button clicked");
 		var commonName = $("#itemName").val().trim();
+
 		var latinName = $("#latinName").val().trim();
 		var	description = $("#description").val().trim();
 		var	cost = $("#cost").val().trim();
