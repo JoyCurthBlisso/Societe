@@ -14,9 +14,7 @@
 <body>
 	<div class="container">
 		<center>
-			<div class="jumbotron alert-success">
-				<h2>Societe</h2>
-			</div>
+			<img src="../assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
 		</center>
 		<center>
 			<br>
@@ -26,7 +24,8 @@
 			<button class="btn-block" id="editDBItem">Edit an Entry</button>
 			<button class="btn-block" id="manualEntry">Manual Entry</button>
 -->
-			<select id="actionSelector">
+			<select id="actionSelector" name="actionSquad" class="selectionField">
+				<option value="none">Select Something!!!!!!!!!!!!</option>
 				<option value="searchBy">Search By</option>
 				<option value="addRecipe">Add New Societe Product</option>
 				<option value="editDBItem">Edit an Existing Raw Product</option>
@@ -41,7 +40,7 @@
 			<br>
 			<div id="databaseDiv">
 				<form action="/action_page.php">
-					<input type="text" name="searchQuery" id="query" class="hidden">
+					<input type="text" name="searchQuery" id="query" class="hidden" value="Enter anything">
 					<button type="button" id="submitQuery" class="hidden">Submit</button>
 				</form>
 				<table id="dbTable" class="DatabaseTable hidden">
@@ -118,15 +117,17 @@
 			</div>
 			<div id="manualEnter" class="hidden">
 				<form action="/action_page.php">
-				<input type="text" id="itemName" name="NITM" value="Enter New Item" maxlength="90">
-				<input type="text" id="amountMAN" name="amt" value="Enter Amount" maxlength="90">
-				<input type="text" id="measuringCup" name="meas" value="Enter Unit of Measurement" maxlength="90">
-				<input type="text" id="dop" name="datum" value="Enter Date of Purchase" maxlength="90">
-				<input type="text" id="latin" name="lat" value="Enter Latin Name" maxlength="90">
-				<input type="text" id="dealerName" name="dlrN" value="Enter Dealer Name" maxlength="90">
-				<input type="text" id="dealerAddress" name="dlrA" value="Enter Dealer Address" maxlength="90">
-				<input type="text" id="dealerPhone" name="dlrP" value="Enter Dealer Phone" maxlength="90">
-				<input type="text" id="notes" name="notz" value="Enter Notes" maxlength="90">
+				<input type="text" id="commonName" name="commonName" value="Enter Common Name" maxlength="90">
+				<input type="text" id="latinName" name="latinName" value="Enter Latin Name" maxlength="90">
+				<input type="textarea" id="description" name="description" value="Enter a Description" maxlength="90">
+				$<input type="number" id="cost" name="cost" maxlength="10">
+				<input type="text" id="unit" name="unit" value="Enter Measurement Unit" maxlength="90">
+				<input type="text" id="reorderPoint" name="reorderPoint" value="Enter Low Stock Alert" maxlength="90">
+				<input type="text" id="lot" name="lot" value="Enter Lot Number" maxlength="90">
+				<input type="text" id="purchaseDate" name="purchaseDate" value="Enter Purchase Date" maxlength="90">
+				<input type="text" id="packDate" name="packDate" value="Enter Packaged Date" maxlength="90">
+				<input type="text" id="supplierId" name="supplierId" value="Enter Supplier ID" maxlength="90">
+				<input type="text" id="sourcing" name="sourcing" value="Enter Source" maxlength="90">
 				<button type="button" id="manualSubmit" class="btn-primary">Submit Manual Entries</button>
 				</form>
 			</div>

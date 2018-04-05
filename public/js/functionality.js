@@ -2,11 +2,10 @@
 
 console.log("Javascript Initiated.");
 
-$("actionSelector").on("change", function() {
-	var actionTaken = document.getElementById("actionSelector")[0].value;
+$("#actionSelector").on("change", function() {
+	var actionTaken = document.getElementsByName("actionSquad")[0].value;
 	
 	// Declaring If statements to Decide Action to Take
-	
 	if (actionTaken === "searchBy") {
 		console.log("Search Initiated.");
 		document.getElementById("query").classList.remove("hidden");
@@ -14,6 +13,7 @@ $("actionSelector").on("change", function() {
 	
 	else if (actionTaken === "addRecipe") {
 		console.log("Add Recipe Initiated.");
+		document.getElementById("newRecipe").classList.remove("hidden");
 	}
 	
 	else if (actionTaken === "editDBItem") {
@@ -22,6 +22,7 @@ $("actionSelector").on("change", function() {
 	
 	else if (actionTaken === "editDBRecipe") {
 		console.log("Editing Database Recipe.");
+		document.getElementById("query").classList.remove("hidden");
 	}
 	
 	else if (actionTaken === "manualEntry") {
@@ -44,6 +45,10 @@ $("actionSelector").on("change", function() {
 	
 	else if (actionTaken === "lowInventory") {
 		console.log("Accessing Low Inventory.");
+	}
+	
+	else if (actionTaken === "none") {
+		console.log("None selected. Throwing all fields");
 	}
 	
 	else {
