@@ -7,26 +7,27 @@ const router = express.Router();
 		const shopRequestHeaders = {
         'X-Shopify-Access-Token': accessToken,
       };
-		if (req.method!="GET"){
-			request({method:req.method, url:"https://societe-portsmouth.myshopify.com/admin/"+url, body:req.body, headers : shopRequestHeaders})
-			.then((shopResponse)=>{
-				res.status(200).end(shopResponse);
-			})
+      	var options = {method:req.method, url:"https://societe-portsmouth.myshopify.com/admin/"+url, headers : shopRequestHeaders}; 
+		switch (req.method){
+			case "PUT":
+			case "POST":
+				options[body]=req.body;
+				break;
 		}
-		else{
-			request({method:req.method, url:"https://societe-portsmouth.myshopify.com/admin/"+url, headers : shopRequestHeaders})
-			.then((shopResponse)=>{
-				res.status(200).end(shopResponse);
-			})
-		}
-	}
+		request(options).then((shopResponse)=>{
+					res.status(200).send(shopResponse);
+				})
+	};
 	router.get("/info", (req,res)=>{
 		response("shop.json", req, res);
-	})
+	});
 	router.get("/products", (req,res)=>{
 		response("products.json", req, res)
-	})
+	});
 	router.post("/products", (req,res)=>{
 		response("products.json", req, res)
-	})
+	});
+	router.put("/products", (req,res)=>{
+		response("products/"+req.params.id+".json")
+	});
 module.exports=router;
