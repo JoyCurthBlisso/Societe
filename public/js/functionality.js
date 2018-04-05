@@ -84,25 +84,29 @@ $("#itemlist").on("change", function() {
 });
 
 $("#manualSubmit").on("click", function() {
-	var manualName = document.getElementById("itemName").value;
-	var manualAmount = document.getElementById("amountMAN").value;
-	var manualMeasure = document.getElementById("measuringCup").value;
-	var manualDop = document.getElementById("dop").value;
-	var manualLatin = document.getElementById("latin").value;
-	var manualDealerName = document.getElementById("dealerName").value;
-	var manualDealerAddress = document.getElementById("dealerAddress").value;
-	var manualDealerPhone = document.getElementById("dealerPhone").value;
-	var manualNotes = document.getElementById("notes").value;
+	var commonName = document.getElementById("commonName").value;
+	var latinName = document.getElementById("latinName").value;
+	var description = document.getElementById("description").value;
+	var cost = document.getElementById("cost").value;
+	var unit = document.getElementById("unit").value;
+	var reorderPoint = document.getElementById("reorderPoint").value;
+	var lot = document.getElementById("lot").value;
+	var purchaseDate = document.getElementById("purchaseDate").value;
+	var packDate = document.getElementById("packDate").value;
+	var supplierId = document.getElementById("supplierId").value;
+	var sourcing = document.getElementById("sourcing").value
 	
-	console.log(manualName);
-	console.log(manualAmount);
-	console.log(manualMeasure);
-	console.log(manualDop);
-	console.log(manualLatin);
-	console.log(manualDealerName);
-	console.log(manualDealerAddress);
-	console.log(manualDealerPhone);
-	console.log(manualNotes);
+	console.log("  Common Name: " + commonName);
+	console.log("   Latin Name: " + latinName);
+	console.log("  Description: " + description);
+	console.log("         Cost: " + cost);
+	console.log("         Unit: " + unit);
+	console.log("Reorder Point: " + reorderPoint);
+	console.log("          Lot: " + lot);
+	console.log("Purchase Date: " + purchaseDate);
+	console.log("    Pack Date: " + packDate);
+	console.log("  Supplier ID: " + supplierId);
+	console.log("       Source: " + sourcing);
 //	Your Submit to Database Will Go Here
 });
 
