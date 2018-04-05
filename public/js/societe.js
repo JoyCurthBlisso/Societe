@@ -21,7 +21,7 @@ $(function()
 		var itemObject = 
 		{
 			method,
-			"tableName":"t_materials",
+			"tableName":"material",
 			commonName,
 			latinName, 
 			description,
