@@ -38,15 +38,9 @@ input[type=number] {
 	width: 80px;
 }
 
-<<<<<<< HEAD
 .hidden {
 	/* display: none; */
 }
-=======
-/*.hidden {
-	display: none;
-}*/
->>>>>>> 3f8e21604826874ab75400350072bf8996e73466
 
 .DatabaseTable {
 	width: 100%;
