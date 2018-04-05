@@ -1,8 +1,33 @@
 @charset "utf-8";
 /* CSS Document */
 
+p{
+font-family: 'Avenir', Times, Times New Roman, serif;
+}
+
+h1 {
+	font-size: 36px;
+	margin-top:50px;
+	font-weight: bold;
+	font-family: 'Avenir', Times, Times New Roman, serif;
+	color:#afb74f; 
+	text-align: center;
+  }
+
+#container{
+
+	background-color: white;
+
+  }
+#herbs
+{
+  height:100%;
+  width:100%;
+  text-align: center;
+}
+
 body {
-	background-color: blanchedalmond;
+	/* background-color: blanchedalmond; */
 }
 
 .semiTran {
@@ -13,9 +38,15 @@ input[type=number] {
 	width: 80px;
 }
 
+<<<<<<< HEAD
+.hidden {
+	/* display: none; */
+}
+=======
 /*.hidden {
 	display: none;
 }*/
+>>>>>>> 3f8e21604826874ab75400350072bf8996e73466
 
 .DatabaseTable {
 	width: 100%;
@@ -27,5 +58,5 @@ th, td {
 }
 
 tr:nth-child(even) {
-	background-color: lightseagreen;
+	/* background-color: lightseagreen; */
 }
