@@ -20,6 +20,7 @@ $(function()
 		var itemObject = 
 		{
 			method,
+			"tableName":"t_materials",
 			commonName,
 			latinName, 
 			description,
