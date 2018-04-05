@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes)
 		description: DataTypes.TEXT,
 		cost: DataTypes.DECIMAL,
 		unit: DataTypes.STRING,
-		reorderPoint: INTEGER(11),
+		reorderPoint: DataTypes.INTEGER,
 		lot: DataTypes.STRING,
 		purchaseDate: DataTypes.DATE,
 		packedDate: DataTypes.DATE,
