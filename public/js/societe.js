@@ -63,9 +63,14 @@ $(function()
 	$.ajax("/db",{
 		type: "POST",
 		data: getObject
-	}).then(function()
+	}).then(function(data)
 	{
-		console.log("get stuff");
+		if (data){
+			console.log("posted data!");
+		}
+		else{
+			console.log("couldn't post data.")
+		}
 	});
 	});
 });
