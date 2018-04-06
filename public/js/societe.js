@@ -3,74 +3,43 @@ $(function()
 	$("#manualSubmit").on("click", function(event)
 	{
 		console.log("button clicked");
-		var commonName = $("#commonName").val();
-
-		var latinName = $("#latinName").val().trim();
-		var	description = $("#description").val().trim();
-		var	cost = $("#cost").val().trim();
-		var	unit= $("#unit").val().trim();
-		var	reorderPoint = $("#reorderPoint").val().trim();
-		var	lot = $("#lot").val().trim();
-		var	purchaseDate = $("#purchaseDate").val().trim();
-		var	packedDate = $("#packDate").val().trim();
-		var	supplierId = $("#supplierId").val().trim();
-		var	sourcing = $("#sourcing").val().trim();
-		// var sku = $("#sku").val().trim();
-		var method = "post";
-		var tableName = "material";
-		var itemObject = 
-		{
-			method,
-			tableName,
-			commonName,
-			latinName, 
-			description,
-			cost,
-			unit,
-			reorderPoint,
-			lot,
-			purchaseDate,
-			packedDate,
-			supplierId,
-			sourcing
-			// sku
-			
-		};
-
-		console.log(itemObject);
-
-		$.ajax("/db", {
-			type: "POST",
-			data: itemObject
-		}).then(function()
-		{
-			console.log("added new item");
-			location.reload();
-		});
+		var itemObject = getAllValues("manualSubmit");
+		itemObject.method = "post";
+		itemObject.tableName="material";
+		dbPost(itemObject);
 	});
 
 	$("#submitQuery").on("click", function()
 	{
 		var searchQuery = $("#query").val().trim();
-		var method = "GET"
 		console.log(searchQuery);
 
 		var getObject = {
-			method,
+			method:"get",
 			searchQuery
 		};
-
-	$.ajax("/db",{
-		type: "POST",
-		data: getObject
-	}).then(function(data)
-	{
-		if (data){
-			console.log("posted data!");
-		}
-		else{
-			console.log("couldn't post data.")
-		}
-	});
+		dbPost(getObject);
 	});
 });
+
+//this function gets all values from the fields with the given class and puts them
+//into an object with the keys equal to the 'name' parameter of the input.
+function getAllValues(classVal){
+	var out = {};
+	$("."+classVal).each(function(index, element){
+		out[$(element).attr("name")] = $(element).val().trim();
+	})
+	console.log(out);
+	return out;
+}
+//this function posts the object to the database and returns success or failure.
+function dbPost(object){
+	$.ajax("/db",{
+		type:"POST",
+		data:object
+	}).then(function(){
+		console.log("posted successfully.");
+	}).fail(function(err){
+		console.log(err);
+	})
+}

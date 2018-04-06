@@ -10,13 +10,16 @@ const router = express.Router();
 				delete req.body.tableName;
 				db[tableName].create(req.body).then((data)=>{
 					console.log(data);
-					res.send(true);
+					res.sendStatus(200);
 				}).catch((err)=>{
-					console.log(err);
-					res.send(false);
+					if(err){
+						console.log(err);
+						res.sendStatus(500);
+					}
 				})
 				break;
+			default:
+				res.sendStatus(500)
 		}
-		res.sendStatus(500);
 });
 module.exports=router;
