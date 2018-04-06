@@ -3,7 +3,7 @@ $(function()
 	$("#manualSubmit").on("click", function(event)
 	{
 		console.log("button clicked");
-		var commonName = $("#itemName").val().trim();
+		var commonName = $("#commonName").val();
 
 		var latinName = $("#latinName").val().trim();
 		var	description = $("#description").val().trim();
@@ -12,16 +12,16 @@ $(function()
 		var	reorderPoint = $("#reorderPoint").val().trim();
 		var	lot = $("#lot").val().trim();
 		var	purchaseDate = $("#purchaseDate").val().trim();
-		var	packedDate = $("#packedDate").val().trim();
+		var	packedDate = $("#packDate").val().trim();
 		var	supplierId = $("#supplierId").val().trim();
 		var	sourcing = $("#sourcing").val().trim();
-		var sku = $("#sku").val().trim();
+		// var sku = $("#sku").val().trim();
 		var method = "POST";
-
+		var tableName = "material";
 		var itemObject = 
 		{
 			method,
-			"tableName":"material",
+			tableName,
 			commonName,
 			latinName, 
 			description,
@@ -32,8 +32,8 @@ $(function()
 			purchaseDate,
 			packedDate,
 			supplierId,
-			sourcing,
-			sku
+			sourcing
+			// sku
 			
 		};
 
