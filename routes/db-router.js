@@ -8,8 +8,15 @@ const router = express.Router();
 				var tableName = req.body.tableName;
 				delete req.body.method;
 				delete req.body.tableName;
-				db[tableName].create(req.body).then((data)=>console.log(data)).catch((err)=>console.log(err))
+				db[tableName].create(req.body).then((data)=>{
+					console.log(data);
+					res.send(true);
+				}).catch((err)=>{
+					console.log(err);
+					res.send(false);
+				})
+				break;
 		}
-		res.send(200);
+		res.sendStatus(500);
 });
 module.exports=router;

@@ -16,7 +16,7 @@ $(function()
 		var	supplierId = $("#supplierId").val().trim();
 		var	sourcing = $("#sourcing").val().trim();
 		// var sku = $("#sku").val().trim();
-		var method = "POST";
+		var method = "post";
 		var tableName = "material";
 		var itemObject = 
 		{
