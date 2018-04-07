@@ -28,11 +28,11 @@
 				<div class="col-12">
 					<select id="actionSelector" name="actionSquad" class="selectionField">
 						<option value="none">( ͡° ͜ʖ ͡°)</option>
+						<option value="manualEntry">Add New Product!</option>
 						<option value="searchBy">Search By</option>
 						<option value="addRecipe">Add New Societe Product</option>
 						<option value="editDBItem">Edit an Existing Raw Product</option>
 						<option value="editDBRecipe">Edit an Existing Recipe</option>
-						<option value="manualEntry">Add New Raw Product</option>
 						<option value="addOther">Add Other Product</option>
 						<option value="profitReport">Profit Report</option>
 						<option value="currentInventory">Current Inventory</option>
@@ -263,6 +263,11 @@
 						</div>
 						<div class="col-4">
 							<input type="text" class="manualSubmit" id="productLabel" name="productLabel" maxlength="90">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<button type="button" id="retailSubmit">Submit</button>
 						</div>
 					</div>
 				</form>
