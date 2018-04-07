@@ -7,7 +7,6 @@ const dotenv = require('dotenv').config();
 const express=require("express");
 const request = require('request-promise');
 //config vars
-const dotenv = require('dotenv').config();
 const apiKey = process.env.SHOPIFY_API_KEY;
 const apiSecret = process.env.SHOPIFY_API_SECRET;
 const authKey = process.env.SHOPIFY_KEY;
