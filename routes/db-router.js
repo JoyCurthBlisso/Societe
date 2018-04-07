@@ -6,6 +6,24 @@ const url = process.env.DYNO ? "https://societe-portsmouth.herokuapp.com" : "htt
 const shopRequestHeaders = {
         'X-Shopify-Access-Token': process.env.SHOPIFY_KEY,
       };
+    router.post("/order", (req,res)=>{
+    	var db = res.app.get("db");
+		var Op = db.Sequelize.Op;
+		var items = req.body.line_items;
+		items.forEach(item=>{
+			db[tableName].findOne({where:{"commonName":item.title}}).then(dbItem=>{
+				console.log(dbItem);
+				var newQ = dbItem.quantity - item.quantity;
+				db[(TABLENAME)].update({item.quantity:newQ},{where:{"commonName":item.title}}).then(data=>{
+				console.log("updated DB successfully with new quantity "+newQ);
+				});
+			});
+		});
+    });
+    router.post("/refund", (req,res)=>{
+    	var db = res.app.get("db");
+		var Op = db.Sequelize.Op;
+    });
 	router.all("/", (req,res)=>{
 		var db = res.app.get("db");
 		var Op = db.Sequelize.Op;
