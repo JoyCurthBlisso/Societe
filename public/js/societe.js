@@ -13,12 +13,8 @@ $(function()
 	{
 		var searchQuery = $("#query").val().trim();
 		console.log(searchQuery);
-
-		var getObject = {
-			method:"get",
-			searchQuery
-		};
-		dbPost(getObject);
+		//must find out column name & tableName somehow?
+		dbGet(searchQuery, qCol, tableName);
 	});
 });
 
@@ -41,5 +37,20 @@ function dbPost(object){
 		console.log("posted successfully.");
 	}).fail(function(err){
 		console.log(err);
+	})
+}
+//function to GET from the database. qString is the string to search for, 
+//qCol is the name of the column it should be in
+//tableName is the db table it lives in
+//exact searches for exactly the string, setting it to false allows the returned objects to contain qString anywhere (%qString%)
+//findAll will return either one match or all matching elements (false by default), (findOne vs findAll);
+function dbGet(qString, qCol, tableName, exact=false, findAll=false){
+	$.ajax("/db",{
+		type:"GET",
+		qString,
+		qCol,
+		tableName,
+		exact,
+		findAll
 	})
 }

@@ -21,3 +21,11 @@
     "dialect": "mysql"
   }
 }
+/*
+to incorporate JawsDB when database is ready
+
+"production":{
+  "use_env_variable": "JAWSDB_URL"
+  "dialect":"mysql"
+}
+*\
