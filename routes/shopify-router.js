@@ -42,7 +42,7 @@ const router = express.Router();
 		response("products/"+req.params.id+".json")
 	});
 
-router.get('/shopify', (req, res) => {
+router.get('/', (req, res) => {
   const shop = req.query.shop;
   if (shop) {
     const state = nonce();
@@ -60,7 +60,7 @@ router.get('/shopify', (req, res) => {
   }
 });
 
-router.get('/shopify/callback', (req, res) => {
+router.get('/callback', (req, res) => {
   const { shop, hmac, code, state } = req.query;
   const stateCookie = cookie.parse(req.headers.cookie).state;
 

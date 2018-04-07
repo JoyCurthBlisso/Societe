@@ -21,14 +21,18 @@ const router = express.Router();
 				break;
 			case "get":
 				var tableName = req.body.tableName;
-				var findQ = req.body.findAll ? findAll : findOne;
-				var query = req.body.exact ? {req.body.qCol:req.body.qString} : {req.body.qCol:{[Op.like]:"%"+req.body.qString+"%"}};
+				var findQ = req.body.findAll ? "findAll" : "findOne";
+				var col = req.body.qCol;
+				var query = {};
+				query[col] = req.body.exact ? req.body.qString : {[Op.like]:"%"+req.body.qString+"%"};
+				console.log(query);
 				db[tableName][findQ]({where:query}).then(data=>{
 					console.log(data);
 					res.send(data);
 				}).catch((err)=>{
 					console.log(err);
 					res.sendStatus(500);
+					console.log("=========================================")
 				});
 				break;
 			default:
