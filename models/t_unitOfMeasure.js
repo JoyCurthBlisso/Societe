@@ -7,6 +7,6 @@ module.exports = function(sequelize, DataTypes)
 
 	unitMeasure.associate = function(models)
 	{
-		unitOfMeasure.belongsTo(materials);
+		unitOfMeasure.hasMany(materials);
 	}
 }

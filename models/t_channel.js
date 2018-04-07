@@ -7,6 +7,6 @@ module.exports = function(sequelize, DataTypes)
 
 	source.associate = function(models)
 	{
-		channel.belongsTo()
+		channel.hasMany(material);
 	}
 }
