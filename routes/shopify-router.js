@@ -7,8 +7,10 @@ const dotenv = require('dotenv').config();
 const express=require("express");
 const request = require('request-promise');
 //config vars
+const dotenv = require('dotenv').config();
 const apiKey = process.env.SHOPIFY_API_KEY;
 const apiSecret = process.env.SHOPIFY_API_SECRET;
+const authKey = process.env.SHOPIFY_KEY;
 const scopes = 'read_products,write_products';
 const forwardingAddress = process.env.DYNO ? "https://societe-portsmouth.herokuapp.com" : "https://localhost"
 
@@ -16,13 +18,13 @@ const router = express.Router();
 	function response(url,req,res){
 		const accessToken = res.app.get('token')
 		const shopRequestHeaders = {
-        'X-Shopify-Access-Token': accessToken,
+        'X-Shopify-Access-Token': authKey,
       };
       	var options = {method:req.method, url:"https://societe-portsmouth.myshopify.com/admin/"+url, headers : shopRequestHeaders}; 
 		switch (req.method){
 			case "PUT":
 			case "POST":
-				options[body]=req.body;
+				options["body"]=JSON.stringify(req.body);
 				break;
 		}
 		request(options).then((shopResponse)=>{

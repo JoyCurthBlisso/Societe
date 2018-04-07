@@ -3,7 +3,7 @@ var db = require("./models");
 const app = express();
 const bodyParser = require("body-parser")
 const PORT = (process.env.PORT || 8080);
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use("/shopify", require("./routes/shopify-router.js"))
 app.use("/db", require("./routes/db-router.js"))

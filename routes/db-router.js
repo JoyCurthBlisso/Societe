@@ -1,6 +1,11 @@
+const dotenv = require('dotenv').config();
 const express=require("express");
 const request = require('request-promise');
 const router = express.Router();
+const url = process.env.DYNO ? "https://societe-portsmouth.herokuapp.com" : "http://localhost:8080";
+const shopRequestHeaders = {
+        'X-Shopify-Access-Token': process.env.SHOPIFY_KEY,
+      };
 	router.all("/", (req,res)=>{
 		var db = res.app.get("db");
 		var Op = db.Sequelize.Op;
@@ -10,8 +15,30 @@ const router = express.Router();
 				delete req.body.method;
 				delete req.body.tableName;
 				db[tableName].create(req.body).then((data)=>{
-					console.log(data);
+					//call shopify
 					res.sendStatus(200);
+					res.end()
+					req.body.shopify=true;
+					//HEY MAYBE FIX THIS LATER ^^^^
+					if (req.body.shopify){
+						var product = shopifyTranslate(req.body);
+						var options = {
+						    method: 'POST',
+						    url: "https://societe-portsmouth.myshopify.com/admin/products.json",
+						    body: {
+						        product
+						    },
+						    json:true,
+						    headers:shopRequestHeaders
+						};
+						request(options).then((data2)=>{
+							console.log("IT WORKED")
+							console.log(data2);
+						}).catch(err=>{
+							console.log("DIDN'T WORK")
+							console.log(err);
+						})
+					}
 				}).catch((err)=>{
 					if(err){
 						console.log(err);
@@ -40,3 +67,19 @@ const router = express.Router();
 		}
 });
 module.exports=router;
+function shopifyTranslate(object){
+	//latin name??
+	var shopifyObject ={
+		title:object.commonName,
+		body_html:object.description,
+		vendor:"Société Portsmouth",
+		published:false,
+		variants:{
+			price:object.price,
+			sku:object.sku,
+			inventory_quantity:object.quantity
+		}
+	}
+	return shopifyObject;
+	//images?
+}
