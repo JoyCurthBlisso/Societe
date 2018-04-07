@@ -24,112 +24,249 @@
 			<button class="btn-block" id="editDBItem">Edit an Entry</button>
 			<button class="btn-block" id="manualEntry">Manual Entry</button>
 -->
-			<select id="actionSelector" name="actionSquad" class="selectionField">
-				<option value="none">Select Something!!!!!!!!!!!!</option>
-				<option value="searchBy">Search By</option>
-				<option value="addRecipe">Add New Societe Product</option>
-				<option value="editDBItem">Edit an Existing Raw Product</option>
-				<option value="editDBRecipe">Edit an Existing Recipe</option>
-				<option value="manualEntry">Add New Raw Product</option>
-				<option value="addOther">Add Other Product</option>
-				<option value="profitReport">Profit Report</option>
-				<option value="currentInventory">Current Inventory</option>
-				<option value="lowInventory">See What's Low</option>
-			</select>
+			<div class="row">
+				<div class="col-12">
+					<select id="actionSelector" name="actionSquad" class="selectionField">
+						<option value="none">( ͡° ͜ʖ ͡°)</option>
+						<option value="searchBy">Search By</option>
+						<option value="addRecipe">Add New Societe Product</option>
+						<option value="editDBItem">Edit an Existing Raw Product</option>
+						<option value="editDBRecipe">Edit an Existing Recipe</option>
+						<option value="manualEntry">Add New Raw Product</option>
+						<option value="addOther">Add Other Product</option>
+						<option value="profitReport">Profit Report</option>
+						<option value="currentInventory">Current Inventory</option>
+						<option value="lowInventory">See What's Low</option>
+					</select>
+				</div>
+			</div>
 			<br>
 			<br>
 			<div id="databaseDiv">
-				<form>
-					<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
-					<button type="button" id="submitQuery" class="hidden">Submit</button>
-				</form>
-				<table id="dbTable" class="DatabaseTable hidden">
-					<tr>
-						<strong>
-							<th>Herb Name</th>
-							<th>Amount</th>
-							<th>Entry</th>
-							<th>Entry</th>
-							<th>Entry</th>
-						</strong>
-					</tr>
-					<tr>
-						<th>Data</th>
-						<th>Data</th>
-						<th>Data</th>
-						<th>Data</th>
-						<th>Data</th>
-					</tr>
-				</table>
+				<div class="row">
+					<div class="col-12">
+						<form>
+							<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
+							<button type="button" id="submitQuery" class="hidden">Submit</button>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<table id="dbTable" class="DatabaseTable hidden">
+							<tr>
+								<strong>
+									<th>Herb Name</th>
+									<th>Amount</th>
+									<th>Entry</th>
+									<th>Entry</th>
+									<th>Entry</th>
+								</strong>
+							</tr>
+							<tr>
+								<th>Data</th>
+								<th>Data</th>
+								<th>Data</th>
+								<th>Data</th>
+								<th>Data</th>
+							</tr>
+						</table>
+					</div>
+				</div>
 			</div>
 			<div id="addItem">
-			  <form id="newRecipe" class="hidden">
-				<input list="items" name="addtheItem" id="itemlist" size="35">
-				<datalist id="items">
-					<option value="Add Item">
-					<option value="Delete Item">
-					<option value="Lily of the Valley">
-				</datalist>
-				<input type="text" class="hidden" id="ifAddItemIsSelected" name="newItemTXT" placeholder="Enter New Item" maxlength="90">
-					<br>
-					<br>
-				<input list="rawMaterials" name="rawMAT" id="rawMaterialsOne">
-				<datalist id="rawMaterials">
-					<option value="Lavender">
-					<option value="Agave">
-					<option value="Maple Leaves">
-					<option value="Cumin">
-				</datalist>
-				<input type="number" name="quantity" value="0" maxlength="5" size="5">
-				<input list="measure" name="measureOne" size="5">
-				<datalist id="measure">
-					<option value="US Fl oZ">
-					<option value="US Wt oZ">
-					<option value="Grams">
-					<option value="mG">
-					<option value="Kg">
-					<option value="Other">
-				</datalist>
-				<br>
-				<br>
-				<input list="rawMaterials" name="rawMATTwo" class="hidden" id="rawMaterialsTwo">
-				<input type="number" name="quantityTwo" value="0" class="hidden" maxlength="5" size="5" id="qtyTwo">
-				<input list="measure" name="measureTwo" size="5" class="hidden" id="measureTwo">
-				<br>
-				<br>
-				<input list="rawMaterials" name="rawMATThree" class="hidden" id="rawMaterialsThree">
-				<input type="number" name="quantityThree" value="0" class="hidden" maxlength="5" size="5" id="qtyThree">
-				<input list="measure" name="measureThree" size="5" class="hidden" id="measureThree">
-				<br>
-				<br>
-				<input list="rawMaterials" name="rawMATFour" class="hidden" id="rawMaterialsFour">
-				<input type="number" name="quantityFour" value="0" class="hidden" maxlength="5" size="5" id="qtyFour">
-				<input list="measure" name="measureFour" size="5" class="hidden" id="measureFour">
-				<br>
-				<br>
-				<input list="rawMaterials" name="rawMATFive" class="hidden" id="rawMaterialsFive">
-				<input type="number" name="quantityFive" value="0" class="hidden" maxlength="5" size="5" id="qtyFive">
-				<input list="measure" name="measureFive" size="5" class="hidden" id="measureFive">
-				
-				
-				<!-- More Will Go Here -->
-			  </form>
+				<div id="row">
+					<div id="col-lg-12">
+						<form id="newRecipe" class="hidden">
+							<input list="items" name="addtheItem" id="itemlist" size="35">
+							<datalist id="items">
+								<option value="Add Item">
+								<option value="Delete Item">
+								<option value="Lily of the Valley">
+							</datalist>
+							<input type="text" class="hidden" id="ifAddItemIsSelected" name="newItemTXT" placeholder="Enter New Item" maxlength="90">
+								<br>
+								<br>
+							<input list="rawMaterials" name="rawMAT" id="rawMaterialsOne">
+							<datalist id="rawMaterials">
+								<option value="Lavender">
+								<option value="Agave">
+								<option value="Maple Leaves">
+								<option value="Cumin">
+							</datalist>
+							<input type="number" name="quantity" value="0" maxlength="5" size="5">
+							<input list="measure" name="measureOne" size="5">
+							<datalist id="measure">
+								<option value="US Fl oZ">
+								<option value="US Wt oZ">
+								<option value="Grams">
+								<option value="mG">
+								<option value="Kg">
+								<option value="Other">
+							</datalist>
+							<br>
+							<br>
+							<input list="rawMaterials" name="rawMATTwo" class="hidden" id="rawMaterialsTwo">
+							<input type="number" name="quantityTwo" value="0" class="hidden" maxlength="5" size="5" id="qtyTwo">
+							<input list="measure" name="measureTwo" size="5" class="hidden" id="measureTwo">
+							<br>
+							<br>
+							<input list="rawMaterials" name="rawMATThree" class="hidden" id="rawMaterialsThree">
+							<input type="number" name="quantityThree" value="0" class="hidden" maxlength="5" size="5" id="qtyThree">
+							<input list="measure" name="measureThree" size="5" class="hidden" id="measureThree">
+							<br>
+							<br>
+							<input list="rawMaterials" name="rawMATFour" class="hidden" id="rawMaterialsFour">
+							<input type="number" name="quantityFour" value="0" class="hidden" maxlength="5" size="5" id="qtyFour">
+							<input list="measure" name="measureFour" size="5" class="hidden" id="measureFour">
+							<br>
+							<br>
+							<input list="rawMaterials" name="rawMATFive" class="hidden" id="rawMaterialsFive">
+							<input type="number" name="quantityFive" value="0" class="hidden" maxlength="5" size="5" id="qtyFive">
+							<input list="measure" name="measureFive" size="5" class="hidden" id="measureFive">
+						</form>
+					</div>
+				</div>
 			</div>
 			<div id="manualEnter" class="hidden">
 				<form>
-					<input type="text" class="manualSubmit" id="commonName" name="commonName" placeholder="Common Name" maxlength="90">
-					<input type="text" class="manualSubmit" id="latinName" name="latinName" placeholder="Latin Name" maxlength="90">
-					<input type="textarea" class="manualSubmit" id="description" name="description" placeholder="Description" maxlength="90">
-					$<input type="number" class="manualSubmit" id="cost" name="cost" maxlength="10" placeholder="Unit Cost">
-					<input type="number" class="manualSubmit" id="quantity" name="quantity" placeholder="Quantity on Hand" maxlength="10">
-					<input type="text" class="manualSubmit" id="unit" name="unit" placeholder="Measurement Unit" maxlength="90">
-					<input type="text" class="manualSubmit" id="reorderPoint" name="reorderPoint" placeholder="Low Stock Alert" maxlength="90">
-					<input type="text" class="manualSubmit" id="lot" name="lot" placeholder="Lot Number" maxlength="90">
-					<input type="text" class="manualSubmit" id="purchaseDate" name="purchaseDate" placeholder="Purchase Date" maxlength="90">
-					<input type="text" class="manualSubmit" id="packDate" name="packDate" placeholder="Packaged Date" maxlength="90">
-					<input type="text" class="manualSubmit" id="supplierId" name="supplierId" placeholder="Supplier ID" maxlength="90">
-					<input type="text" class="manualSubmit" id="sourcing" name="sourcing" placeholder="Source" maxlength="90">
-					<button type="button" id="manualSubmit" class="btn-primary">Submit Manual Entries</button>
+					<div class="row">
+						<div class="col-1">
+							<p class="nameTag">Name</p>
+						</div>
+						<div class="col-5">
+							<input type="text" class="manualSubmit" id="commonName" name="commonName" placeholder="Common Name" maxlength="90">
+						</div>
+						<div class="col-1">
+							<p class="nameTag">Latin</p>
+						</div>
+						<div class="col-5">
+							<input type="text" class="manualSubmit" id="latinName" name="latinName" placeholder="Latin Name" maxlength="90">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Description</p>
+						</div>
+						<div class="col-10">
+							<input type="textarea" class="manualSubmit" id="description" name="description" placeholder="Description" maxlength="90">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Total Price</p>
+						</div>
+						<div class="col-2">
+							<input type="text" class="manualSubmit" id="totalCost" name="totalCost" placeholder="$5150.00" maxlength="10">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Discount %</p>
+						</div>
+						<div class="col-2">
+							<input type="number" class="manualSubmit" id="discount" name="discount" maxlength="10">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Actual Price</p>
+						</div>
+						<div class="col-2">
+							<p id="calculatedDisc">$100.98</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Rec. Retail Price</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="recommendedRetailPrice" name="recommendedRetailPrice" maxlength="90">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Societe Price</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="societeRetailPrice" name="societeRetailPrice" maxlength="90">
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-4">
+							<p class="nameTag">QTY Purchased</p>
+						</div>
+						<div class="col-4">
+							<p class="nameTag">Measurement</p>
+						</div>
+						<div class="col-4">
+							<p class="nameTag">Unit of Measure</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="qtyPurchased" name="qtyPurchased" maxlength="90">
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="" name="" maxlength="90">
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="unitOfMeasure" name="unitOfMeasure" maxlength="90">
+						</div>
+					</div>
+					<br>
+					<br>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Lot Num.</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="lot" name="lot" maxlength="90">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Reorder Point</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="reorderPoint" name="reorderPoint" maxlength="90">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Purchase Date</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="purchaseDate" name="purchaseDate" maxlength="90">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Pack Date</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="packedDate" name="packedDate" maxlength="90">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Supplier ID</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="supplierId" name="supplierId" maxlength="90">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Source</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="sourcing" name="sourcing" maxlength="90">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Product Image</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="productImage" name="productImage" maxlength="90">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Product Label</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="productLabel" name="productLabel" maxlength="90">
+						</div>
+					</div>
 				</form>
 			</div>
 		</center>
