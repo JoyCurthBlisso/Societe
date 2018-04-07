@@ -34,6 +34,7 @@ body {
 	opacity: 0.9;
 }
 
+/*
 .nameTag {
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	padding-left: 5px;
@@ -45,6 +46,7 @@ body {
 	height: 60%;
 	background-color: #afb74f;
 }
+*/
 .manualSubmit {
 	width: 100%;
 	background-color: white;
@@ -60,6 +62,11 @@ input[type=number] {
 
 .DatabaseTable {
 	width: 100%;
+}
+
+.footerText {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	margin-top: 50px;
 }
 
 th, td {
