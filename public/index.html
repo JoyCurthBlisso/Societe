@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Societe</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -176,14 +176,18 @@
 						<div class="col-2">
 							<p class="nameTag">Rec. Retail Price</p>
 						</div>
-						<div class="col-4">
+						<div class="col-3">
 							<input type="text" class="manualSubmit" id="recommendedRetailPrice" name="recommendedRetailPrice" maxlength="90">
 						</div>
 						<div class="col-2">
 							<p class="nameTag">Societe Price</p>
 						</div>
-						<div class="col-4">
+						<div class="col-3">
 							<input type="text" class="manualSubmit" id="societeRetailPrice" name="societeRetailPrice" maxlength="90">
+						</div>
+						<div class="col-2">
+							<input type="checkbox" id="shopify" name="shopify" value="false">
+							<label for="shopify">Shopify</label>
 						</div>
 					</div>
 					<br>
@@ -267,7 +271,7 @@
 					</div>
 					<div class="row">
 						<div class="col-12">
-							<button type="button" id="manualSubmit">Submit</button>
+							<button type="button" id="retailSubmit">Submit</button>
 						</div>
 					</div>
 				</form>
