@@ -28,11 +28,11 @@
 				<div class="col-12">
 					<select id="actionSelector" name="actionSquad" class="selectionField">
 						<option value="none">( ͡° ͜ʖ ͡°)</option>
+						<option value="manualEntry">Add New Raw Product</option>
 						<option value="searchBy">Search By</option>
 						<option value="addRecipe">Add New Societe Product</option>
 						<option value="editDBItem">Edit an Existing Raw Product</option>
 						<option value="editDBRecipe">Edit an Existing Recipe</option>
-						<option value="manualEntry">Add New Raw Product</option>
 						<option value="addOther">Add Other Product</option>
 						<option value="profitReport">Profit Report</option>
 						<option value="currentInventory">Current Inventory</option>
@@ -157,7 +157,7 @@
 							<p class="nameTag">Total Price</p>
 						</div>
 						<div class="col-2">
-							<input type="text" class="manualSubmit" id="totalCost" name="totalCost" placeholder="$5150.00" maxlength="10">
+							<input type="text" class="manualSubmit" id="wholesaleCost" name="wholesaleCost" placeholder="$5150.00" maxlength="10">
 						</div>
 						<div class="col-2">
 							<p class="nameTag">Discount %</p>
@@ -176,36 +176,40 @@
 						<div class="col-2">
 							<p class="nameTag">Rec. Retail Price</p>
 						</div>
-						<div class="col-4">
+						<div class="col-3">
 							<input type="text" class="manualSubmit" id="recommendedRetailPrice" name="recommendedRetailPrice" maxlength="90">
 						</div>
 						<div class="col-2">
 							<p class="nameTag">Societe Price</p>
 						</div>
-						<div class="col-4">
+						<div class="col-3">
 							<input type="text" class="manualSubmit" id="societeRetailPrice" name="societeRetailPrice" maxlength="90">
+						</div>
+						<div class="col-2">
+							<input type="checkbox" id="shopify" name="shopify" value="false">
+							<label for="shopify">Shopify</label>
 						</div>
 					</div>
 					<br>
 					<div class="row">
-						<div class="col-4">
+						<div class="col-3">
 							<p class="nameTag">QTY Purchased</p>
 						</div>
-						<div class="col-4">
-							<p class="nameTag">Measurement</p>
-						</div>
-						<div class="col-4">
-							<p class="nameTag">Unit of Measure</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-4">
+						<div class="col-3">
 							<input type="text" class="manualSubmit" id="qtyPurchased" name="qtyPurchased" maxlength="90">
 						</div>
-						<div class="col-4">
+<!--
+						<div class="col-2">
+							<p class="nameTag">Measurement</p>
+						</div>
+						<div class="col-2">
 							<input type="text" class="manualSubmit" id="" name="" maxlength="90">
 						</div>
-						<div class="col-4">
+-->
+						<div class="col-3">
+							<p class="nameTag">Unit of Measure</p>
+						</div>
+						<div class="col-3">
 							<input type="text" class="manualSubmit" id="unitOfMeasure" name="unitOfMeasure" maxlength="90">
 						</div>
 					</div>
@@ -265,6 +269,11 @@
 						</div>
 						<div class="col-4">
 							<input type="text" class="manualSubmit" id="productLabel" name="productLabel" maxlength="90">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<button type="button" id="manualSubmit">Submit</button>
 						</div>
 					</div>
 				</form>

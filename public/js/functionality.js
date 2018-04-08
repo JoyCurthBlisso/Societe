@@ -83,32 +83,32 @@ $("#itemlist").on("change", function() {
 	}
 });
 
-$("#manualSubmit").on("click", function() {
-	var commonName = document.getElementById("commonName").value;
-	var latinName = document.getElementById("latinName").value;
-	var description = document.getElementById("description").value;
-	var cost = document.getElementById("cost").value;
-	var unit = document.getElementById("unit").value;
-	var reorderPoint = document.getElementById("reorderPoint").value;
-	var lot = document.getElementById("lot").value;
-	var purchaseDate = document.getElementById("purchaseDate").value;
-	var packDate = document.getElementById("packDate").value;
-	var supplierId = document.getElementById("supplierId").value;
-	var sourcing = document.getElementById("sourcing").value
+// $("#manualSubmit").on("click", function() {
+// 	var commonName = document.getElementById("commonName").value;
+// 	var latinName = document.getElementById("latinName").value;
+// 	var description = document.getElementById("description").value;
+// 	var cost = document.getElementById("totalCost").value;
+// 	var unit = document.getElementById("unitOfMeasure").value;
+// 	var reorderPoint = document.getElementById("reorderPoint").value;
+// 	var lot = document.getElementById("lot").value;
+// 	var purchaseDate = document.getElementById("purchaseDate").value;
+// 	var packDate = document.getElementById("packDate").value;
+// 	var supplierId = document.getElementById("supplierId").value;
+// 	var sourcing = document.getElementById("sourcing").value
 	
-	console.log("  Common Name: " + commonName);
-	console.log("   Latin Name: " + latinName);
-	console.log("  Description: " + description);
-	console.log("         Cost: " + cost);
-	console.log("         Unit: " + unit);
-	console.log("Reorder Point: " + reorderPoint);
-	console.log("          Lot: " + lot);
-	console.log("Purchase Date: " + purchaseDate);
-	console.log("    Pack Date: " + packDate);
-	console.log("  Supplier ID: " + supplierId);
-	console.log("       Source: " + sourcing);
-//	Your Submit to Database Will Go Here
-});
+// 	console.log("  Common Name: " + commonName);
+// 	console.log("   Latin Name: " + latinName);
+// 	console.log("  Description: " + description);
+// 	console.log("         Cost: " + cost);
+// 	console.log("         Unit: " + unit);
+// 	console.log("Reorder Point: " + reorderPoint);
+// 	console.log("          Lot: " + lot);
+// 	console.log("Purchase Date: " + purchaseDate);
+// 	console.log("    Pack Date: " + packDate);
+// 	console.log("  Supplier ID: " + supplierId);
+// 	console.log("       Source: " + sourcing);
+// //	Your Submit to Database Will Go Here
+// });
 
 $("#rawMaterialsOne").on("change", function() {
 	document.getElementById("rawMaterialsTwo").classList.remove("hidden");

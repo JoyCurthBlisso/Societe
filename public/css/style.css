@@ -27,11 +27,26 @@ h1 {
 }
 
 body {
-	/* background-color: blanchedalmond; */
 }
 
 .semiTran {
 	opacity: 0.9;
+}
+
+.nameTag {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	padding-left: 10px;
+	padding-top: 8px;
+	margin-left: 10px;
+	text-align: left;
+	border-radius: 10px;
+	width: 100%;
+	height: 80%;
+	background-color: yellowgreen;
+}
+.manualSubmit {
+	width: 100%;
+	background-color: limegreen;
 }
 
 input[type=number] {

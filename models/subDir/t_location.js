@@ -5,8 +5,8 @@ module.exports = function(sequelize, DataTypes)
 		location: DataTypes.TEXT
 	});
 
-	location.associate = function(models)
+	source.associate = function(models)
 	{
-		location.belongsTo(materials);
+		location.belongsTo()
 	}
 }
