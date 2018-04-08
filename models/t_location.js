@@ -1,12 +1,13 @@
 module.exports = function(sequelize, DataTypes)
 {
-	var source = sequelize.define("source",
+	var location = sequelize.define("location",
 	{
-		sourcing: DataTypes.TEXT
+		location: DataTypes.TEXT
 	});
 
 	source.associate = function(models)
 	{
-		source.hasMany(material);
+		location.hasMany(material);
 	}
+
 }

@@ -7,6 +7,6 @@ module.exports = function(sequelize, DataTypes)
 
 	variation.associate = function(models)
 	{
-		variation.belongsTo(materials);
+		variation.hasMany(materials);
 	}
 }

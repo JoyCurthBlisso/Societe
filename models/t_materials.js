@@ -26,5 +26,15 @@ module.exports = function(sequelize, DataTypes)
 		productImage: DataTypes.TEXT
 	});
 
+	material.hasOne(location);
+
+	material.hasOne(channel);
+
+	material.hasOne(source);
+
+	material.hasOne(unitMeasure);
+
+	material.hasOne(suppliers);
+
 	return material;
 }

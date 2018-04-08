@@ -1,12 +1,12 @@
 module.exports = function(sequelize, DataTypes)
 {
-	var source = sequelize.define("source",
+	var channel = sequelize.define("channel",
 	{
-		sourcing: DataTypes.TEXT
+		channel: DataTypes.TEXT
 	});
 
 	source.associate = function(models)
 	{
-		source.hasMany(material);
+		channel.hasMany(material);
 	}
 }

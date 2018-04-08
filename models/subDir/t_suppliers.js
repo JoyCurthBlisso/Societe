@@ -19,5 +19,7 @@ module.exports = function(sequelize, DataTypes)
 		notes: DataTypes.LONGTEXT,
 	});
 
+	suppliers.hasMany(material);
+
 	return suppliers;
 }
