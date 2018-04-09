@@ -23,6 +23,9 @@ const shopRequestHeaders = {
 				console.log("updated DB successfully with new quantity "+newQ);
 				res.sendStatus(200)
 				});
+			}).catch(error=>{
+				console.log(error);
+				res.sendStatus(500);
 			});
 		});
     });
@@ -42,7 +45,9 @@ const shopRequestHeaders = {
 				console.log("updated DB successfully with new quantity "+newQ);
 				res.sendStatus(200)
 				});
-			});
+			}).catch(error=>{
+				console.log(error);
+				res.sendStatus(500);
 		});
     });
     //this handles any requests that make it this far (i.e. not webhooks)
