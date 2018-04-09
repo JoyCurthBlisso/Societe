@@ -25,7 +25,6 @@ const shopRequestHeaders = {
 				});
 			}).catch(error=>{
 				console.log(error);
-				res.sendStatus(500);
 			});
 		});
     });
@@ -47,10 +46,10 @@ const shopRequestHeaders = {
 				});
 			}).catch(error=>{
 				console.log(error);
-				res.sendStatus(500);
 			});
 		});
     });
+    //more webhooks for product create/delete on shopify would be helpful but this gets presented in 4 hours lol
     //this handles any requests that make it this far (i.e. not webhooks)
 	router.all("/", (req,res)=>{
 		var db = res.app.get("db");
