@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Societe</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,14 +29,14 @@
 					<select id="actionSelector" name="actionSquad" class="selectionField">
 						<option value="none">( ͡° ͜ʖ ͡°)</option>
 						<option value="manualEntry">Add New Product or Supply</option>
-						<option value="searchBy">Search By</option>
 						<option value="addRecipe">Add New Societe Product</option>
-						<option value="editDBItem">Edit an Existing Raw Product</option>
+						<option value="searchBy">Search By</option>
+						<option value="editDBItem">Edit an Existing Product or Supply</option>
 						<option value="editDBRecipe">Edit an Existing Recipe</option>
 						<option value="addOther">Add Other Product</option>
 						<option value="profitReport">Profit Report</option>
 						<option value="currentInventory">Current Inventory</option>
-						<option value="lowInventory">See What's Low</option>
+						<option value="lowInventory">Low Inventory Report</option>
 					</select>
 				</div>
 			</div>
@@ -77,17 +77,17 @@
 			<div id="manualEnter" class="hidden">
 				<form>
 					<div class="row">
-						<div class="col-1">
+						<div class="col-2">
 							<p class="nameTag">Name</p>
 						</div>
-						<div class="col-5">
-							<input type="text" class="manualSubmit" id="commonName" name="commonName" placeholder="Common Name" maxlength="90">
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="commonName" name="commonName" placeholder="Enter Common Name">
 						</div>
-						<div class="col-1">
+						<div class="col-2">
 							<p class="nameTag">Latin</p>
 						</div>
-						<div class="col-5">
-							<input type="text" class="manualSubmit" id="latinName" name="latinName" placeholder="Latin Name" maxlength="90">
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="latinName" name="latinName" placeholder="Enter Latin Name">
 						</div>
 					</div>
 					<div class="row">
@@ -95,7 +95,7 @@
 							<p class="nameTag">Description</p>
 						</div>
 						<div class="col-10">
-							<input type="textarea" class="manualSubmit" id="description" name="description" placeholder="Description" maxlength="90">
+							<input type="textarea" class="manualSubmit" id="description" name="description" placeholder="Enter Description">
 						</div>
 					</div>
 					<div class="row">
@@ -103,46 +103,47 @@
 							<p class="nameTag">Total Price</p>
 						</div>
 						<div class="col-2">
-							<input type="text" class="manualSubmit" id="wholesaleCost" name="wholesaleCost" placeholder="$5150.00" maxlength="10">
+							<input type="text" class="manualSubmit" id="wholesaleCost" name="wholesaleCost" placeholder="$0.00">
 						</div>
 						<div class="col-2">
 							<p class="nameTag">Discount %</p>
 						</div>
 						<div class="col-2">
-							<input type="number" class="manualSubmit" id="discount" name="discount" maxlength="10">
+							<input type="number" class="manualSubmit" id="discount" name="discount" maxlength="10" placeholder="%">
 						</div>
 						<div class="col-2">
 							<p class="nameTag">Actual Price</p>
 						</div>
 						<div class="col-2">
-							<p id="calculatedDisc">$100.98</p>
+							<input type="text" id="calculatedDisc" placeholder="$0.00"></p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-2">
-							<p class="nameTag">Rec. Retail Price</p>
+							<p class="nameTag">Sugg. Retail Price</p>
 						</div>
 						<div class="col-3">
-							<input type="text" class="manualSubmit" id="recommendedRetailPrice" name="recommendedRetailPrice" maxlength="90">
+							<input type="text" class="manualSubmit" id="recommendedRetailPrice" name="recommendedRetailPrice" placeholder="$0.00">
 						</div>
 						<div class="col-2">
 							<p class="nameTag">Societe Price</p>
 						</div>
 						<div class="col-3">
-							<input type="text" class="manualSubmit" id="societeRetailPrice" name="societeRetailPrice" maxlength="90">
+							<input type="text" class="manualSubmit" id="societeRetailPrice" name="societeRetailPrice" placeholder="$0.00">
 						</div>
-						<div class="col-2">
-							<input type="checkbox" class="manualSubmit" id="shopify" name="shopify" value="post">
-							<label for="shopify">Shopify</label>
+						<div class="col-1">
+								<p class="nameTag">Shopify</p>
+						</div>
+						<div class="col-1">
+							<input type="checkbox" class="manualSubmit" id="shopify" name="shopify" value="post">	
 						</div>
 					</div>
-					<br>
 					<div class="row">
-						<div class="col-3">
-							<p class="nameTag">QTY Purchased</p>
+						<div class="col-2">
+							<p class="nameTag">Quantity Purchased</p>
 						</div>
-						<div class="col-3">
-							<input type="text" class="manualSubmit" id="qtyPurchased" name="qtyPurchased" maxlength="90">
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="qtyPurchased" name="qtyPurchased" placeholder="Enter # of Quantity Purchased">
 						</div>
 <!--
 						<div class="col-2">
@@ -152,27 +153,25 @@
 							<input type="text" class="manualSubmit" id="" name="" maxlength="90">
 						</div>
 -->
-						<div class="col-3">
+						<div class="col-2">
 							<p class="nameTag">Unit of Measure</p>
 						</div>
-						<div class="col-3">
-							<input type="text" class="manualSubmit" id="unitOfMeasure" name="unitOfMeasure" maxlength="90">
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="unitOfMeasure" name="unitOfMeasure" placeholder="Enter Unit of Measure">
 						</div>
 					</div>
-					<br>
-					<br>
 					<div class="row">
 						<div class="col-2">
-							<p class="nameTag">Lot Num.</p>
+							<p class="nameTag">Lot #</p>
 						</div>
 						<div class="col-4">
-							<input type="text" class="manualSubmit" id="lot" name="lot" maxlength="90">
+							<input type="text" class="manualSubmit" id="lot" name="lot" placeholder="Enter Lot #">
 						</div>
 						<div class="col-2">
-							<p class="nameTag">Reorder Point</p>
+							<p class="nameTag" >Reorder Point</p>
 						</div>
 						<div class="col-4">
-							<input type="text" class="manualSubmit" id="reorderPoint" name="reorderPoint" maxlength="90">
+							<input type="text" class="manualSubmit" id="reorderPoint" name="reorderPoint" placeholder="Enter Reorder Point">
 						</div>
 					</div>
 					<div class="row">
@@ -180,27 +179,27 @@
 							<p class="nameTag">Purchase Date</p>
 						</div>
 						<div class="col-4">
-							<input type="text" class="manualSubmit" id="purchaseDate" name="purchaseDate" maxlength="90">
+							<input type="text" class="manualSubmit" id="purchaseDate" name="purchaseDate" placeholder="dd/mm/yyyy">
 						</div>
 						<div class="col-2">
-							<p class="nameTag">Pack Date</p>
+							<p class="nameTag">Packaged Date</p>
 						</div>
 						<div class="col-4">
-							<input type="text" class="manualSubmit" id="packedDate" name="packedDate" maxlength="90">
+							<input type="text" class="manualSubmit" id="packedDate" name="packedDate" placeholder="dd/mm/yyyy">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-2">
-							<p class="nameTag">Supplier ID</p>
+							<p class="nameTag">Supplier</p>
 						</div>
 						<div class="col-4">
-							<input type="text" class="manualSubmit" id="supplierId" name="supplierId" maxlength="90">
+							<input type="text" class="manualSubmit" id="supplierId" name="supplierId" placeholder="Enter Supplier">
 						</div>
 						<div class="col-2">
 							<p class="nameTag">Source</p>
 						</div>
 						<div class="col-4">
-							<input type="text" class="manualSubmit" id="sourcing" name="sourcing" maxlength="90">
+							<input type="text" class="manualSubmit" id="sourcing" name="sourcing" placeholder="Enter Source">
 						</div>
 					</div>
 					<div class="row">
@@ -208,15 +207,16 @@
 							<p class="nameTag">Product Image</p>
 						</div>
 						<div class="col-4">
-							<input type="text" class="manualSubmit" id="productImage" name="productImage" maxlength="90">
+							<input type="text" class="manualSubmit" id="productImage" name="productImage" placeholder="Enter url">
 						</div>
 						<div class="col-2">
 							<p class="nameTag">Product Label</p>
 						</div>
 						<div class="col-4">
-							<input type="text" class="manualSubmit" id="productLabel" name="productLabel" maxlength="90">
+							<input type="text" class="manualSubmit" id="productLabel" name="productLabel" placeholder="Enter url">
 						</div>
 					</div>
+				
 					<div class="row">
 						<div class="col-12">
 							<button type="button" id="retailSubmit">Submit</button>

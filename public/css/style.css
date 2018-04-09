@@ -34,9 +34,7 @@ body {
 	opacity: 0.9;
 }
 
-/*
 .nameTag {
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	padding-left: 5px;
 	padding-top: 0px;
 	margin-left: 10px;
@@ -44,12 +42,13 @@ body {
 	border-radius: 10px;
 	width: 100%;
 	height: 60%;
-	background-color: #afb74f;
+	text-align: left;
 }
-*/
+
 .manualSubmit {
 	width: 100%;
 	background-color: white;
+	text-align: left;
 }
 
 input[type=number] {
@@ -65,7 +64,7 @@ input[type=number] {
 }
 
 .footerText {
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	padding-top: 25px;
 	margin-top: 50px;
 }
 
@@ -75,5 +74,5 @@ th, td {
 }
 
 tr:nth-child(even) {
-	/* background-color: lightseagreen; */
+
 }
