@@ -48,6 +48,7 @@ const shopRequestHeaders = {
 			}).catch(error=>{
 				console.log(error);
 				res.sendStatus(500);
+			});
 		});
     });
     //this handles any requests that make it this far (i.e. not webhooks)
@@ -87,14 +88,14 @@ const shopRequestHeaders = {
 						}).catch(err=>{
 							console.log("DIDN'T WORK")
 							console.log(err);
-						})
+						});
 					}
 				}).catch((err)=>{
 					if(err){
 						console.log(err);
 						res.sendStatus(500);
 					}
-				})
+				});
 				break;
 			//to get from the DB;
 			case "get":
