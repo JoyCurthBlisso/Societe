@@ -7,6 +7,7 @@ module.exports = function(sequelize, DataTypes)
 
 	source.associate = function(models)
 	{
-		location.belongsTo()
+		location.hasMany(material);
 	}
+
 }

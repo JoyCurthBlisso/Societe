@@ -7,6 +7,6 @@ module.exports = function(sequelize, DataTypes)
 
 	category.associate = function(models)
 	{
-		category.belongsTo(materials);
+		category.hasMany(materials);
 	}
 }

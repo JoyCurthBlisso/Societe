@@ -5,8 +5,8 @@ module.exports = function(sequelize, DataTypes)
 		channel: DataTypes.TEXT
 	});
 
-	channel.associate = function(models)
+	source.associate = function(models)
 	{
-		channel.belongsTo(materials);
+		channel.belongsTo()
 	}
 }
