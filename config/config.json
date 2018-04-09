@@ -14,10 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "societe_db",
-    "host": "localhost",
+    "use_env_variable":"JAWSDB_URL",
     "dialect": "mysql"
   }
 }
