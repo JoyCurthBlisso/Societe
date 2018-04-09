@@ -9,6 +9,7 @@ const shopRequestHeaders = {
     //webhooks
     	//order 
     router.post("/order", (req,res)=>{
+    	console.log("An order just came in!");
     	var db = res.app.get("db");
 		var Op = db.Sequelize.Op;
 		var items = req.body.line_items;
@@ -27,6 +28,7 @@ const shopRequestHeaders = {
     });
     	//refund
     router.post("/refund", (req,res)=>{
+    	console.log("processing a refund!!")
 		var db = res.app.get("db");
 		var Op = db.Sequelize.Op;
 		var items = req.body.line_items;
