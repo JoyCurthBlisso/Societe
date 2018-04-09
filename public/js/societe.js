@@ -27,7 +27,9 @@ function getAllValues(classVal){
 	})
 	console.log(out);
 	$(":checkbox").each(function(index,element){
-		out[$(element).attr("name")] = $(element).is(":checked");
+		if ($(element).attr("class")==classVal){
+			out[$(element).attr("name")] = $(element).is(":checked");
+		};
 	})
 	return out;
 }
