@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes)
 {
-	var suppliers = sequelize.define("suppliers",
+	var supplier = sequelize.define("supplier",
 	{
 		name: DataTypes.STRING,
 		contact: DataTypes.STRING,
@@ -16,10 +16,8 @@ module.exports = function(sequelize, DataTypes)
 		email1: DataTypes.STRING,
 		email2: DataTypes.STRING,
 		url: DataTypes.TEXT,
-		notes: DataTypes.LONGTEXT,
+		notes: DataTypes.TEXT('long'),
 	});
 
-	suppliers.hasMany(material);
-
-	return suppliers;
+	return supplier;
 }

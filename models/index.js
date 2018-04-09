@@ -33,4 +33,11 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+//relations
+db.material.hasOne(db.location);
+db.material.hasOne(db.channel);
+db.material.hasOne(db.source);
+db.material.hasOne(db.unitMeasure);
+db.material.hasOne(db.supplier);
+
 module.exports = db;

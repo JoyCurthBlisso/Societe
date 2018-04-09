@@ -1,12 +1,8 @@
 module.exports = function(sequelize, DataTypes)
 {
-	var unitMeasure = sequelize.define("unitOfMeasure",
+	var unitMeasure = sequelize.define("unitMeasure",
 	{
 		unitOfMeasure: DataTypes.STRING
 	});
-
-	unitMeasure.associate = function(models)
-	{
-		unitOfMeasure.hasMany(materials);
-	}
+	return unitMeasure
 }

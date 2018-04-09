@@ -4,9 +4,5 @@ module.exports = function(sequelize, DataTypes)
 	{
 		channel: DataTypes.TEXT
 	});
-
-	source.associate = function(models)
-	{
-		channel.hasMany(material);
-	}
+	return channel;
 }

@@ -6,6 +6,8 @@ const url = process.env.DYNO ? "https://societe-portsmouth.herokuapp.com" : "htt
 const shopRequestHeaders = {
         'X-Shopify-Access-Token': process.env.SHOPIFY_KEY,
       };
+    //webhooks
+    	//order 
     router.post("/order", (req,res)=>{
     	var db = res.app.get("db");
 		var Op = db.Sequelize.Op;
@@ -23,26 +25,43 @@ const shopRequestHeaders = {
 			});
 		});
     });
+    	//refund
     router.post("/refund", (req,res)=>{
-    	var db = res.app.get("db");
+		var db = res.app.get("db");
 		var Op = db.Sequelize.Op;
+		var items = req.body.line_items;
+		console.log("=============")
+		console.log(items)
+		console.log("=============")
+		items.forEach(item=>{
+			db["material"].findOne({where:{"commonName":item.title}}).then(dbItem=>{
+				var newQ = dbItem.qtyOnHand + item.quantity;
+				db["material"].update({qtyOnHand:newQ},{where:{"commonName":item.title}}).then(data=>{
+				console.log("updated DB successfully with new quantity "+newQ);
+				res.sendStatus(200)
+				});
+			});
+		});
     });
+    //this handles any requests that make it this far (i.e. not webhooks)
 	router.all("/", (req,res)=>{
 		var db = res.app.get("db");
 		var Op = db.Sequelize.Op;
 		switch (req.body.method){
+			//for POST requests
 			case "post":
 				var tableName = req.body.tableName;
+				//remove elements that dont go into the DB
 				delete req.body.method;
 				delete req.body.tableName;
 				req.body.qtyOnHand = req.body.qtyPurchased;
+				req.body.shopify = req.body.shopify=="true" ? true : false;
+				//add new record in the DB
 				db[tableName].create(req.body).then((data)=>{
 					console.log("adding record")
-					//call shopify
 					res.sendStatus(200);
 					res.end();
-					req.body.shopify = true;
-					//HEY MAYBE FIX THIS LATER ^^^^
+					//call shopify
 					if (req.body.shopify){
 						console.log("calling shopify");
 						var product = shopifyTranslate(req.body);
@@ -70,6 +89,7 @@ const shopRequestHeaders = {
 					}
 				})
 				break;
+			//to get from the DB;
 			case "get":
 				var tableName = req.body.tableName;
 				var findQ = req.body.findAll ? "findAll" : "findOne";
@@ -91,6 +111,7 @@ const shopRequestHeaders = {
 		}
 });
 module.exports=router;
+//function to take what we get from the DB and make it into an object shopify expects
 function shopifyTranslate(object){
 	//latin name??
 	var shopifyObject ={
