@@ -48,7 +48,27 @@ const shopRequestHeaders = {
 				console.log(error);
 			});
 		});
-    });
+	});
+	
+	//Get all inventory
+	router.get('/inventory', (req, res)=>{
+		console.log('Getting all inventory!!');
+		var db = res.app.get('db');
+		db["material"].findAll().then(items=>{
+			
+			res.send(items);
+		}).catch(error=>{
+			console.log(error);
+		})
+	});
+
+	router.get('/units', (req, res) => {
+		var db = res.app.get('db');
+		db["unitMeasures"].findAll().then(units=>{
+			res.send(units);
+		})
+	});
+
     //more webhooks for product create/delete on shopify would be helpful but this gets presented in 4 hours lol
     //this handles any requests that make it this far (i.e. not webhooks)
 	router.all("/", (req,res)=>{
@@ -98,20 +118,20 @@ const shopRequestHeaders = {
 				break;
 			//to get from the DB;
 			case "get":
-				var tableName = req.body.tableName;
-				var findQ = req.body.findAll ? "findAll" : "findOne";
-				var col = req.body.qCol;
-				var query = {};
-				query[col] = req.body.exact ? req.body.qString : {[Op.like]:"%"+req.body.qString+"%"};
-				console.log(query);
-				db[tableName][findQ]({where:query}).then(data=>{
-					console.log(data);
-					res.send(data);
-				}).catch((err)=>{
-					console.log(err);
-					res.sendStatus(500);
-					console.log("=========================================")
-				});
+				// var tableName = req.body.tableName;
+				// var findQ = req.body.findAll ? "findAll" : "findOne";
+				// var col = req.body.qCol;
+				// var query = {};
+				// query[col] = req.body.exact ? req.body.qString : {[Op.like]:"%"+req.body.qString+"%"};
+				// console.log(query);
+				// db[tableName][findQ]({where:query}).then(data=>{
+				// 	console.log(data);
+				// 	res.send(data);
+				// }).catch((err)=>{
+				// 	console.log(err);
+				// 	res.sendStatus(500);
+				// 	console.log("=========================================")
+				// });
 				break;
 			default:
 				res.sendStatus(500)

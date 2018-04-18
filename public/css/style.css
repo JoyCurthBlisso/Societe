@@ -21,7 +21,7 @@ h1 {
   }
 #herbs
 {
-  height:50%;
+  /* height:50%; */
   width:50%;
   text-align: center;
 }
@@ -45,14 +45,18 @@ body {
 	text-align: left;
 }
 
-.manualSubmit {
+/* .manualSubmit {
 	width: 100%;
 	background-color: white;
 	text-align: left;
-}
+} */
 
-input[type=number] {
+/* input[type=number] {
 	width: 80px;
+} */
+
+.retailSubmit{
+
 }
 
 .hidden {
@@ -64,8 +68,9 @@ input[type=number] {
 }
 
 .footerText {
-	padding-top: 25px;
+	
 	margin-top: 50px;
+	text-align:center;
 }
 
 th, td {

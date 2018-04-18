@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "societe_db",
-    "host": "localhost",
+    "username": "iykv71stgi6wnslw",
+    "password": "ymumhn1wgkud1fyt",
+    "database": "y3nxowkvi2b4zw35",
+    "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
