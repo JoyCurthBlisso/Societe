@@ -2,13 +2,14 @@
 
 console.log("Javascript Initiated.");
 
-$("#actionSelector").on("change", function() {
-	var actionTaken = document.getElementsByName("actionSquad")[0].value;
+$("#actionSelector").on("change", function(e) {
+	
+	var actionTaken = $(this).val(); //document.getElementsByName("actionSquad")[0].value;
 	
 	// Declaring If statements to Decide Action to Take
 	if (actionTaken === "searchBy") {
 		console.log("Search Initiated.");
-		document.getElementById("query").classList.remove("hidden");
+		$("#query").removeClass("hidden");
 	}
 	
 	else if (actionTaken === "addRecipe") {
@@ -27,7 +28,19 @@ $("#actionSelector").on("change", function() {
 	
 	else if (actionTaken === "manualEntry") {
 		console.log("Manual Entry Mode Initiated.");
-		document.getElementById("manualEnter").classList.remove("hidden");
+		$("#dbTable").addClass("hidden");
+		$("#manualEnter").removeClass("hidden");
+		//Get the units of measure
+		$.get('/db/units', function(units){
+			// units.sort(function(a, b){
+			// 	return a.unitOfMeasure > b.unitOfMeasure;
+			// });
+			$.each(units, function(index, unit){
+				$('#unitOfMeasure')
+				.append(`<option value="${unit.unitOfMeasure}">${unit.unitOfMeasure}</option>`);
+			});
+			
+		});
 	}
 	
 	else if (actionTaken === "addOther") {
@@ -40,7 +53,21 @@ $("#actionSelector").on("change", function() {
 	
 	else if (actionTaken === "currentInventory") {
 		console.log("Accessing Inventory.");
-		document.getElementById("dbTable").classList.remove("hidden");
+		$('#manualEnter').addClass('hidden');
+		$("#dbTable").removeClass("hidden");
+		//Need to load all of the items
+		$.get('/db/inventory', function(data){
+			
+			var html = '';
+			$.each(data, function(index, item){
+				html += `<tr><td>${item.commonName}</td>
+				<td>${item.description}</td>
+				<td>${item.societeRetailPrice}</td>
+				<td>${item.qtyOnHand}</td>`;
+			});
+			$('#dbTable > tbody').html(html);
+		});
+		
 	}
 	
 	else if (actionTaken === "lowInventory") {

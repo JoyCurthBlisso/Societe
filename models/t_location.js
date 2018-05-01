@@ -4,10 +4,5 @@ module.exports = function(sequelize, DataTypes)
 	{
 		location: DataTypes.TEXT
 	});
-
-	source.associate = function(models)
-	{
-		location.hasMany(material);
-	}
-
+	return location
 }

@@ -5,8 +5,5 @@ module.exports = function(sequelize, DataTypes)
 		sourcing: DataTypes.TEXT
 	});
 
-	source.associate = function(models)
-	{
-		source.hasMany(material);
-	}
+	return source;
 }

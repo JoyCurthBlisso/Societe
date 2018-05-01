@@ -86,23 +86,13 @@ const router = express.Router();
 	      const accessToken = accessTokenResponse.access_token;
 	      // DONE: Use access token to make API call to 'shop' endpoint
 	      const shopRequestUrl = 'https://' + shop + '/admin/shop.json';
-	      const shopRequestHeaders = {
-	        'X-Shopify-Access-Token': accessToken,
-	      };
-	      console.log(accessToken)
-	      request.get(shopRequestUrl, { headers: shopRequestHeaders })
-	      .then((shopResponse) => {
-	      	res.app.set('token', accessToken);
-	        res.redirect("/");
-	      })
-	      .catch((error) => {
-	        res.status(error.statusCode).send(error.error.error_description);
-	      });
-	    })
-	    .catch((error) => {
-	      res.status(error.statusCode).send(error.error.error_description);
-	    });
-
+	      if (accessToken == process.env.SHOPIFY_KEY){
+	      		res.app.set("token", accessToken)
+	        	res.redirect("/");
+	      }
+	      else{
+	      	res.sendStatus(401)
+	      }});
 	  } else {
 	    res.status(400).send('Required parameters missing');
 	  }

@@ -26,6 +26,11 @@ function getAllValues(classVal){
 		out[$(element).attr("name")] = $(element).val().trim();
 	})
 	console.log(out);
+	$(":checkbox").each(function(index,element){
+		if ($(element).attr("class")==classVal){
+			out[$(element).attr("name")] = $(element).is(":checked");
+		};
+	})
 	return out;
 }
 //this function posts the object to the database and returns success or failure.
