@@ -25,11 +25,11 @@ module.exports = function(sequelize, DataTypes)
 			type: DataTypes.DECIMAL
 		}
 	});
-	Order.associate = function(models) {
-        Order.hasMany(models.Order_item, {
-            onDelete: "cascade"
-        });
-    };
+	// Order.associate = function(models) {
+ //        Order.hasMany(models.Order_item, {
+ //            onDelete: "cascade"
+ //        });
+ //    };
 
 	return Order;
 };
