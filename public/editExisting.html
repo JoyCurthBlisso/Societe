@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Societe</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>-->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 text-center">
+				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2">
+				<button class="btn btn-success">Go Back</button>
+			</div>
+			<div class="col-10">
+				<!-- Placeholder -->
+			</div>
+		</div>
+		<div class="row">
+			<table style="width:100%">
+				<tr>
+					<th>Common Name</th>
+					<th>Latin Name</th>
+					<th>Description</th>
+					<th>Total Price</th>
+					<th>Discount %</th>
+					<th>Actual Price</th>
+					<th>SRPrice</th>
+					<th>socPrice</th>
+					<th>Shopify</th>
+					<th>QTY Purchased</th>
+					<th>Measure Unit</th>
+					<th>Lot No.</th>
+					<th>Reorder</th>
+					<th>Purchase Date</th>
+					<th>Pack Date</th>
+					<th>Supplier</th>
+					<th>Source</th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr> <!-- DELETE THIS -->
+					<td>Orange Peel</td>
+					<td>Orangus Peelus</td>
+					<td>Moldy ol' orange peels.</td>
+					<td>$97.09</td>
+					<td>10%</td>
+					<td>$85.99</td>
+					<td>$99.99</td>
+					<td>$99.98</td>
+					<td>Yes</td>
+					<td>97</td>
+					<td>Individual Units</td>
+					<td>786857</td>
+					<td>12</td>
+					<td>11/19/2017</td>
+					<td>11/20/2017</td>
+					<td>Waste Management</td>
+					<td>The Trash</td>
+					<td><button class="btn btn-outline-primary" id="filler">Edit</button></td>
+					<td><button class="btn btn-outline-danger" id="deleter">Delete</button></td>
+				</tr>
+			</table>
+		</div>
+		<div class="row">
+			<div id="manualEnter" class="hidden">
+				<form>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Name</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="commonName" name="commonName" placeholder="Enter Common Name">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Latin</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="latinName" name="latinName" placeholder="Enter Latin Name">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Description</p>
+						</div>
+						<div class="col-10">
+							<input type="textarea" class="manualSubmit form-control" id="description" name="description" placeholder="Enter Description">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Total Price</p>
+						</div>
+						<div class="col-2">
+							<input type="text" class="manualSubmit form-control" id="wholesaleCost" name="wholesaleCost" placeholder="$0.00">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Discount %</p>
+						</div>
+						<div class="col-2">
+							<input type="number" class="manualSubmit form-control" id="discount" name="discount" maxlength="10" placeholder="%">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Actual Price</p>
+						</div>
+						<div class="col-2">
+							<input type="text" id="calculatedDisc" class="form-control" placeholder="$0.00">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Sugg. Retail Price</p>
+						</div>
+						<div class="col-3">
+							<input type="text" class="manualSubmit form-control" id="recommendedRetailPrice" name="recommendedRetailPrice" placeholder="$0.00">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Societe Price</p>
+						</div>
+						<div class="col-3">
+							<input type="text" class="manualSubmit form-control" id="societeRetailPrice" name="societeRetailPrice" placeholder="$0.00">
+						</div>
+						<div class="col-1">
+								<p class="nameTag">Shopify</p>
+						</div>
+						<div class="col-1">
+							<input type="checkbox" class="manualSubmit form-control" id="shopify" name="shopify" value="post">	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Quantity Purchased</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="qtyPurchased" name="qtyPurchased" placeholder="Enter # of Quantity Purchased">
+						</div>
+	<!--
+						<div class="col-2">
+							<p class="nameTag">Measurement</p>
+						</div>
+						<div class="col-2">
+							<input type="text" class="manualSubmit" id="" name="" maxlength="90">
+						</div>
+	-->
+						<div class="col-2">
+							<p class="nameTag">Unit of Measure</p>
+						</div>
+						<div class="col-4">
+							<select class="manualSubmit form-control" id="unitOfMeasure" name="unitOfMeasure"  placeholder="Select Unit of Measure">
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Lot #</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="lot" name="lot" placeholder="Enter Lot #">
+						</div>
+						<div class="col-2">
+							<p class="nameTag" >Reorder Point</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="reorderPoint" name="reorderPoint" placeholder="Enter Reorder Point">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Purchase Date</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="purchaseDate" name="purchaseDate" placeholder="dd/mm/yyyy">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Packaged Date</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="packedDate" name="packedDate" placeholder="dd/mm/yyyy">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Supplier</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier">
+						</div>
+	<!--<<<<<<< HEAD-->
+						<div class="col-2">
+							<p class="nameTag">Source</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="sourcing" name="sourcing" placeholder="Enter Source">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Product Image</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="productImage" name="productImage" placeholder="Enter url">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Product Label</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="productLabel" name="productLabel" placeholder="Enter url">
+						</div>
+					</div>
+
+					<div class="row mt-2">
+						<div class="col-12">
+							<div class="text-right">
+								<button type="button" class="btn btn-primary" id="retailSubmit">Submit</button>
+							</div>
+						</div>
+	<!--=======-->
+
+						<div class="row">
+							<div class="col-12">
+	<!--							<button type="button" id="manualSubmit">Submit</button>-->
+	<!--d10cf0d2b535a1258d6868e192a04a42ef60fbd6-->
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div id="databaseDiv">
+			<div class="row">
+				<div class="col-12">
+					<form>
+						<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
+						<button type="button" id="submitQuery" class="hidden">Submit</button>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<table id="dbTable" class="DatabaseTable hidden">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+								<th>Retail Price</th>
+								<th>Quantity</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+			</div><!-- End of Manual Submit Div -->
+		<div>
+	</div>
+	<div class="footer">
+		<p class="footerText">Copyright&#169; 2018 Societe. All Rights Reserved</p>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/functionality.js"></script>
+	<script src="js/subletFunctionality.js"></script>
+	<script src="js/societe.js"></script>
+</body>
+</html>

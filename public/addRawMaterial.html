@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<center>
+					<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe" width="600px">
+				</center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2">
+				<button class="btn btn-success">Go Back</button>
+			</div>
+			<div class="col-10">
+				<!-- Placeholder -->
+			</div>
+		</div>
+		<div class="row">
+			<div id="manualEnter" class="hidden">
+				<form>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Name</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="commonName" name="commonName" placeholder="Enter Common Name">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Latin</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="latinName" name="latinName" placeholder="Enter Latin Name">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Description</p>
+						</div>
+						<div class="col-10">
+							<input type="textarea" class="manualSubmit form-control" id="description" name="description" placeholder="Enter Description">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Total Price</p>
+						</div>
+						<div class="col-2">
+							<input type="text" class="manualSubmit form-control" id="wholesaleCost" name="wholesaleCost" placeholder="$0.00">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Discount %</p>
+						</div>
+						<div class="col-2">
+							<input type="number" class="manualSubmit form-control" id="discount" name="discount" maxlength="10" placeholder="%">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Actual Price</p>
+						</div>
+						<div class="col-2">
+							<input type="text" id="calculatedDisc" class="form-control" placeholder="$0.00">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Sugg. Retail Price</p>
+						</div>
+						<div class="col-3">
+							<input type="text" class="manualSubmit form-control" id="recommendedRetailPrice" name="recommendedRetailPrice" placeholder="$0.00">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Societe Price</p>
+						</div>
+						<div class="col-3">
+							<input type="text" class="manualSubmit form-control" id="societeRetailPrice" name="societeRetailPrice" placeholder="$0.00">
+						</div>
+						<div class="col-1">
+								<p class="nameTag">Shopify</p>
+						</div>
+						<div class="col-1">
+							<input type="checkbox" class="manualSubmit form-control" id="shopify" name="shopify" value="post">	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Quantity Purchased</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="qtyPurchased" name="qtyPurchased" placeholder="Enter # of Quantity Purchased">
+						</div>
+	<!--
+						<div class="col-2">
+							<p class="nameTag">Measurement</p>
+						</div>
+						<div class="col-2">
+							<input type="text" class="manualSubmit" id="" name="" maxlength="90">
+						</div>
+	-->
+						<div class="col-2">
+							<p class="nameTag">Unit of Measure</p>
+						</div>
+						<div class="col-4">
+							<select class="manualSubmit form-control" id="unitOfMeasure" name="unitOfMeasure"  placeholder="Select Unit of Measure">
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Lot #</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="lot" name="lot" placeholder="Enter Lot #">
+						</div>
+						<div class="col-2">
+							<p class="nameTag" >Reorder Point</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="reorderPoint" name="reorderPoint" placeholder="Enter Reorder Point">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Purchase Date</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="purchaseDate" name="purchaseDate" placeholder="dd/mm/yyyy">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Packaged Date</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="packedDate" name="packedDate" placeholder="dd/mm/yyyy">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Supplier</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier">
+						</div>
+	<!--<<<<<<< HEAD-->
+						<div class="col-2">
+							<p class="nameTag">Source</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="sourcing" name="sourcing" placeholder="Enter Source">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Product Image</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="productImage" name="productImage" placeholder="Enter url">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Product Label</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit form-control" id="productLabel" name="productLabel" placeholder="Enter url">
+						</div>
+					</div>
+
+					<div class="row mt-2">
+						<div class="col-12">
+							<div class="text-right">
+								<button type="button" class="btn btn-primary" id="retailSubmit">Submit</button>
+							</div>
+						</div>
+	<!--=======-->
+
+						<div class="row">
+							<div class="col-12">
+	<!--							<button type="button" id="manualSubmit">Submit</button>-->
+	<!--d10cf0d2b535a1258d6868e192a04a42ef60fbd6-->
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Last in Line -->
+	<script src="js/subletFunctionality.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/functionality.js"></script>
+	<script src="js/societe.js"></script>
+</body>
+</html>
