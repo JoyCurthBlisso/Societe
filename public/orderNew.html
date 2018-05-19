@@ -2,73 +2,262 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Societe</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>-->
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+<title>Enter Order</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<div class="container">
+	
 		<div class="row">
-			<div class="col-12 text-center">
-				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-2">
-				<button class="btn btn-success">Go Back</button>
-			</div>
-			<div class="col-10">
-				<!-- Placeholder -->
-			</div>
-		</div>
-		<br>
-		<br>
-		<div id="databaseDiv">
-			<div class="row">
-				<div class="col-12">
-					<form>
-						<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
-						<button type="button" id="submitQuery" class="hidden">Submit</button>
-					</form>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<table id="dbTable" class="DatabaseTable hidden">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-								<th>Retail Price</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody></tbody>
-					</table>
-				</div>
+
+			<div class="col-12">
+				<center>
+					<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe" width="600px">
+				</center>
 			</div>
 		</div>
 
-			</div><!-- End of Manual Submit Div -->
-		<div>
+		<nav class="navbar navbar-dark bg-dark">
+				<!-- Navbar content -->
+	
+
+		<!-- <nav class="navbar navbar-inverse"> -->
+				<div class="container-fluid">
+				  <div class="navbar-header">
+					<a class="navbar-brand" href="#">Enter Order</a>
+				  </div>
+				  <!-- <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Recipe</a></li>
+					<li><a href="#">Profit</a></li>
+					<li><a href="#">Low Inventory</a></li>
+				  </ul> -->
+				  <!-- <ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					  </ul>
+				</div> -->
+		</nav>
+<br>
+<!-- 
+		<div class="row">
+			<div class="col-6">
+				<p class="jumbotron">Enter Order</p>
+			</div>
+			<div class="col-6">
+			
+			</div>
+		</div> -->
+
+		<div class="row">
+				<div class="col-2">
+					<p class="nameTag">Order Date</p>		
+				</div>
+				<div class="col-2">	
+					<p class="nameTag">Purchase Order # </p>			
+				</div>
+	
+				<div class="col-2">				
+						<p class="nameTag">Supplier</p>
+
+				</div>
+
+				<div class="col-2">
+						<p class="nameTag">Order Shipped Date</p>
+				</div>
+
+				<div class="col-2">
+						<p class="nameTag">Order Received Date</p>
+				</div>
+				
+		</div>
+	
+		<div class="row">
+			<div class="col-2">				
+					
+							<input type="text" class="manualSubmit form-control" id="orderPlacedDate" name="orderPlacedDate" placeholder="dd/mm/yyyy">
+							<!-- DEFAULT ORDER DATE TO TODAY'S DATE -->
+					
+			</div>
+			<div class="col-2">				
+					<input type="text" id="qtyPurchase" class="form-control" placeholder="PO #">
+			</div>
+
+			<div class="col-2">				
+					<select id="actionSelector" name="actionSquad" class="selectionField form-control">
+							<option value="none">Supplier</option>
+							<!-- Link to supplier table -->
+					</select>
+			</div>
+
+			<div class="col-2">
+					<input type="text" id="qtyPurchase" class="form-control" placeholder="dd/mm/yyyy">
+			</div>
+			<div class="col-2">
+					<input type="text" class="manualSubmit form-control" id="receivedDate" name="receivedDate" placeholder="dd/mm/yyyy">
+			</div>
+			<div class="col-2">
+					
+			</div>
+			
+		</div>
+
+
+		<hr>
+
+		<div class="row">
+				<div class="col-2">
+					<p class="nameTag">Product</p>		
+				</div>
+				<div class="col-2">	
+					<p class="nameTag">?</p>			
+				</div>
+	
+				<div class="col-2">				
+						<p class="nameTag">Category</p>
+				</div>
+	
+				<div class="col-1">
+						<p class="nameTag">Qty</p>
+				</div>
+				<div class="col-1">
+						<p class="nameTag">Retail $</p>
+				</div>
+				<div class="col-1">
+						<p class="nameTag">Discount</p>
+				</div>
+				<div class="col-1">
+							<p class="nameTag">Actual $</p>
+				</div>
+				<div class="col-1">
+						<p class="nameTag">sku</p>
+				</div>
+			</div>
+	
+		<div class="row">
+			<div class="col-2">				
+				<select id="actionSelector" name="actionSquad" class="selectionField form-control">
+					<option value="none">Product</option>
+					<!-- Link to products table -->
+				</select>
+			</div>
+			<div class="col-2">				
+					<select id="actionSelector" name="actionSquad" class="selectionField form-control">
+						<option value="none">?</option>
+						<!-- Link to supplier table -->
+					</select>
+			</div>
+
+			<div class="col-2">				
+					<select id="actionSelector" name="actionSquad" class="selectionField form-control">
+						<option value="none">Category</option>
+						<!-- Link to category table -->
+						
+					</select>
+			</div>
+
+			<div class="col-1">
+					<input type="text" id="qtyPurchase" class="form-control" placeholder="Qty">
+			</div>
+			<div class="col-1">
+					<input type="text" id="productRetailPrice" class="form-control" placeholder="RP $">
+			</div>
+			<div class="col-1">
+					<input type="text" id="productDiscount" class="form-control" placeholder="Disc. $">
+			</div>
+			<div class="col-1">
+					<input type="text" id="productActualPrice" class="form-control" placeholder="Price $">
+			</div>
+			<div class="col-1">
+					<input type="text" id="sku" class="form-control" placeholder="#">
+			</div>
+			<div class="col-1">				
+					<button type="button" class="btn btn-dark" id="retailSubmit">+</button>
+			</div>
+			
+		</div>
+
+		<hr>
+
+		<!-- <div class="row"> -->
+			<!-- <div id="manualEnter" class="hidden"> -->
+				<!-- <form> -->
+
+		<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Sub Total Cost</p>
+						</div>
+						
+						<div class="col-2">
+								<p class="nameTag">Discount</p>
+						</div>
+					
+						<div class="col-2">
+							<p class="nameTag">S&H Cost</p>
+						</div>
+						
+						<div class="col-2">
+								<p class="nameTag">Total Order Cost</p>
+						</div>
+
+						<div class="col-4">
+								
+						</div>
+						
+		</div>
+
+		<div class="row">
+							<div class="col-2">
+									<input type="text" class="manualSubmit form-control" id="subTotalCost" name="subTotalCost" placeholder="$0.00">
+							</div>
+							<div class="col-2">
+									<input type="text" class="manualSubmit form-control" id="discount" name="discount" placeholder="%">
+							</div>
+							<div class="col-2">
+									<input type="text" class="manualSubmit form-control" id="shCost" name="shCost" placeholder="$0.00">
+								</div>
+							<div class="col-2">
+									<input type="text" class="manualSubmit form-control" id="totalOrderCost" name="totalOrderCost" placeholder="%">
+							</div>
+						
+		</div>	
+
+		<hr>
+		<div class="row">
+			<div class="col-12">
+					<div class="text-right">
+						<button type="button" class="btn btn-dark" id="submitOrder">Save Order</button>
+					</div>
+			</div>
+		</div>
+
+					<!-- <div class="row">
+					
+
+
+						<!-- <div class="row">
+							<!-- <div class="col-12">
+	<!--							<button type="button" id="manualSubmit">Submit</button>-->
+	<!--d10cf0d2b535a1258d6868e192a04a42ef60fbd6-->
+					</div>  
+				</div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
-	<div class="footer">
-		<p class="footerText">Copyright&#169; 2018 Societe. All Rights Reserved</p>
-	</div>
+	<!-- Last in Line -->
+	<script src="js/subletFunctionality.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
   		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="js/functionality.js"></script>
-	<script src="js/subletFunctionality.js"></script>
 	<script src="js/societe.js"></script>
 </body>
 </html>
