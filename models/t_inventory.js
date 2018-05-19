@@ -42,9 +42,9 @@ module.exports = function(sequelize, DataTypes)
 			type: DataTypes.INTEGER
 		}
 	});
-	// Inventory.associate = function(models) {
- //        Inventory.hasOne(models.Order_item);
- //    };
+ 	// Inventory.associate = function(models) {
+  //       Inventory.hasOne(models.Order_item);
+  //   };
 	
 	return Inventory;
 };

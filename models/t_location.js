@@ -4,5 +4,5 @@ module.exports = function(sequelize, DataTypes)
 	{
 		location: DataTypes.TEXT
 	});
-	return location
-}
+	return location;
+};
