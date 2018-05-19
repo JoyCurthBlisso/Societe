@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes)
 			type: DataTypes.STRING
 		},
 		item_qty: {
-			type: DataTypes.STRING
+			type: DataTypes.INTEGER
 		},
 		item_discount_amt: {
 			type: DataTypes.DECIMAL

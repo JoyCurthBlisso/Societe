@@ -5,4 +5,4 @@ module.exports = function(sequelize, DataTypes)
 		channel: DataTypes.TEXT
 	});
 	return channel;
-}
+};
