@@ -2974,6 +2974,7 @@ ul.staggered-list li {
   padding: 10px 0px;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgb(175,183,79);
+  font: avenir book;
 }
 
 table, th, td {
