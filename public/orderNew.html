@@ -56,12 +56,12 @@
 				  <!-- <ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li> -->
 					<li><a href="addRawMaterial.html">New Product</a></li>
-					<li><a href="profit.html">Profit</a></li>
 					<li><a href="inventory.html">Inventory</a></li>
 					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
 					<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
 					<li><a href="societeRecipe.html">Recipe</a></li>
 					<li><a href="suppliers.html">Suppliers</a></li>
+					<li><a href="profit.html">Profit</a></li>
 				  </ul>
 				  	<!-- <ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -95,31 +95,31 @@
 		<div class="row">
 
 				<div class="col-2">	
-						<label for="first_name">Supplier</label>			
-						<select id="actionSelector" name="actionSquad" class="selectionField form-control"  type="text" class="validate">
+						<label for="supplier">Supplier</label>			
+						<select id="supplier" name="supplier" class="selectionField form-control"  type="text" class="validate">
 								<option value="none">Supplier</option>
 								<!-- Link to supplier table -->
 						</select>
 				</div>
 
 			<div class="col-2">				
-							<label for="first_name">Order Date</label>
+							<label for="orderPlacedDate">Order Date</label>
 							<input type="text" class="datepicker" class="manualSubmit form-control" id="orderPlacedDate" name="orderPlacedDate" placeholder="dd/mm/yyyy">
 							<!-- DEFAULT ORDER DATE TO TODAY'S DATE -->		
 			</div>
 			<div class="col-2">	
-					<label for="first_name">PO#</label>			
-					<input type="text" id="qtyPurchase" class="form-control" placeholder="#">
+					<label for="PO#">PO#</label>			
+					<input type="text" id="PO#" class="form-control" placeholder="#">
 			</div>
 
 
 			<div class="col-2">
-					<label for="first_name">Shipped</label>
-					<input type="text" class="datepicker" id="qtyPurchase" class="form-control" placeholder="dd/mm/yyyy">
+					<label for="shipped">Shipped</label>
+					<input type="text" class="datepicker" id="Shipped" class="form-control" placeholder="dd/mm/yyyy">
 			</div>
 			<div class="col-2">
-					<label for="first_name">Received</label>
-					<input type="text"  class="datepicker" class="manualSubmit form-control" id="receivedDate" name="receivedDate" placeholder="dd/mm/yyyy">
+					<label for="received">Received</label>
+					<input type="text"  class="datepicker" class="manualSubmit form-control" id="Received" name="receivedDate" placeholder="dd/mm/yyyy">
 			</div>
 			<div class="col-2">
 					
@@ -129,19 +129,19 @@
 
 		<div class="row">
 				<div class="col-2">
-					<label for="first_name">SubTotal</label>
+					<label for="subtotal">SubTotal</label>
 					<input type="text" class="manualSubmit form-control" id="subTotal" name="subTotal" placeholder="$0.00">
 				</div>
 				<div class="col-2">
-						<label for="first_name">Discount</label>
+						<label for="discount">Discount</label>
 						<input type="text" class="manualSubmit form-control" id="discount" name="discount" placeholder="%">
 				</div>
 				<div class="col-2">
-						<label for="first_name">S&H</label>
+						<label for="shCost">S&H</label>
 						<input type="text" class="manualSubmit form-control" id="shCost" name="shCost" placeholder="$0.00">
 					</div>
 				<div class="col-2">
-						<label for="first_name">Total Order</label>
+						<label for="totalOrderCost">Total Order</label>
 						<input type="text" class="manualSubmit form-control" id="totalOrderCost" name="totalOrderCost" placeholder="$0.00">
 				</div>	
 		</div>	
@@ -151,8 +151,8 @@
 	
 		<div class="row">
 			<div class="col-2">		
-				<label for="first_name">Product</label>		
-				<select id="actionSelector" name="actionSquad" class="selectionField form-control">
+				<label for="product">Product</label>		
+				<select id="actionSelector" name="product" class="selectionField form-control">
 					<option value="none"><address>Product</address></option>
 					<!-- Link to products table -->
 				</select>
@@ -160,8 +160,8 @@
 	
 
 			<div class="col-2">	
-					<label for="first_name">Category</label>			
-					<select id="actionSelector" name="actionSquad" class="selectionField form-control">
+					<label for="category">Category</label>			
+					<select id="actionSelector" name="category" class="selectionField form-control">
 						<option value="none">Category</option>
 						<!-- Link to category table -->
 						
@@ -169,24 +169,24 @@
 			</div>
 
 			<div class="col-1">
-					<label for="first_name">Qty</label>
+					<label for="qtyPurchase">Qty</label>
 					<input type="text" id="qtyPurchase" class="form-control" placeholder="#">
 			</div>
 			<div class="col-1">
-					<label for="first_name">Retail</label>
+					<label for="productRetailPrice">Retail</label>
 					<input type="text" id="productRetailPrice" class="form-control" placeholder="$">
 			</div>
 			<div class="col-1">
-					<label for="first_name">Discount</label>
+					<label for="productDiscount">Discount</label>
 					<input type="text" id="productDiscount" class="form-control" placeholder="%">
 			</div>
 			<div class="col-1">
-					<label for="first_name">Wholesale</label>
-					<input type="text" id="productActualPrice" class="form-control" placeholder="$">
+					<label for="wholesalecost">Wholesale</label>
+					<input type="text" id="wholesalecost" class="form-control" placeholder="$">
 			</div>
 			<div class="col-1">
-					<label for="first_name">Actual</label>
-					<input type="text" id="sku" class="form-control" placeholder="#">
+					<label for="actual">Actual</label>
+					<input type="text" id="actual" class="form-control" placeholder="#">
 			</div>
 			<div class="col-1">
 					
@@ -238,6 +238,7 @@
 			 
 			  </div>
 			</div>
+			
 	</footer>
 
 
