@@ -7,7 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!--Import materialize.css-->
+   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
 </head>
+
+<script type="text/javascript" src="js/materialize.min.js"></script>
 
 <body>
 	<div class="container">
@@ -16,7 +24,7 @@
 
 			<div class="col-12">
 				<center>
-					<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe" width="600px">
+					<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe" width="400px">
 				</center>
 			</div>
 		</div>
@@ -58,53 +66,36 @@
 			
 			</div>
 		</div> -->
-
-		<div class="row">
-				<div class="col-2">
-					<p class="nameTag">Order Date</p>		
-				</div>
-				<div class="col-2">	
-					<p class="nameTag">Purchase Order # </p>			
-				</div>
-	
-				<div class="col-2">				
-						<p class="nameTag">Supplier</p>
-
-				</div>
-
-				<div class="col-2">
-						<p class="nameTag">Order Shipped Date</p>
-				</div>
-
-				<div class="col-2">
-						<p class="nameTag">Order Received Date</p>
-				</div>
-				
-		</div>
 	
 		<div class="row">
 			<div class="col-2">				
-					
-							<input type="text" class="manualSubmit form-control" id="orderPlacedDate" name="orderPlacedDate" placeholder="dd/mm/yyyy">
+							<label for="first_name">Order Date</label>
+							<input type="text" class="datepicker" class="manualSubmit form-control" id="orderPlacedDate" name="orderPlacedDate" placeholder="dd/mm/yyyy">
 							<!-- DEFAULT ORDER DATE TO TODAY'S DATE -->
+
+
 					
 			</div>
-			<div class="col-2">				
-					<input type="text" id="qtyPurchase" class="form-control" placeholder="PO #">
+			<div class="col-2">	
+					<label for="first_name">PO#</label>			
+					<input type="text" id="qtyPurchase" class="form-control" placeholder="#">
 			</div>
 
-			<div class="col-2">				
-					<select id="actionSelector" name="actionSquad" class="selectionField form-control">
+			<div class="col-2">	
+					<label for="first_name">Supplier</label>			
+					<select id="actionSelector" name="actionSquad" class="selectionField form-control"  type="text" class="validate">
 							<option value="none">Supplier</option>
 							<!-- Link to supplier table -->
 					</select>
 			</div>
 
 			<div class="col-2">
-					<input type="text" id="qtyPurchase" class="form-control" placeholder="dd/mm/yyyy">
+					<label for="first_name">Shipped</label>
+					<input type="text" class="datepicker" id="qtyPurchase" class="form-control" placeholder="dd/mm/yyyy">
 			</div>
 			<div class="col-2">
-					<input type="text" class="manualSubmit form-control" id="receivedDate" name="receivedDate" placeholder="dd/mm/yyyy">
+					<label for="first_name">Received</label>
+					<input type="text"  class="datepicker" class="manualSubmit form-control" id="receivedDate" name="receivedDate" placeholder="dd/mm/yyyy">
 			</div>
 			<div class="col-2">
 					
@@ -112,38 +103,10 @@
 			
 		</div>
 
-
-		<hr>
-
-		<div class="row">
-				<div class="col-2">
-					<p class="nameTag">Product</p>		
-				</div>
-			
-	
-				<div class="col-2">				
-						<p class="nameTag">Category</p>
-				</div>
-	
-				<div class="col-1">
-						<p class="nameTag">Qty</p>
-				</div>
-				<div class="col-1">
-						<p class="nameTag">Retail $</p>
-				</div>
-				<div class="col-1">
-						<p class="nameTag">Discount</p>
-				</div>
-				<div class="col-1">
-							<p class="nameTag">Actual $</p>
-				</div>
-				<div class="col-1">
-						<p class="nameTag">sku</p>
-				</div>
-			</div>
 	
 		<div class="row">
-			<div class="col-2">				
+			<div class="col-2">		
+				<label for="first_name">Product</label>		
 				<select id="actionSelector" name="actionSquad" class="selectionField form-control">
 					<option value="none"><address>Product</address></option>
 					<!-- Link to products table -->
@@ -151,7 +114,8 @@
 			</div>
 	
 
-			<div class="col-2">				
+			<div class="col-2">	
+					<label for="first_name">Category</label>			
 					<select id="actionSelector" name="actionSquad" class="selectionField form-control">
 						<option value="none">Category</option>
 						<!-- Link to category table -->
@@ -160,84 +124,66 @@
 			</div>
 
 			<div class="col-1">
-					<input type="text" id="qtyPurchase" class="form-control" placeholder="Qty">
+					<label for="first_name">Qty</label>
+					<input type="text" id="qtyPurchase" class="form-control" placeholder="#">
 			</div>
 			<div class="col-1">
-					<input type="text" id="productRetailPrice" class="form-control" placeholder="RP $">
+					<label for="first_name">Retail</label>
+					<input type="text" id="productRetailPrice" class="form-control" placeholder="$">
 			</div>
 			<div class="col-1">
-					<input type="text" id="productDiscount" class="form-control" placeholder="Disc. $">
+					<label for="first_name">Discount</label>
+					<input type="text" id="productDiscount" class="form-control" placeholder="%">
 			</div>
 			<div class="col-1">
-					<input type="text" id="productActualPrice" class="form-control" placeholder="Price $">
+					<label for="first_name">Wholesale</label>
+					<input type="text" id="productActualPrice" class="form-control" placeholder="$">
 			</div>
 			<div class="col-1">
+					<label for="first_name">Actual</label>
 					<input type="text" id="sku" class="form-control" placeholder="#">
 			</div>
 			<div class="col-1">
 					
 			</div>
 			<div class="col-1">				
-					<button type="button" class="btn btn-dark" id="retailSubmit">+</button>
+					<button type="button" class="btn btn-dark light-green" id="retailSubmit">+</button>
 			</div>
 			
 		</div>
 
-		<hr>
 
 		<!-- <div class="row"> -->
 			<!-- <div id="manualEnter" class="hidden"> -->
 				<!-- <form> -->
-
-		<div class="row">
-						<div class="col-2">
-							<p class="nameTag">Sub Total Cost</p>
-						</div>
-						
-						<div class="col-2">
-								<p class="nameTag">Discount</p>
-						</div>
-					
-						<div class="col-2">
-							<p class="nameTag">S&H Cost</p>
-						</div>
-						
-						<div class="col-2">
-								<p class="nameTag">Total Order Cost</p>
-						</div>
-
-						<div class="col-4">
-								
-						</div>
-						
-		</div>
+	
 
 		<div class="row">
 							<div class="col-2">
-									<input type="text" class="manualSubmit form-control" id="subTotalCost" name="subTotalCost" placeholder="$0.00">
+								<label for="first_name">SubTotal</label>
+								<input type="text" class="manualSubmit form-control" id="subTotal" name="subTotal" placeholder="$0.00">
 							</div>
 							<div class="col-2">
+									<label for="first_name">Discount</label>
 									<input type="text" class="manualSubmit form-control" id="discount" name="discount" placeholder="%">
 							</div>
 							<div class="col-2">
+									<label for="first_name">S&H</label>
 									<input type="text" class="manualSubmit form-control" id="shCost" name="shCost" placeholder="$0.00">
 								</div>
 							<div class="col-2">
-									<input type="text" class="manualSubmit form-control" id="totalOrderCost" name="totalOrderCost" placeholder="%">
+									<label for="first_name">Total Order</label>
+									<input type="text" class="manualSubmit form-control" id="totalOrderCost" name="totalOrderCost" placeholder="$0.00">
 							</div>
 						
 		</div>	
-
-		<hr>
 		<div class="row">
 			<div class="col-10">
-				
-						
 				
 			</div>
 			<div class="col-1">
 				
-						<button type="button" class="btn btn-dark" id="submitOrder">Save Order</button>
+						<button type="button" class="btn btn-dark light-green" id="submitOrder">Save Order</button>
 				
 			</div>
 		</div>
@@ -257,6 +203,35 @@
 			</div>
 		</div>
 	</div>
+
+
+	<footer class="page-footer light-green">
+			<!-- <div class="container"> -->
+			  <!-- <div class="row">
+				<div class="col l6 s12">
+				  <h5 class="white-text">Footer Content</h5>
+				  <p class="#8bc34a light-green">You can use rows and columns here to organize your footer content.</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+				  <h5 class="white-text">Links</h5>
+				  <ul>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+				  </ul>
+				</div>
+			  </div>
+			</div> -->
+			<div class="footer-copyright light-green">
+			  <div class="container center">
+			  © 2018 Copyright Societe
+			  <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+			  </div>
+			</div>
+	</footer>
+
+
 	<!-- Last in Line -->
 	<script src="js/subletFunctionality.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -266,5 +241,14 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="js/functionality.js"></script>
 	<script src="js/societe.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
+
+
 </body>
 </html>

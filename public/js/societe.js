@@ -59,3 +59,7 @@ function dbGet(qString, qCol, tableName, exact=false, findAll=false){
 		findAll
 	})
 }
+
+$(document).ready(function(){
+    $('.datepicker').datepicker();
+  });

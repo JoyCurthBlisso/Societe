@@ -160,3 +160,15 @@ $("#rawMaterialsFour").on("change", function() {
 	document.getElementById("qtyFive").classList.remove("hidden");
 	document.getElementById("measureFive").classList.remove("hidden");
 });
+
+
+$(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+
+
+  
+	document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.datepicker');
+		var instances = M.Datepicker.init(elems, options);
+	  });
