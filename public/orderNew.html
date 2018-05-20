@@ -22,25 +22,30 @@
 		</div>
 
 		<nav class="navbar navbar-dark bg-dark">
+			
 				<!-- Navbar content -->
 	
 
 		<!-- <nav class="navbar navbar-inverse"> -->
 				<div class="container-fluid">
-				  <div class="navbar-header">
+				  <div class="navbar-header" class="nav-button">
+					
 					<a class="navbar-brand" href="#">Enter Order</a>
 				  </div>
 				  <!-- <ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Recipe</a></li>
-					<li><a href="#">Profit</a></li>
-					<li><a href="#">Low Inventory</a></li>
-				  </ul> -->
-				  <!-- <ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#">Home</a></li> -->
+					<li><a href="addRawMaterial.html">New Product</a></li>
+					<li><a href="profit.html">Profit</a></li>
+					<li><a href="inventory.html">Inventory</a></li>
+					<li><a href="lowInventory.html">Low Inventory</a></li>
+					<li><a href="societeRecipe.html">Recipe</a></li>
+					<li><a href="suppliers.html">Suppliers</a></li>
+				  </ul>
+				  	<!-- <ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					  </ul>
-				</div> -->
+					</ul> -->
+				</div>
 		</nav>
 <br>
 <!-- 
@@ -113,9 +118,7 @@
 				<div class="col-2">
 					<p class="nameTag">Product</p>		
 				</div>
-				<div class="col-2">	
-					<p class="nameTag">?</p>			
-				</div>
+			
 	
 				<div class="col-2">				
 						<p class="nameTag">Category</p>
@@ -141,16 +144,11 @@
 		<div class="row">
 			<div class="col-2">				
 				<select id="actionSelector" name="actionSquad" class="selectionField form-control">
-					<option value="none">Product</option>
+					<option value="none"><address>Product</address></option>
 					<!-- Link to products table -->
 				</select>
 			</div>
-			<div class="col-2">				
-					<select id="actionSelector" name="actionSquad" class="selectionField form-control">
-						<option value="none">?</option>
-						<!-- Link to supplier table -->
-					</select>
-			</div>
+	
 
 			<div class="col-2">				
 					<select id="actionSelector" name="actionSquad" class="selectionField form-control">
@@ -174,6 +172,9 @@
 			</div>
 			<div class="col-1">
 					<input type="text" id="sku" class="form-control" placeholder="#">
+			</div>
+			<div class="col-1">
+					
 			</div>
 			<div class="col-1">				
 					<button type="button" class="btn btn-dark" id="retailSubmit">+</button>
@@ -228,10 +229,15 @@
 
 		<hr>
 		<div class="row">
-			<div class="col-12">
-					<div class="text-right">
+			<div class="col-10">
+				
+						
+				
+			</div>
+			<div class="col-1">
+				
 						<button type="button" class="btn btn-dark" id="submitOrder">Save Order</button>
-					</div>
+				
 			</div>
 		</div>
 
