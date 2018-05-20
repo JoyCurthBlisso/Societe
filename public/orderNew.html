@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>Enter Order</title>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
    <!--Import Google Icon Font-->
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,12 +32,22 @@
 			</div>
 		</div>
 
+		
+			<!-- Dropdown Structure -->
+			<ul id="inventorydrop" class="dropdown-content">
+					<li><a href="addRawMaterial.html">New Product</a></li>
+					<li><a href="societeProducts.html">New Societe</a></li>
+					<li><a href="moveInventory.html">Move</a></li>
+					<li><a href="lowInventory.html">Low Inventory</a></li>
+		
+					<li class="divider"></li>
+			</ul>
+
+
 		<nav class="navbar navbar-dark bg-dark">
 			
 				<!-- Navbar content -->
-	
-
-		<!-- <nav class="navbar navbar-inverse"> -->
+				<!-- <nav class="navbar navbar-inverse"> -->
 				<div class="container-fluid">
 				  <div class="navbar-header" class="nav-button">
 					
@@ -46,8 +58,8 @@
 					<li><a href="addRawMaterial.html">New Product</a></li>
 					<li><a href="profit.html">Profit</a></li>
 					<li><a href="inventory.html">Inventory</a></li>
-					<li><a href="moveInventory.html">Move Inventory</a></li>
-					<li><a href="lowInventory.html">Low Inventory</a></li>
+					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
+					<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
 					<li><a href="societeRecipe.html">Recipe</a></li>
 					<li><a href="suppliers.html">Suppliers</a></li>
 				  </ul>
@@ -57,6 +69,18 @@
 					</ul> -->
 				</div>
 		</nav>
+
+			<!-- <nav>
+				<div class="nav-wrapper">
+				<a href="#!" class="brand-logo">Logo</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="sass.html">Sass</a></li>
+					<li><a href="badges.html">Components</a></li>
+					Dropdown Trigger
+					<li><a class="dropdown-trigger" href="#!" data-target="inventorydrop">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+				</ul>
+				</div>
+			<!-- </nav> --> 
 <br>
 <!-- 
 		<div class="row">
@@ -69,26 +93,25 @@
 		</div> -->
 	
 		<div class="row">
+
+				<div class="col-2">	
+						<label for="first_name">Supplier</label>			
+						<select id="actionSelector" name="actionSquad" class="selectionField form-control"  type="text" class="validate">
+								<option value="none">Supplier</option>
+								<!-- Link to supplier table -->
+						</select>
+				</div>
+
 			<div class="col-2">				
 							<label for="first_name">Order Date</label>
 							<input type="text" class="datepicker" class="manualSubmit form-control" id="orderPlacedDate" name="orderPlacedDate" placeholder="dd/mm/yyyy">
-							<!-- DEFAULT ORDER DATE TO TODAY'S DATE -->
-
-
-					
+							<!-- DEFAULT ORDER DATE TO TODAY'S DATE -->		
 			</div>
 			<div class="col-2">	
 					<label for="first_name">PO#</label>			
 					<input type="text" id="qtyPurchase" class="form-control" placeholder="#">
 			</div>
 
-			<div class="col-2">	
-					<label for="first_name">Supplier</label>			
-					<select id="actionSelector" name="actionSquad" class="selectionField form-control"  type="text" class="validate">
-							<option value="none">Supplier</option>
-							<!-- Link to supplier table -->
-					</select>
-			</div>
 
 			<div class="col-2">
 					<label for="first_name">Shipped</label>
@@ -103,6 +126,27 @@
 			</div>
 			
 		</div>
+
+		<div class="row">
+				<div class="col-2">
+					<label for="first_name">SubTotal</label>
+					<input type="text" class="manualSubmit form-control" id="subTotal" name="subTotal" placeholder="$0.00">
+				</div>
+				<div class="col-2">
+						<label for="first_name">Discount</label>
+						<input type="text" class="manualSubmit form-control" id="discount" name="discount" placeholder="%">
+				</div>
+				<div class="col-2">
+						<label for="first_name">S&H</label>
+						<input type="text" class="manualSubmit form-control" id="shCost" name="shCost" placeholder="$0.00">
+					</div>
+				<div class="col-2">
+						<label for="first_name">Total Order</label>
+						<input type="text" class="manualSubmit form-control" id="totalOrderCost" name="totalOrderCost" placeholder="$0.00">
+				</div>	
+		</div>	
+
+		<hr>
 
 	
 		<div class="row">
@@ -156,47 +200,27 @@
 
 		<!-- <div class="row"> -->
 			<!-- <div id="manualEnter" class="hidden"> -->
-				<!-- <form> -->
-	
+				<!-- <form> -->	
 
-		<div class="row">
-							<div class="col-2">
-								<label for="first_name">SubTotal</label>
-								<input type="text" class="manualSubmit form-control" id="subTotal" name="subTotal" placeholder="$0.00">
-							</div>
-							<div class="col-2">
-									<label for="first_name">Discount</label>
-									<input type="text" class="manualSubmit form-control" id="discount" name="discount" placeholder="%">
-							</div>
-							<div class="col-2">
-									<label for="first_name">S&H</label>
-									<input type="text" class="manualSubmit form-control" id="shCost" name="shCost" placeholder="$0.00">
-								</div>
-							<div class="col-2">
-									<label for="first_name">Total Order</label>
-									<input type="text" class="manualSubmit form-control" id="totalOrderCost" name="totalOrderCost" placeholder="$0.00">
-							</div>
-						
-		</div>	
 		<div class="row">
 			<div class="col-10">
 				
 			</div>
+		
 			<div class="col-1">
 				
-						<button type="button" class="btn btn-dark light-green" id="submitOrder">Save Order</button>
+				<button type="button" class="btn btn-dark light-green" id="submitOrder">Save Order</button>
 				
 			</div>
 		</div>
 
 					<!-- <div class="row">
 					
-
-
 						<!-- <div class="row">
 							<!-- <div class="col-12">
 	<!--							<button type="button" id="manualSubmit">Submit</button>-->
 	<!--d10cf0d2b535a1258d6868e192a04a42ef60fbd6-->
+
 					</div>  
 				</div>
 					</div>
@@ -226,13 +250,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="js/functionality.js"></script>
 	<script src="js/societe.js"></script>
-
-
-<script>
-$(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
-</script>
 
 
 </body>

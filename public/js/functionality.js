@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 // JavaScript Document
 
 console.log("Javascript Initiated.");
@@ -161,14 +163,9 @@ $("#rawMaterialsFour").on("change", function() {
 	document.getElementById("measureFive").classList.remove("hidden");
 });
 
-
-$(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
-
-
   
 	document.addEventListener('DOMContentLoaded', function() {
 		var elems = document.querySelectorAll('.datepicker');
 		var instances = M.Datepicker.init(elems, options);
 	  });
+});
