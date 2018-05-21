@@ -43,7 +43,7 @@
 				<div class="container-fluid">
 				  <div class="navbar-header" class="nav-button">
 					
-					<a class="navbar-brand" href="#">Move Inventory</a>
+					<!-- <a class="navbar-brand" href="#">Move Inventory</a> -->
 				  </div>
 				  <!-- <ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li> -->
@@ -62,15 +62,8 @@
 					</ul> -->
 				</div>
 		</nav>
-		<div class="row">
-	
-			<div class="col-10">
-				<!-- Placeholder -->
-			</div>
-		</div>
-		<br>
-		<br>
-		<div id="databaseDiv">
+
+		<!-- <div id="databaseDiv">
 			<div class="row">
 				<div class="col-12">
 					<form>
@@ -78,26 +71,31 @@
 						<button type="button" id="submitQuery" class="hidden">Submit</button>
 					</form>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<table id="dbTable" class="DatabaseTable hidden">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-								<th>Retail Price</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody></tbody>
-					</table>
+		</div> -->
+
+		<div class="panel panel-primary">
+				<div class="panel-heading">
+				  <h3 class="panel-title"><strong>Move Inventory</strong></h3>
 				</div>
-			</div>
+				<div class="panel-body">
+				  <table class="table table-hover" id='lowinventory-table'>
+					<thead>
+					  <tr>
+						<th>Product Name</th>
+						<th>Quantity</th>
+						<th>Unit of Measure</th>
+						<th>Location From</th>
+						<th>Location To</th>
+					  </tr>
+					</thead>
+					<tbody>
+					</tbody>
+				  </table>
+				</div>
 		</div>
 
-			</div><!-- End of Manual Submit Div -->
-		<div>
+	</div><!-- End of Manual Submit Div -->
+	<div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -114,12 +112,10 @@
 			<div class="footer-copyright light-green">
 			  <div class="container center">
 			  © 2018 Copyright Societe
-			 
 			  </div>
 			</div>
+
 	</footer>
-
-
 
 </body>
 </html>
