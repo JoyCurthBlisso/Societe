@@ -26,4 +26,4 @@ module.exports = function(sequelize, DataTypes)
 		productImage: DataTypes.TEXT
 	});
 	return material;
-}
+};

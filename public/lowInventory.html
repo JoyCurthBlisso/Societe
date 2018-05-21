@@ -1,35 +1,76 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Societe</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>-->
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta charset="utf-8">
+	<title>Societe</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
+
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>	
 
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-12 text-center">
-				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
+				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe" width="300px">
 			</div>
 		</div>
+		
+		<nav class="navbar navbar-dark bg-dark">
+			
+				<!-- Navbar content -->
+	
+
+		<!-- <nav class="navbar navbar-inverse"> -->
+				<div class="container-fluid">
+				  <div class="navbar-header" class="nav-button">
+					
+					<a class="navbar-brand" href="#">Low Inventory</a>
+				  </div>
+				  <!-- <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li> -->
+					<li><a href="addRawMaterial.html">New Product</a></li>
+					<li><a href="inventory.html">Inventory</a></li>
+					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
+					<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
+					<li><a href="societeRecipe.html">Recipe</a></li>
+					<li><a href="suppliers.html">Suppliers</a></li>
+					<li><a href="profit.html">Profit</a></li>
+				  </ul>
+				  	<!-- <ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					</ul> -->
+				</div>
+		</nav>
 		<div class="row">
-			<div class="col-2">
+			<!-- <div class="col-2">
 				<button class="btn btn-success">Go Back</button>
-			</div>
+			</div> -->
 			<div class="col-10">
 				<!-- Placeholder -->
 			</div>
 		</div>
 		<br>
-		<br>
+
 		<div id="databaseDiv">
 			<div class="row">
 				<div class="col-12">
@@ -59,9 +100,8 @@
 			</div><!-- End of Manual Submit Div -->
 		<div>
 	</div>
-	<div class="footer">
-		<p class="footerText">Copyright&#169; 2018 Societe. All Rights Reserved</p>
-	</div>
+
+	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
   		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   		crossorigin="anonymous"></script>
@@ -70,5 +110,17 @@
 	<script src="js/functionality.js"></script>
 	<script src="js/subletFunctionality.js"></script>
 	<script src="js/societe.js"></script>
+
+	<footer class="page-footer light-green">
+
+			<div class="footer-copyright light-green">
+			  <div class="container center">
+			  © 2018 Copyright Societe
+			 
+			  </div>
+			</div>
+	</footer>
+
+
 </body>
 </html>
