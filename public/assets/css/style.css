@@ -30,5 +30,17 @@ input
   margin-top:5px;
 }
 
+nav
+{
+
+  border-top-left-radius: 4px;
+  
+  border-bottom-left-radius: 4px;
+  
+  }
+
+  .navbar-default .navbar-brand {
+    color: #777;
+}
 
 

@@ -81,3 +81,7 @@ th, td {
 tr:nth-child(even) {
 
 }
+
+nav ul li:hover {
+	background-color:rgb(175,183,79);
+ }

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Orders</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!--Import materialize.css-->
+   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+</head>
+
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>	
+
+<body>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-12 text-center">
+				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe" width="300px">
+			</div>
+		</div>
+
+
+				<!-- Dropdown Structure -->
+				<ul id="inventorydrop" class="dropdown-content">
+						<li><a href="addRawMaterial.html">New Product</a></li>
+						<li><a href="societeProducts.html">New Societe</a></li>
+						<li><a href="moveInventory.html">Move</a></li>
+						<li><a href="lowInventory.html">Low Inventory</a></li>
+			
+						<li class="divider"></li>
+				</ul>
+	
+	
+			<nav class="navbar navbar-dark bg-dark">
+				
+					<!-- Navbar content -->
+					<!-- <nav class="navbar navbar-inverse"> -->
+					<div class="container-fluid">
+					  <div class="navbar-header" class="nav-button">
+						
+						<a class="navbar-brand" href="#">Orders</a>
+					  </div>
+					  <!-- <ul class="nav navbar-nav"> -->
+						<!-- <li class="active"><a href="#">Home</a></li> -->
+						<li><a href="addRawMaterial.html">New Product</a></li>
+						<li><a href="profit.html">Profit</a></li>
+						<li><a href="inventory.html">Inventory</a></li>
+						<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
+						<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
+						<li><a href="societeRecipe.html">Recipe</a></li>
+						<li><a href="suppliers.html">Suppliers</a></li>
+					  </ul>
+						  <!-- <ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						</ul> -->
+					</div>
+			</nav>
+
+
+		<div class="row">
+		
+			<div class="col-10">
+				<!-- Placeholder -->
+			</div>
+		</div>
+		<br>
+	
+	
+			<div class="row">
+				<div class="col-10">
+					<table id="dbTable" class="DatabaseTable hidden">
+						<thead>
+							<tr>
+								<th>Order Number</th>
+								<th>Supplier</th>
+								<th>Order Date</th>
+								<th>PO #</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+<!-- 
+			<div class="col-2">
+					<ul id="dropdown2" class="dropdown-content light-green">
+							<li><a href="#!">Edit<span class="badge">1</span></a></li>
+							<li><a href="#!">Delete<span class="new badge">1</span></a></li>
+							<!-- <li><a href="#!">three</a></li> -->
+						<!-- </ul>
+
+					<a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+			</div>				  -->
+
+
+		</div>
+
+		</div><!-- End of Manual Submit Div -->
+		<div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/functionality.js"></script>
+	<script src="js/subletFunctionality.js"></script>
+	<script src="js/societe.js"></script>
+
+	<footer class="page-footer light-green">
+
+			<div class="footer-copyright light-green">
+			  <div class="container center">
+			  © 2018 Copyright Societe
+			 
+			  </div>
+			</div>
+			
+	</footer>
+
+
+</body>
+</html>

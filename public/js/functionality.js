@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 // JavaScript Document
 
 console.log("Javascript Initiated.");
@@ -159,4 +161,11 @@ $("#rawMaterialsFour").on("change", function() {
 	document.getElementById("rawMaterialsFive").classList.remove("hidden");
 	document.getElementById("qtyFive").classList.remove("hidden");
 	document.getElementById("measureFive").classList.remove("hidden");
+});
+
+  
+	document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.datepicker');
+		var instances = M.Datepicker.init(elems, options);
+	  });
 });
