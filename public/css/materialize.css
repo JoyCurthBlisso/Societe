@@ -6707,7 +6707,7 @@ textarea.materialize-textarea {
 [type="radio"]:not(:checked),
 [type="radio"]:checked {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   pointer-events: none;
 }
 
@@ -6831,7 +6831,7 @@ textarea.materialize-textarea {
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   pointer-events: none;
 }
 

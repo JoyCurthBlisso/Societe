@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Societe</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -31,7 +33,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 text-center">
-				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
+				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe" width"300px">
 			</div>
 		</div>
 
@@ -43,21 +45,20 @@
 
 		<!-- <nav class="navbar navbar-inverse"> -->
 				<div class="container-fluid">
-				  <div class="navbar-header" class="nav-button">
+					<!-- <div class="navbar-header" class="nav-button">
 					
-					<a class="navbar-brand" href="#">Recipe</a>
-				  </div>
-				  <!-- <ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li> -->
-	
+						<a class="navbar-brand" href="#">New Recipe</a>
+					</div> -->
+			
 					<li><a href="orderNew.html">Order</a></li>
 					<li><a href="addRawMaterial.html">New Product</a></li>
-					<li><a href="profit.html">Profit</a></li>
 					<li><a href="inventory.html">Inventory</a></li>
+					<li><a href="societeRecipe.html">Recipe</a></li>
+					<li><a href="profit.html">Profit</a></li>
 					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
 					<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
 					<!-- <li><a href="societeRecipe.html">Recipe</a></li> -->
-					<li><a href="suppliers.html">Suppliers</a></li>
+					<!-- <li><a href="suppliers.html">Suppliers</a></li> -->
 				  </ul>
 				  	<!-- <ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -66,34 +67,20 @@
 				</div>
 		</nav>
 
-		<div class="row">
-			<div class="col-2">
-			
-			</div>
-			<div class="col-10">
-				<!-- Placeholder -->
-			</div>
-		</div>
-		<br>
-		<br>
-		<div id="databaseDiv">
-			<div class="row">
-				<div class="col-12">
-					<form>
-						<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
-						<button type="button" id="submitQuery" class="hidden">Submit</button>
-					</form>
+		<div class="panel panel-primary">
+				<div class="panel-heading">
+				  <h3 class="panel-title"><strong>Recipe</strong></h3>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<table id="dbTable" class="DatabaseTable hidden">
-						<thead>
+				<div class="panel-body">
+				  <table class="table table-hover" id='societeRecipe'>
+					<thead>
 							<tr>
 								<th>Name</th>
+								<th>SKU</th>
 								<th>Description</th>
+								<th>Cost</th>
 								<th>Retail Price</th>
-								<th>Quantity</th>
+								<th>Qty Avail.</th>
 								
 							</tr>
 						</thead>
