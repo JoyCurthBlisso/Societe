@@ -63,8 +63,8 @@ $(document).ready(function(){
 		})
 	}
 
-	$('.datepicker').datepicker();
+	// $('.datepicker').datepicker();
 
-	$(".dropdown-trigger").dropdown();
+	// $(".dropdown-trigger").dropdown();
 
 });
