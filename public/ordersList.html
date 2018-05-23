@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <title>Orders</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +16,7 @@
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <!--Import materialize.css-->
    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	 <link type="text/css" rel="stylesheet" href="css/style.css"/>
 
 </head>
 
@@ -49,7 +52,7 @@
 					<div class="container-fluid">
 					  <div class="navbar-header" class="nav-button">
 						
-						<a class="navbar-brand" href="#">Orders</a>
+						<!-- <a class="navbar-brand" href="#">Orders</a> -->
 					  </div>
 					  <!-- <ul class="nav navbar-nav"> -->
 						<!-- <li class="active"><a href="#">Home</a></li> -->
@@ -67,31 +70,27 @@
 						</ul> -->
 					</div>
 			</nav>
-
-
-		<div class="row">
-		
-			<div class="col-10">
-				<!-- Placeholder -->
-			</div>
-		</div>
-		<br>
 	
-	
-			<div class="row">
-				<div class="col-10">
-					<table id="dbTable" class="DatabaseTable hidden">
+			<div class="panel panel-primary">
+					<div class="panel-heading">
+					  <h3 class="panel-title"><strong>Orders</strong></h3>
+					</div>
+					<div class="panel-body">
+					  <table class="table table-hover" id='lowinventory-table'>
 						<thead>
-							<tr>
-								<th>Order Number</th>
-								<th>Supplier</th>
-								<th>Order Date</th>
-								<th>PO #</th>
-							</tr>
+						  <tr>
+							<th>PO# </th>
+							<th>Supplier</th>
+							<th>Order Date</th>
+							<th>Received Date</th>
+							<th>Total Order Cost</th>
+						  </tr>
 						</thead>
-						<tbody></tbody>
-					</table>
-				</div>
+						<tbody>
+							
+						</tbody>
+					  </table>
+					</div>
 			</div>
 <!-- 
 			<div class="col-2">
@@ -102,8 +101,7 @@
 						<!-- </ul>
 
 					<a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
-			</div>				  -->
-
+			</div>				  --
 
 		</div>
 
@@ -117,7 +115,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="js/functionality.js"></script>
-	<script src="js/subletFunctionality.js"></script>
+	<!-- <script src="js/subletFunctionality.js"></script> -->
 	<script src="js/societe.js"></script>
 
 	<footer class="page-footer light-green">

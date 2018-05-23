@@ -8,6 +8,8 @@
 
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<meta name="google-signin-scope" content="profile email">
 	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -17,8 +19,7 @@
 	<!--Import materialize.css-->
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
 </head>
 
@@ -45,10 +46,11 @@
 				<div class="container-fluid">
 				  <div class="navbar-header" class="nav-button">
 					
-					<a class="navbar-brand" href="#">Suppliers</a>
+					<!-- <a class="navbar-brand" href="#">Suppliers</a> -->
 				  </div>
 				  <!-- <ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li> -->
+					<li><a href="orderNew.html">Order</a></li>
 					<li><a href="addRawMaterial.html">New Product</a></li>
 					<li><a href="inventory.html">Inventory</a></li>
 					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
@@ -63,41 +65,30 @@
 					</ul> -->
 				</div>
 		</nav>
-		<div class="row">
-			<div class="col-2">
-				
-			</div>
-			<div class="col-10">
-			
-			</div>
-		</div>
-		<br>
-		<br>
-		<div id="databaseDiv">
-			<div class="row">
-				<div class="col-12">
-					<form>
-						<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
-						<button type="button" id="submitQuery" class="hidden">Submit</button>
-					</form>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<table id="dbTable" class="DatabaseTable hidden">
+
+			<div class="panel panel-primary">
+					<div class="panel-heading">
+					  <h3 class="panel-title"><strong>Suppliers</strong></h3>
+					</div>
+					<div class="panel-body">
+					  <table class="table table-hover" id='lowinventory-table'>
 						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-								<th>Retail Price</th>
-								<th>Quantity</th>
-							</tr>
+						  <tr>
+							<th>Name</th>
+							<th>Contact</th>
+							<th>Phone #</th>
+							<th>email</th>
+							<th>Lead Time</th>
+							<th>Category</th>
+						
+						  </tr>
 						</thead>
-						<tbody></tbody>
-					</table>
-				</div>
+						<tbody>
+							
+						</tbody>
+					  </table>
+					</div>
 			</div>
-		</div>
 
 			</div><!-- End of Manual Submit Div -->
 		<div>
@@ -109,7 +100,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="js/functionality.js"></script>
-	<script src="js/subletFunctionality.js"></script>
+	<!-- <script src="js/subletFunctionality.js"></script> -->
 	<script src="js/societe.js"></script>
 
 

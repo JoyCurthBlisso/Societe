@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Societe</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -17,8 +19,7 @@
 	<!--Import materialize.css-->
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
 </head>
 
@@ -43,10 +44,11 @@
 				<div class="container-fluid">
 				  <div class="navbar-header" class="nav-button">
 					
-					<a class="navbar-brand" href="#">Low Inventory</a>
+					<!-- <a class="navbar-brand" href="#">Low Inventory</a> -->
 				  </div>
 				  <!-- <ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li> -->
+					<li><a href="orderNew.html">Order</a></li>
 					<li><a href="addRawMaterial.html">New Product</a></li>
 					<li><a href="inventory.html">Inventory</a></li>
 					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
@@ -61,47 +63,35 @@
 					</ul> -->
 				</div>
 		</nav>
-		<div class="row">
-			<!-- <div class="col-2">
-				<button class="btn btn-success">Go Back</button>
-			</div> -->
-			<div class="col-10">
-				<!-- Placeholder -->
-			</div>
-		</div>
-		<br>
-
-		<div id="databaseDiv">
-			<div class="row">
-				<div class="col-12">
-					<form>
-						<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
-						<button type="button" id="submitQuery" class="hidden">Submit</button>
-					</form>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<table id="dbTable" class="DatabaseTable hidden">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-								<th>Retail Price</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody></tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-
-			</div><!-- End of Manual Submit Div -->
-		<div>
-	</div>
-
 	
+
+
+		<div class="panel panel-primary">
+				<div class="panel-heading">
+				  <h3 class="panel-title"><strong>Low Inventory Report</strong></h3>
+				</div>
+				<div class="panel-body">
+				  <table class="table table-hover" id='lowinventory-table'>
+					<thead>
+					  <tr>
+						<th>Product Name</th>
+						<th>Quantity</th>
+						<th>Supplier</th>
+						<th>Minimum Qty Order</th>
+						<th>Lead Time</th>
+						<th>Cost</th>
+						<th>Retail</th>
+						<th>Minimum Order Cost</th>
+				
+					  </tr>
+					</thead>
+					<tbody>
+					</tbody>
+				  </table>
+				</div>
+		</div>
+
+
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
   		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   		crossorigin="anonymous"></script>
