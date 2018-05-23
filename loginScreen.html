@@ -1,39 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Societe Login</title>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample FirebaseUI App</title>
+    <!-- *******************************************************************************************
+       * TODO(DEVELOPER): Paste the initialization snippet from:
+       * Firebase Console > Overview > Add Firebase to your web app. *
+		   ***************************************************************************************** -->
+	<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyCtI4i7M125NpvPXidrWtm-sCnPuJb2kzo",
+		authDomain: "societe-7f9c3.firebaseapp.com",
+		databaseURL: "https://societe-7f9c3.firebaseio.com",
+		projectId: "societe-7f9c3",
+		storageBucket: "societe-7f9c3.appspot.com",
+		messagingSenderId: "248905852156"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: './index.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+          firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: './termsOfService.html'
+      };
 
-<body>
-	<center>
-		<img src="assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
-		<h3>Plz Log In</h3>
-		<hr>
-		<div id="authenticator" class="authentication">
-			<!-- GOOGLE AUTH GOES HERE -->
-			<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-			<script>
-				function onSignIn(googleUser) {
-					// Useful data for your client-side scripts:
-					var profile = googleUser.getBasicProfile();
-					console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-					console.log('Full Name: ' + profile.getName());
-					console.log('Given Name: ' + profile.getGivenName());
-					console.log('Family Name: ' + profile.getFamilyName());
-					console.log("Image URL: " + profile.getImageUrl());
-					console.log("Email: " + profile.getEmail());
-
-					 The ID token you need to pass to your backend:
-					var id_token = googleUser.getAuthResponse().id_token;
-					console.log("ID Token: " + id_token);
-				};
-			</script>
-		</div>
-	</center>
-</body>
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+  </head>
+  <body>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+    <h1>Societe</h1>
+    <div id="firebaseui-auth-container"></div>
+  </body>
 </html>
