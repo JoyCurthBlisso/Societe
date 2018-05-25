@@ -8,18 +8,34 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-	<!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>	
+
+
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Compiled and minified CSS --> -->
 
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
-</head>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+	
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+
+	</head>
+
 
 
 <body>
@@ -32,35 +48,46 @@
 			</div>
 		</div>
 
-		
+		<!-- <div> -->
 		<nav class="navbar navbar-dark bg-dark">
 			
 				<!-- Navbar content -->
 	
-
-		<!-- <nav class="navbar navbar-inverse"> -->
+				<!-- <nav class="navbar navbar-inverse"> -->
 				<div class="container-fluid">
-				  <div class="navbar-header" class="nav-button">
+				  	<div class="navbar-header" class="nav-button">
+						<ul id="inventory*" class="dropdown-content">
+								<li><a href="inventory.html">All</a></li>
+								<li><a href="rawInventory.html">Raw</a></li>
+								<li><a href="societeInventory.html">Societe</a></li>
+								<!-- <li><a href="moveInventory.html">Move</a></li> -->
+								<li><a href="lowInventory.html">Low</a></li>
+								<li class="divider"></li>
 					
-					<!-- <a class="navbar-brand" href="#">New Product</a> -->
-				  </div>
-				  <!-- <ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li> -->
-					<!-- <li><a href="addRawMaterial.html">New Product</a></li> -->
-					<li><a href="orderNew.html">Order</a></li>	
-					<li><a href="inventory.html">Inventory</a></li>
-					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
-					<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
-					<li><a href="societeRecipe.html">Recipe</a></li>
-					<li><a href="suppliers.html">Suppliers</a></li>
-					<li><a href="profit.html">Profit</a></li>
-				  </ul>
-				  	<!-- <ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					</ul> -->
+						</ul>
+					
+						<!-- <a class="navbar-brand" href="#">New Product</a> -->
+					</div>
+
+					<!-- <div> -->
+						<!-- <ul class="nav navbar-nav"> -->
+						<!-- <li class="active"><a href="#">Home</a></li> -->
+						<!-- <li><a href="addRawMaterial.html">New Product</a></li> -->
+						<li><a href="orderNew.html">Order</a></li>
+						<li><a class="dropdown-trigger" href="#!" data-target="inventory*">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>	
+						<li><a href="societeRecipe.html">Recipe</a></li>
+						<li><a href="suppliers.html">Suppliers</a></li>
+						<li><a href="profit.html">Profit</a></li>
+
+					<!-- </ul> -->
+						<!-- <ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						</ul> -->
 				</div>
-		</nav>
+				
+			</nav>
+				
 		<br>
 
 		<div class="panel panel-primary">
@@ -210,14 +237,14 @@
 						</div>
 					</div>
 
-
+<!-- 
 					<div class="row">
 						<div class="col-10">
 							<!-- Dropdown Trigger -->
-							<a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+							<!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
 
 							<!-- Dropdown Structure -->
-							<ul id='dropdown1' class='dropdown-content'>
+							<!-- <ul id='dropdown1' class='dropdown-content'>
 								<li><a href="#!">one</a></li>
 								<li><a href="#!">two</a></li>
 								<li class="divider" tabindex="-1"></li>
@@ -226,10 +253,10 @@
 								<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
 							</ul>
 								
-						</div>
+						</div> -->
 
 						
-					</div>
+					<!-- </div> -->
 
 						<div class="row">
 							<div class="col-12">
@@ -243,35 +270,39 @@
 		</div>
 		</div>
 	</div>
-	<!-- Last in Line -->
-	<!-- <script src="js/subletFunctionality.js"></script> -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
-	<!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-	<script src="js/functionality.js"></script>
-	<script src="js/societe.js"></script>
+
+
 	<script>
 		$(document).ready(function(){
 			$('.dropdown-trigger').dropdown();
 			$('.datepicker').datepicker();
+			
 		});
+		
+
 	</script>
 
-	<footer class="page-footer light-green">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-			<div class="footer-copyright light-green">
-			  <div class="container center">
-			  © 2018 Copyright Societe
-			 
-			  </div>
-			</div>
-	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/functionality.js"></script>
+	<script src="js/societe.js"></script>
 
+
+	
+	<div class="container center">
+		<footer class="page-footer light-green">
+
+				
+				© 2018 Copyright Societe
+				
+				</div>
+				</div>
+		</footer> 
+	</div>
 
 </body>
 </html>
