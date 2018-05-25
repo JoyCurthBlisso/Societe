@@ -3,80 +3,235 @@
 <head>
 <meta charset="utf-8">
 <title>Societe</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>-->
 <link href="css/style.css" rel="stylesheet" type="text/css">
-<meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-12 text-center">
-				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-4 offset-4">				
-				<select id="actionSelector" name="actionSquad" class="selectionField form-control">
-					<option value="none">( ͡° ͜ʖ ͡°)</option>
-					<option value="manualEntry">Add New Product or Supply</option>
-					<option value="addRecipe">Add New Societe Product</option>
-					<option value="searchBy">Search By</option>
-					<option value="editDBItem">Edit an Existing Product or Supply</option>
-					<option value="editDBRecipe">Edit an Existing Recipe</option>
-					<option value="addOther">Add Other Product</option>
-					<option value="profitReport">Profit Report</option>
-					<option value="currentInventory">Current Inventory</option>
-					<option value="lowInventory">Low Inventory Report</option>
-				</select>
-			</div>
-		</div>
-		<br>
-		<br>
-		<div id="databaseDiv">
+		<center>
+			<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
+		</center>
+		<center>
+			<br>
+<!--
+			<button class="btn-block" id="databaseOpener">Search By</button>
+			<button class="btn-block" id="addToDB">Submit New Item</button>
+			<button class="btn-block" id="editDBItem">Edit an Entry</button>
+			<button class="btn-block" id="manualEntry">Manual Entry</button>
+-->
 			<div class="row">
 				<div class="col-12">
-					<form>
-						<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
-						<button type="button" id="submitQuery" class="hidden">Submit</button>
-					</form>
+					<select id="actionSelector" name="actionSquad" class="selectionField">
+						<option value="none">( ͡° ͜ʖ ͡°)</option>
+						<option value="manualEntry">Add New Product or Supply</option>
+						<option value="addRecipe">Add New Societe Product</option>
+						<option value="searchBy">Search By</option>
+						<option value="editDBItem">Edit an Existing Product or Supply</option>
+						<option value="editDBRecipe">Edit an Existing Recipe</option>
+						<option value="addOther">Add Other Product</option>
+						<option value="profitReport">Profit Report</option>
+						<option value="currentInventory">Current Inventory</option>
+						<option value="lowInventory">Low Inventory Report</option>
+					</select>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<table id="dbTable" class="DatabaseTable hidden">
-						<thead>
+			<br>
+			<br>
+			<div id="databaseDiv">
+				<!-- <div class="row">
+					<div class="col-12">
+						<form>
+							<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
+							<button type="button" id="submitQuery" class="hidden">Submit</button>
+						</form>
+					</div>
+				</div> -->
+				<!-- <div class="row">
+					<div class="col-lg-12">
+						<table id="dbTable" class="DatabaseTable hidden">
 							<tr>
-								<th>Name</th>
-								<th>Description</th>
-								<th>Retail Price</th>
-								<th>Quantity</th>
+								<strong>
+									<th>Herb Name</th>
+									<th>Amount</th>
+									<th>Entry</th>
+									<th>Entry</th>
+									<th>Entry</th>
+								</strong>
 							</tr>
-						</thead>
-						<tbody></tbody>
-					</table>
-				</div>
+							<tr>
+								<th>Data</th>
+								<th>Data</th>
+								<th>Data</th>
+								<th>Data</th>
+								<th>Data</th>
+							</tr>
+						</table>
+					</div>
+				</div> -->
 			</div>
-		</div>
-
-			</div><!-- End of Manual Submit Div -->
-		<div>
+			<div id="manualEnter" class="hidden">
+				<form>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Name</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="commonName" name="commonName" placeholder="Enter Common Name">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Latin</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="latinName" name="latinName" placeholder="Enter Latin Name">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Description</p>
+						</div>
+						<div class="col-10">
+							<input type="textarea" class="manualSubmit" id="description" name="description" placeholder="Enter Description">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Total Price</p>
+						</div>
+						<div class="col-2">
+							<input type="text" class="manualSubmit" id="wholesaleCost" name="wholesaleCost" placeholder="$0.00">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Discount %</p>
+						</div>
+						<div class="col-2">
+							<input type="number" class="manualSubmit" id="discount" name="discount" maxlength="10" placeholder="%">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Actual Price</p>
+						</div>
+						<div class="col-2">
+							<input type="text" id="calculatedDisc" placeholder="$0.00"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Sugg. Retail Price</p>
+						</div>
+						<div class="col-3">
+							<input type="text" class="manualSubmit" id="recommendedRetailPrice" name="recommendedRetailPrice" placeholder="$0.00">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Societe Price</p>
+						</div>
+						<div class="col-3">
+							<input type="text" class="manualSubmit" id="societeRetailPrice" name="societeRetailPrice" placeholder="$0.00">
+						</div>
+						<div class="col-1">
+								<p class="nameTag">Shopify</p>
+						</div>
+						<div class="col-1">
+							<input type="checkbox" class="manualSubmit" id="shopify" name="shopify" value="post">	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Quantity Purchased</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="qtyPurchased" name="qtyPurchased" placeholder="Enter # of Quantity Purchased">
+						</div>
+<!--
+						<div class="col-2">
+							<p class="nameTag">Measurement</p>
+						</div>
+						<div class="col-2">
+							<input type="text" class="manualSubmit" id="" name="" maxlength="90">
+						</div>
+-->
+						<div class="col-2">
+							<p class="nameTag">Unit of Measure</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="unitOfMeasure" name="unitOfMeasure" placeholder="Enter Unit of Measure">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Lot #</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="lot" name="lot" placeholder="Enter Lot #">
+						</div>
+						<div class="col-2">
+							<p class="nameTag" >Reorder Point</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="reorderPoint" name="reorderPoint" placeholder="Enter Reorder Point">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Purchase Date</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="purchaseDate" name="purchaseDate" placeholder="dd/mm/yyyy">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Packaged Date</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="packedDate" name="packedDate" placeholder="dd/mm/yyyy">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Supplier</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="supplierId" name="supplierId" placeholder="Enter Supplier">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Source</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="sourcing" name="sourcing" placeholder="Enter Source">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<p class="nameTag">Product Image</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="productImage" name="productImage" placeholder="Enter url">
+						</div>
+						<div class="col-2">
+							<p class="nameTag">Product Label</p>
+						</div>
+						<div class="col-4">
+							<input type="text" class="manualSubmit" id="productLabel" name="productLabel" placeholder="Enter url">
+						</div>
+					</div>
+				
+					<div class="row">
+						<div class="col-12">
+							<button type="button" id="manualSubmit">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</center>
 	</div>
 	<div class="footer">
-		<p class="footerText">Copyright&#169; 2018 Societe. All Rights Reserved</p>
+		<center>
+			<p class="footerText">Copyright&#169; 2018 Societe. All Rights Reserved</p>
+		</center>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="js/functionality.js"></script>
-	<script src="js/subletFunctionality.js"></script>
 	<script src="js/societe.js"></script>
 </body>
 </html>
