@@ -74,7 +74,7 @@
 				</div>
 
 				<div class="panel-body">
-				  <table class="table table-hover" id='lowinventory-table'>
+				  <table class="table table-striped table-hover" id="inventory-table">
 					<thead>
 					  <tr>
 						<!-- if societe only show Societe products-->
@@ -132,5 +132,57 @@
 	<script src="js/functionality.js"></script>
 	<!-- <script src="js/subletFunctionality.js"></script> -->
 	<script src="js/societe.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.getJSON("/inventory/all", function(items){
+				var html = "";
+				items.forEach(function(item){
+					// id: 1,
+					// commonName: "Cool Tea",
+					// latinName: "",
+					// description: "Good for napping with!",
+					// wholesaleCost: "0",
+					// discount: "0",
+					// societeRetailPrice: "0",
+					// recommendedRetailPrice: "0",
+					// unitOfMeasure: "",
+					// qtyPurchased: "0",
+					// qtyOnHand: "0",
+					// reorderPoint: 0,
+					// lot: "",
+					// locationId: null,
+					// channelId: null,
+					// purchaseDate: null,
+					// packedDate: null,
+					// supplierId: 0,
+					// sourcing: "",
+					// sku: null,
+					// shopify: false,
+					// productLabel: "",
+					// productImage: "",
+					// createdAt: "2018-04-09T18:37:18.000Z",
+					// updatedAt: "2018-04-09T18:37:18.000Z"
+
+					//<th>Qty</th>
+					//<th>UoM</th>						
+					//<th>Desc.</th>
+					//<th>Organic</th>
+					//<th>Supplier</th>
+					//<th>Wholesale $</th>
+					//<th>Actual $</th>
+					//<th>RP $</th>
+					//<th>Profit</th>
+					//<th>Date Received</th>
+					//<th>Location</th>
+					html += "<tr><td>" + item.commonName +"</td><td>" + 
+						item.sku + "</td><td>" + item.qtyOnHand + "</td><td>" +
+						item.description + "</td><td>" + item.sourcing + "</td><td></td><td>" +
+						item.wholesaleCost + "</td><td></td><td>" + item.societeRetailPrice +
+						"</td><td></td><td>" + item.purchaseDate + "</td><td></td></tr>";
+				});
+				$('#inventory-table tbody').html(html);
+			});
+		});
+	</script>
 </body>
 </html>

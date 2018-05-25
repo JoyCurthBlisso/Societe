@@ -1,28 +1,26 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>New Product</title>
+	<meta charset="utf-8">
+	<title>New Product</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
 
-   <!--Import Google Icon Font-->
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <!--Import materialize.css-->
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
-   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-   <link type="text/css" rel="stylesheet" href="css/style.css"/>
+	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
 </head>
 
-<script type="text/javascript" src="js/materialize.min.js"></script>
 
 <body>
 	<div class="container">
@@ -166,12 +164,12 @@
 
 						<div class="col-2">
 								<label for="purchase date">Purchase Date</label>
-								<input type="text" class="manualSubmit form-control" id="purchaseDate" name="purchaseDate" placeholder="dd/mm/yyyy">
+								<input type="text" class="manualSubmit datepicker form-control" id="purchaseDate" name="purchaseDate" placeholder="dd/mm/yyyy">
 						</div>
 							
 						<div class="col-2">
 								<label for="purchase date">Purchase Date</label>
-								<input type="text" class="manualSubmit form-control" id="packedDate" name="packedDate" placeholder="dd/mm/yyyy">
+								<input type="text" class="manualSubmit datepicker form-control" id="packedDate" name="packedDate" placeholder="dd/mm/yyyy">
 						</div>
 
 
@@ -215,7 +213,18 @@
 
 					<div class="row">
 						<div class="col-10">
-							
+							<!-- Dropdown Trigger -->
+							<a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+
+							<!-- Dropdown Structure -->
+							<ul id='dropdown1' class='dropdown-content'>
+								<li><a href="#!">one</a></li>
+								<li><a href="#!">two</a></li>
+								<li class="divider" tabindex="-1"></li>
+								<li><a href="#!">three</a></li>
+								<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+								<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+							</ul>
 								
 						</div>
 
@@ -241,9 +250,17 @@
   		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 	<script src="js/functionality.js"></script>
 	<script src="js/societe.js"></script>
-
+	<script>
+		$(document).ready(function(){
+			$('.dropdown-trigger').dropdown();
+			$('.datepicker').datepicker();
+		});
+	</script>
 
 	<footer class="page-footer light-green">
 
