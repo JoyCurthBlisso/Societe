@@ -11,7 +11,7 @@ const apiKey = process.env.SHOPIFY_API_KEY;
 const apiSecret = process.env.SHOPIFY_API_SECRET;
 const authKey = process.env.SHOPIFY_KEY;
 const scopes = 'read_products,write_products';
-const forwardingAddress = process.env.DYNO ? "https://societe-portsmouth.herokuapp.com" : "https://localhost"
+const forwardingAddress = process.env.DYNO ? "https://societe-portsmouth.herokuapp.com" : "https://societe.localtunnel.me"
 
 const router = express.Router();
 	function response(url,req,res){

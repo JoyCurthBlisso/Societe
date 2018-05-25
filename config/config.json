@@ -14,7 +14,13 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable":"JAWSDB_URL",
-    "dialect": "mysql"
+    "username":"iykv71stgi6wnslw",
+    "password": "ymumhn1wgkud1fyt",
+    "database":"y3nxowkvi2b4zw35",
+    "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "SHOPIFY_API_KEY": "ad129f22eef3a7882d536161d936d008",
+    "SHOPIFY_API_SECRET": "3d0d5a39d35a7a92b91e9e154effe55f",
+    "SHOPIFY_KEY": "92500c2bc81dd7470d0db19bba03faec"
   }
 }

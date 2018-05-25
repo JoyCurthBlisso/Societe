@@ -63,8 +63,8 @@ const shopRequestHeaders = {
 	});
 
 	router.get('/units', (req, res) => {
-		var db = res.app.get('db');
-		db["unitMeasures"].findAll().then(units=>{
+		var db = res.app.get("db");
+		db["unitMeasure"].findAll().then(units=>{
 			res.send(units);
 		})
 	});
