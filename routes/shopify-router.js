@@ -11,7 +11,7 @@ const apiKey = process.env.SHOPIFY_API_KEY;
 const apiSecret = process.env.SHOPIFY_API_SECRET;
 const authKey = process.env.SHOPIFY_KEY;
 const scopes = 'read_products,write_products';
-const forwardingAddress = process.env.DYNO ? "https://societe-portsmouth.herokuapp.com" : "https://societe.localtunnel.me"
+const forwardingAddress = process.env.DYNO ? "https://societe-portsmouth.herokuapp.com" : "https://hello.localtunnel.me"
 
 const router = express.Router();
 	function response(url,req,res){
@@ -33,9 +33,11 @@ const router = express.Router();
 
 	router.get('/', (req, res) => {
 	  const shop = req.query.shop;
-	  if (shop) {
+		
+		if (shop) {
+			var url = "https://" + req.host;
 	    const state = nonce();
-	    const redirectUri = forwardingAddress + '/shopify/callback';
+	    const redirectUri = url + '/shopify/callback';
 	    const installUrl = 'https://' + shop +
 	      '/admin/oauth/authorize?client_id=' + apiKey +
 	      '&scope=' + scopes +
