@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.use("/shopify", require("./routes/shopify-router.js"))
 app.use("/db", require("./routes/db-router.js"))
 app.use("/inventory", require("./routes/inventory-route.js"));
+app.use("/suppliers", require("./routes/supplier-route.js"));
 app.use("/",require("./routes/router.js"));
 app.use("/", express.static(__dirname+"/public"))
 db.sequelize.sync().then(function()

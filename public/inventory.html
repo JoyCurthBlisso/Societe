@@ -81,16 +81,17 @@
 						<th>Product</th> 
 						<th>SKU</th>
 						<th>Qty</th>
-						<th>UoM</th>						
+						<!-- <th>UoM</th>						 -->
 						<th>Desc.</th>
-						<th>Organic</th>
-						<th>Supplier</th>
+						<!-- <th>Organic</th> -->
+						<!-- <th>Supplier</th> -->
 						<th>Wholesale $</th>
+						<th>Discount %</th>
 						<th>Actual $</th>
-						<th>RP $</th>
-						<th>Profit</th>
+						<!-- <th>RP $</th> -->
+						<!-- <th>Profit</th> -->
 						<th>Date Received</th>
-						<th>Location</th>
+						<!-- <th>Location</th> -->
 					  </tr>
 					</thead>
 					<tbody>
@@ -115,12 +116,10 @@
 	</div>
 	
 	<div class="container center">
-			<footer class="page-footer light-green">
+			<footer id="page-footer" style="color: white">
 					
 					© 2018 Copyright Societe
 					
-					</div>
-					</div>
 			</footer> 
 	</div>
 	
@@ -174,12 +173,20 @@
 					//<th>Profit</th>
 					//<th>Date Received</th>
 					//<th>Location</th>
-					html += "<tr><td>" + item.commonName +"</td><td>" + 
+					// html += "<tr><td>" + item.commonName +"</td><td>" + 
+					// 	item.sku + "</td><td>" + item.qtyOnHand + "</td><td>" +
+					// 	item.description + "</td><td>" + item.sourcing + "</td><td></td><td>" +
+					// 	item.wholesaleCost + "</td><td></td><td>" + item.societeRetailPrice +
+					// 	"</td><td></td><td>" + item.purchaseDate + "</td><td></td></tr>";
+
+					html += "<tr><td>" + item.commonName + "</td><td>" + 
 						item.sku + "</td><td>" + item.qtyOnHand + "</td><td>" +
-						item.description + "</td><td>" + item.sourcing + "</td><td></td><td>" +
-						item.wholesaleCost + "</td><td></td><td>" + item.societeRetailPrice +
-						"</td><td></td><td>" + item.purchaseDate + "</td><td></td></tr>";
+						item.description + "</td><td>" +
+						item.wholesaleCost  + "</td><td>" +
+						item.discount  + "</td><td>" + item.societeRetailPrice +
+						"</td><td>" + item.purchaseDate;
 				});
+				
 				$('#inventory-table tbody').html(html);
 			});
 		});
