@@ -62,6 +62,18 @@ const shopRequestHeaders = {
 		})
 	});
 
+	//get all suppliers
+	router.get('/suppliers', (req, res)=>{
+		console.log('Getting all suppliers!');
+		var db = res.app.get('db');
+		db["supplier"].findAll().then(items=>{
+			
+			res.send(items);
+		}).catch(error=>{
+			console.log(error);
+		})
+	});
+
 	router.get('/units', (req, res) => {
 		var db = res.app.get("db");
 		db["unitMeasure"].findAll().then(units=>{

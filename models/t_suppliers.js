@@ -15,6 +15,7 @@ module.exports = function(sequelize, DataTypes)
 		fax: DataTypes.STRING,
 		email1: DataTypes.STRING,
 		email2: DataTypes.STRING,
+		leadTime: DataTypes.STRING,
 		url: DataTypes.TEXT,
 		notes: DataTypes.TEXT('long'),
 	});
