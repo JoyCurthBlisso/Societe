@@ -12,6 +12,15 @@ module.exports = function(sequelize, DataTypes)
 		unitOfMeasure: DataTypes.STRING,
 		qtyPurchased: DataTypes.DECIMAL,
 		qtyOnHand: DataTypes.DECIMAL,
+		item_storage_location: {
+			type: DataTypes.STRING
+		},
+		item_qty_onShelf: {
+			type: DataTypes.INTEGER
+		},
+		item_qty_inStorage: {
+			type: DataTypes.INTEGER
+		},
 		reorderPoint: DataTypes.INTEGER,
 		lot: DataTypes.STRING,
 		locationId: DataTypes.INTEGER,

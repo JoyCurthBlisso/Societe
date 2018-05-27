@@ -8,301 +8,187 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 
-	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<body>
+	<div class="container">
+		<center>
+			<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
+		</center>
+	</div>
+	<ul id="inventorydrop" class="dropdown-content">
+	  <li><a href="addRawMaterial.html">Add New Inventory</a></li>
+	  <li><a href="societeProducts.html”">Add New Societe Product</a></li>
+	  <li><a href=“moveInventory.html”>Move Inventory</a></li>
+      <li><a href=“lowInventory.html”>Low Inventory</a></li>
+	  <li class="divider"></li>
+	</ul>
+	<nav class="container nav-wrapper" style="background-color: black; ">
+	    <ul class="center hide-on-med-and-down">
+	      <li><a href="orderNew.html">Order Product</a></li>
+	      <li><a href="societeRecipe.html">Recipe</a></li>
+		  <li><a href="suppliers.html">Suppliers</a></li>
+		  <li><a href="profit.html">Profit</a></li>
+	      <!-- Dropdown Trigger -->
+	      <li><a class="dropdown-trigger" href="#!" data-target="inventorydrop">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>
+	    </ul>
+	</nav>
+	<div class="container panel panel-primary panel-heading">
+	    <h3 class="panel-title"><strong>New Product</strong></h3>
+	</div>
+	<div class="container">
+		<div id="manualEnter" class="hidden">
+			<form>
+				<div class="row">			
+					<div class="col s4">
+						<label for="common">Common Name</label>
+						<input type="text" class="manualSubmit form-control" id="commonName" name="commonName" placeholder="Enter Common Name">
+						</div>
+		
+					<div class="col s4">
+						<label for="latin">Latin Name</label>
+						<input type="text" class="manualSubmit form-control" id="latinName" name="latinName" placeholder="Enter Latin Name">
+					</div>
 
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>	
+					<div class="col s4">
+						<label for="description">Description</label>
+						<input type="text" class="manualSubmit form-control" id="description" name="description" placeholder="Enter Description">
+					</div>
+				</div>
 
+				<div class="row">
+					<div class="col s2">
+						<label for="wholesaleCost">Wholesale Cost</label>
+						<input type="text" class="manualSubmit form-control" id="wholesaleCost" name="wholesaleCost" placeholder="$0.00">
+					</div>
+					
+					<div class="col s2">
+						<label for="discount">Discount %</label>
+						<input type="number" class="manualSubmit form-control" id="discount" name="discount" maxlength="10" placeholder="%">
+					</div>
+					
+					<div class="col s2">
+						<label for="calculatedDisc">Discount $</label>
+						<input type="text" id="calculatedDisc" name="calculatedDisc" class="form-control" placeholder="$0.00">
+					</div>
+					
+					<div class="col s2">
+						<label for="recommendedRetailPrice">Sugg. Retail $</label>
+						<input type="text" class="manualSubmit form-control" id="recommendedRetailPrice" name="recommendedRetailPrice" placeholder="$0.00">
+					</div>
+					
+					<div class="col s2">
+						<label for="societeRetailPrice">Societe Retail Price</label>
+						<input type="text" class="manualSubmit form-control" id="societeRetailPrice" name="societeRetailPrice" placeholder="$0.00">
+					</div>
 
-	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+					<div class="col s2">
+						<p><br></p>
+						<label>
+        					<input type="checkbox" class="filled-in">
+        					<span>Add to Shopify</span>
+      					</label>
+						<!-- <label id="shopify" for="shopify">
+						<input type="checkbox" class="manualSubmit filled-in" checked="checked" id="shopify" name="shopify" value="post">Add to Shopify</label> -->	
+					</div>
+				</div>
+					
+				<div class="row">
+					
+					<div class="col s2">
+						<label for="qtyPurchased">Quantity Purchased</label>
+						<input type="text" class="manualSubmit form-control" id="qtyPurchased" name="qtyPurchased" placeholder="Quantity">
+					</div>
 
-	<!-- Compiled and minified CSS --> -->
+					<div class="col s2">
+					    <label>Unit of Measure</label>
+					    <select class="input-field">
+					      <option value="" disabled selected>Select UOM</option>
+					      <option value="1">Ounces</option>
+					      <option value="2">Pounds</option>
+					      <option value="3">Other</option>
+					    </select>
+						  </div>
 
-	<link type="text/css" rel="stylesheet" href="css/style.css"/>
+					<div class="col s2">
+							<label for="lot">Lot #</label>
+							<input type="text" class="manualSubmit form-control" id="lot" name="lot" placeholder="Enter Lot #">
+					</div>
+			
+					<div class="col s2">
+							<label for="lot">Re Order Point</label>
+							<input type="text" class="manualSubmit form-control" id="reorderPoint" name="reorderPoint" placeholder="Reorder Point">
+					</div>
 
+					<div class="col s2">
+							<label for="purchase date">Purchase Date</label>
+							<input type="text" class="manualSubmit datepicker form-control" id="purchaseDate" name="purchaseDate" placeholder="Mmm dd, yyyy">
+					</div>
+					
+					<div class="col s2">
+							<label for="purchase date">Packed Date</label>
+							<input type="text" class="manualSubmit datepicker form-control" id="packedDate" name="packedDate" placeholder="Mmm dd, yyyy">
+					</div>
+
+				</div>
+
+				<div class="row">
+					
+					<div class="col s2">
+						<label for="supplierId">Supplier</label>
+						<input type="text" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier">
+					</div>
+
+					<div class="col s2">
+						<label for="sourcing">Organic</label>
+						<input type="text" class="manualSubmit form-control" id="sourcing" name="sourcing" placeholder="Organic">
+					</div>
+
+					<div class="col s4">
+							<label for="sourcing">Image</label>
+							<input type="text" class="manualSubmit form-control" id="productImage" name="productImage" placeholder="Enter url">
+					</div>
+						
+					<div class="col s4">
+						<label for="sourcing">Label</label>
+						<input type="text" class="manualSubmit form-control" id="productLabel" name="productLabel" placeholder="Enter url">
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col s10"></div>
+					<div class="col s2">
+						<button type="button" class="btn light-green float-right" id="retailSubmit">Save</button>
+						<button style="background-color: gray; margin-right: 12px" type="button" class="btn float-right" id="clear">Cancel</button>
+					</div>
+
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="container">
+		<footer id="page-footer" style="color: white; text-align: center">
+					© 2018 Copyright Societe
+		</footer>
+	</div> 
+</body>
+	<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 	
 	<!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-
-	</head>
-
-
-
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<center>
-						<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
-				</center>
-			</div>
-		</div>
-
-		<!-- <div> -->
-		<nav class="navbar navbar-dark bg-dark">
-			
-				<!-- Navbar content -->
-	
-				<!-- <nav class="navbar navbar-inverse"> -->
-				<div class="container-fluid">
-				  	<div class="navbar-header" class="nav-button">
-						<ul id="inventory*" class="dropdown-content">
-								<li><a href="inventory.html">All</a></li>
-								<li><a href="rawInventory.html">Raw</a></li>
-								<li><a href="societeInventory.html">Societe</a></li>
-								<!-- <li><a href="moveInventory.html">Move</a></li> -->
-								<li><a href="lowInventory.html">Low</a></li>
-								<li class="divider"></li>
-					
-						</ul>
-					
-						<!-- <a class="navbar-brand" href="#">New Product</a> -->
-					</div>
-
-					<!-- <div> -->
-						<!-- <ul class="nav navbar-nav"> -->
-						<!-- <li class="active"><a href="#">Home</a></li> -->
-						<!-- <li><a href="addRawMaterial.html">New Product</a></li> -->
-						<li><a href="orderNew.html">Order</a></li>
-						<li><a class="dropdown-trigger" href="#!" data-target="inventory*">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>	
-						<li><a href="societeRecipe.html">Recipe</a></li>
-						<li><a href="suppliers.html">Suppliers</a></li>
-						<li><a href="profit.html">Profit</a></li>
-
-					<!-- </ul> -->
-						<!-- <ul class="nav navbar-nav navbar-right">
-							<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-							<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-						</ul> -->
-				</div>
-				
-			</nav>
-				
-		<br>
-
-		<div class="panel panel-primary">
-				<div class="panel-heading">
-				  <h3 class="panel-title"><strong>New Product</strong></h3>
-				</div>
-			
-
-		<div class="row">
-			<div id="manualEnter" class="hidden">
-				<form>
-					<div class="row">
-					
-						<div class="col-4">
-							<label for="common">Common Name</label>
-							<input type="text" class="manualSubmit form-control" id="commonName" name="commonName" placeholder="Enter Common Name">
-						</div>
-					
-						<div class="col-4">
-							<label for="latin">Latin Name</label>
-							<input type="text" class="manualSubmit form-control" id="latinName" name="latinName" placeholder="Enter Latin Name">
-						</div>
-
-						<div class="col-4">
-								<label for="description">Description</label>
-								<input type="textarea" class="manualSubmit form-control" id="description" name="description" placeholder="Enter Description">
-						</div>
-
-					</div>
-			
-					<div class="row">
-						
-						<div class="col-2">
-							<label for="wholesaleCost">Wholesale Cost</label>
-							<input type="text" class="manualSubmit form-control" id="wholesaleCost" name="wholesaleCost" placeholder="$0.00">
-						</div>
-					
-						<div class="col-2">
-							<label for="discount">Discount %</label>
-							<input type="number" class="manualSubmit form-control" id="discount" name="discount" maxlength="10" placeholder="%">
-						</div>
-					
-						<div class="col-2">
-							<label for="calculatedDisc">Discount $</label>
-							<input type="text" id="calculatedDisc" class="form-control" placeholder="$0.00">
-						</div>
-						
-						<div class="col-2">
-							<label for="recommendedRetailPrice">Sugg. Retail $</label>
-							<input type="text" class="manualSubmit form-control" id="recommendedRetailPrice" name="recommendedRetailPrice" placeholder="$0.00">
-						</div>
-					
-						<div class="col-2">
-							<label for="societeRetailPrice">Societe Retail Price</label>
-							<input type="text" class="manualSubmit form-control" id="societeRetailPrice" name="societeRetailPrice" placeholder="$0.00">
-						</div>
-
-						
-							<div class="col-2">
-								<!-- <form action="#"> -->
-										<!-- <label>
-												<input type="checkbox" />
-												<span>Red</span>
-										</label> -->
-										<label id="shopifyLbl" for="shopify">Add to Shopify</label>
-										<input type="checkbox" class="manualSubmit form-control" id="shopify" name="shopify" value="post">	
-									
-									<!-- <input type="checkbox" class="form-control" id="shopify" value="post"> -->
-									<!-- <input type="checkbox" id="shopify" checked value="post"></input> -->
-
-									<!-- <label id="name" for="nameInput">Name</label>
-									<input type="text" class="form-control" id="nameInput"> -->
-
-								<!-- </form> -->
-							</div>
-						</div>
-					</div>
-					
-					<div class="row">
-					
-						<div class="col-2">
-							<label for="qtyPurchased">Quantity Purchased</label>
-							<input type="text" class="manualSubmit form-control" id="qtyPurchased" name="qtyPurchased" placeholder="Quantity">
-						</div>
-
-						<div class="col-2">
-							<label for="unitOfMeasure">Unit of Measure</label>
-							<select class="manualSubmit form-control" id="unitOfMeasure" name="unitOfMeasure"  placeholder="Select Unit of Measure">
-							</select>
-						</div>
-
-						<div class="col-2">
-								<label for="lot">Lot #</label>
-								<input type="text" class="manualSubmit form-control" id="lot" name="lot" placeholder="Enter Lot #">
-						</div>
-						
-						<div class="col-2">
-								<label for="lot">Re Order Point</label>
-								<input type="text" class="manualSubmit form-control" id="reorderPoint" name="reorderPoint" placeholder="Reorder Point">
-						</div>
-
-						<div class="col-2">
-								<label for="purchase date">Purchase Date</label>
-								<input type="text" class="manualSubmit datepicker form-control" id="purchaseDate" name="purchaseDate" placeholder="dd/mm/yyyy">
-						</div>
-							
-						<div class="col-2">
-								<label for="purchase date">Purchase Date</label>
-								<input type="text" class="manualSubmit datepicker form-control" id="packedDate" name="packedDate" placeholder="dd/mm/yyyy">
-						</div>
-
-
-					</div>
-				
-				
-					<div class="row">
-					
-						<div class="col-2">
-							<label for="supplierId">Supplier</label>
-							<input type="manualSubmit form-control" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier">
-						</div>
-
-						<div class="col-2">
-							<label for="sourcing">Organic</label>
-							<input type="text" class="manualSubmit form-control" id="sourcing" name="sourcing" placeholder="Organic">
-						</div>
-
-						<div class="col-2">
-								<label for="sourcing">Image</label>
-								<input type="text" class="manualSubmit form-control" id="productImage" name="productImage" placeholder="Enter url">
-						</div>
-						
-						<div class="col-2">
-								<label for="sourcing">Label</label>
-								<input type="text" class="manualSubmit form-control" id="productLabel" name="productLabel" placeholder="Enter url">
-						</div>
-
-						<div class="col-2">
-								
-							
-						</div>
-
-						<div class="col-2">
-								
-							<button type="button" class="btn btn-primary light-green" id="retailSubmit">Save</button>
-						
-						</div>
-					</div>
-
-<!-- 
-					<div class="row">
-						<div class="col-10">
-							<!-- Dropdown Trigger -->
-							<!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-
-							<!-- Dropdown Structure -->
-							<!-- <ul id='dropdown1' class='dropdown-content'>
-								<li><a href="#!">one</a></li>
-								<li><a href="#!">two</a></li>
-								<li class="divider" tabindex="-1"></li>
-								<li><a href="#!">three</a></li>
-								<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-								<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-							</ul>
-								
-						</div> -->
-
-						
-					<!-- </div> -->
-
-						<div class="row">
-							<div class="col-12">
-	<!--							<button type="button" id="manualSubmit">Submit</button>-->
-	<!--d10cf0d2b535a1258d6868e192a04a42ef60fbd6-->
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-		</div>
-	</div>
-
-
-	<script>
-		$(document).ready(function(){
-			$('.dropdown-trigger').dropdown();
-			$('.datepicker').datepicker();
-			
-		});
-		
-
-	</script>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="js/functionality.js"></script>
+	
 	<script src="js/societe.js"></script>
 
-
-	
-	<div class="container center">
-		<footer class="page-footer light-green">
-
-				
-				© 2018 Copyright Societe
-				
-				</div>
-				</div>
-		</footer> 
-	</div>
-
-</body>
 </html>

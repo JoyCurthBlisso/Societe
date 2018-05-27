@@ -1,4 +1,5 @@
 INSERT INTO t_Material (commonName, cost, lot, purchaseDate) VALUES
+('common name', 'latin name', 'description', 15.00, 'Ounce', 14, 'lot1234', '2018-05-05', '2018-05-01',1,'Organic'),
 ('Acacia Powder', '12.5', '23426', '2017-11-16'),
 ('Activated Charcoal', '30.4', '73395', '2017-11-16'),
 ('Activated Charcoal', '30.4', '73647', '2017-11-16'),
@@ -31,5 +32,5 @@ INSERT INTO t_UoM (measure) VALUES
 
 INSERT INTO t_Suppliers (name, contact, address1, address2, city, state, postCode, country, phone1, phone2, email1, email2, url) VALUES
 ('Bluechai', 'Stefan Dorn', '', '', 'Horgenzell', '', '88263', 'Germany', '', '', 'hi@bluechai.com', '', 'http://bluechai.com'),
-('Mountain Rose Herbs', '', 'PO Box 50220', '', 'Eugene', 'OR', '97405', 'USA', '800-879-3337', '541-741-7307', 'support@mountainroseherbs.com', '', 'http://mountainroseherbs.com');
+('Mountain Rose Herbs', '', 'PO Box 50220', '', 'Eugene', 'OR', '97405', 'USA', '8008793337', '5417417307', 'support@mountainroseherbs.com', '', 'http://mountainroseherbs.com');
 
