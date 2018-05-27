@@ -6,15 +6,38 @@ module.exports = function(sequelize, DataTypes)
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		latinName: DataTypes.STRING,
-		description: DataTypes.TEXT,
-		wholesaleCost: DataTypes.DECIMAL,
-		discount: DataTypes.DECIMAL,
-		societeRetailPrice: DataTypes.DECIMAL,
-		recommendedRetailPrice: DataTypes.DECIMAL,
-		unitOfMeasure: DataTypes.STRING,
-		qtyPurchased: DataTypes.DECIMAL,
-		qtyOnHand: DataTypes.DECIMAL,
+		latinName: {
+			type: DataTypes.STRING
+		
+		},
+		description: {
+			type: DataTypes.TEXT,
+			validate: {
+				notEmpty: true,
+				msg: 'Description is required'
+			}
+		},
+		wholesaleCost: {
+			type: DataTypes.DECIMAL
+		},
+		discount: {
+			type: DataTypes.DECIMAL
+		},
+		societeRetailPrice: {
+			type: DataTypes.DECIMAL
+		},
+		recommendedRetailPrice: {
+			type: DataTypes.DECIMAL
+		},
+		unitOfMeasure: {
+			type: DataTypes.STRING
+		},
+		qtyPurchased: {
+			type: DataTypes.DECIMAL
+		},
+		qtyOnHand: {
+			type: DataTypes.DECIMAL
+		},
 		item_storage_location: {
 			type: DataTypes.STRING
 		},
