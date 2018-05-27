@@ -1,82 +1,96 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Societe</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>-->
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta charset="utf-8">
+	<title>New Product</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="./public/css/materialize.min.css"  media="screen,projection"/>
+
+    <link type="text/css" rel="stylesheet" href="./public/css/style.css"/>
 </head>
 
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-12 text-center">
-				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-4 offset-4">				
-				<select id="actionSelector" name="actionSquad" class="selectionField form-control">
-					<option value="none">( ͡° ͜ʖ ͡°)</option>
-					<option value="manualEntry">Add New Product or Supply</option>
-					<option value="addRecipe">Add New Societe Product</option>
-					<option value="searchBy">Search By</option>
-					<option value="editDBItem">Edit an Existing Product or Supply</option>
-					<option value="editDBRecipe">Edit an Existing Recipe</option>
-					<option value="addOther">Add Other Product</option>
-					<option value="profitReport">Profit Report</option>
-					<option value="currentInventory">Current Inventory</option>
-					<option value="lowInventory">Low Inventory Report</option>
-				</select>
-			</div>
-		</div>
-		<br>
-		<br>
-		<div id="databaseDiv">
-			<div class="row">
-				<div class="col-12">
-					<form>
-						<input type="text" name="searchQuery" id="query" class="hidden" placeholder="Enter anything">
-						<button type="button" id="submitQuery" class="hidden">Submit</button>
-					</form>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<table id="dbTable" class="DatabaseTable hidden">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-								<th>Retail Price</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody></tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-
-			</div><!-- End of Manual Submit Div -->
-		<div>
+		<center>
+			<img src="./public/assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
+		</center>
 	</div>
-	<div class="footer">
-		<p class="footerText">Copyright&#169; 2018 Societe. All Rights Reserved</p>
+	<ul id="inventorydrop" class="dropdown-content">
+	  <li><a href="public/addRawMaterial.html">Add New Inventory</a></li>
+	  <li><a href="public/societeProducts.html”">Add New Societe Product</a></li>
+	  <li><a href=“public/moveInventory.html”>Move Inventory</a></li>
+      <li><a href=“public/lowInventory.html”>Low Inventory</a></li>
+	  <li class="divider"></li>
+	</ul>
+	<nav class="container nav-wrapper" style="background-color: black; ">
+	    <ul class="center hide-on-med-and-down">
+	      <li><a href="public/orderNew.html">Order Product</a></li>
+	      <li><a href="public/societeRecipe.html">Recipe</a></li>
+		  <li><a href="public/suppliers.html">Suppliers</a></li>
+		  <li><a href="public/profit.html">Profit</a></li>
+	      <!-- Dropdown Trigger -->
+	      <li><a class="dropdown-trigger" href="#!" data-target="inventorydrop">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>
+	    </ul>
+	</nav>
+	<div class="container panel panel-primary panel-heading">
+	    <h3 class="panel-title center"><strong>Welcome to Societe</strong></h3>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="js/functionality.js"></script>
-	<script src="js/subletFunctionality.js"></script>
-	<script src="js/societe.js"></script>
+	<div class="container slider">
+	    <ul class="slides">
+	      <li>
+	        <img src="./public/assets/images/herbspice.png"> <!-- random image -->
+	        <div class="caption center-align">
+	          <h3>This is Picture 1</h3>
+	          <h5 class="light grey-text text-lighten-3">Relaxing and soothing.</h5>
+	        </div>
+	      </li>
+	      <li>
+	        <img src="./public/assets/images/vintage_apothecary.jpg"> <!-- random image -->
+	        <div class="caption left-align">
+	          <h3>Left Aligned Caption</h3>
+	          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+	        </div>
+	      </li>
+	      <li>
+	        <img src="./public/assets/images/open_apothecary.jpg"> <!-- random image -->
+	        <div class="caption right-align">
+	          <h3>Right Aligned Caption</h3>
+	          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+	        </div>
+	      </li>
+	      <li>
+	        <img src="./public/assets/images/jar_apothecary.jpg"> <!-- random image -->
+	        <div class="caption center-align">
+	          <h3>This is our big Tagline!</h3>
+	          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+	        </div>
+	      </li>
+	    </ul>
+	</div>
+	<div class="container">
+		<footer id="page-footer" style="color: white; text-align: center">
+					© 2018 Copyright Societe
+		</footer>
+	</div> 
 </body>
+	<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+	<script src="./public/js/functionality.js"></script>
+	
+	<script src="./public/js/societe.js"></script>
+
 </html>
