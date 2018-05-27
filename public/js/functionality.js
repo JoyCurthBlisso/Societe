@@ -2,6 +2,7 @@ $(document).ready(function(){
 	$(".dropdown-trigger").dropdown();
 	$('.datepicker').datepicker();
 	$('select').formSelect();
+	$('.slider').slider();
 
 // JavaScript Document
 
@@ -114,6 +115,7 @@ $("#itemlist").on("change", function() {
 		document.getElementById("ifAddItemIsSelected").classList.remove("hidden");
 	}
 });
+
 
 // $("#manualSubmit").on("click", function() {
 // 	var commonName = document.getElementById("commonName").value;
