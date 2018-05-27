@@ -38,124 +38,111 @@
 	      <li><a class="dropdown-trigger" href="#!" data-target="inventorydrop">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>
 	    </ul>
 	</nav>
-	<div class="panel-heading">
+	<div class="panel-heading container">
 		<h3 class="panel-title"><strong>Place New Order</strong></h3>
 	</div>
-	<div class="container"
-	<div class="row">
-		<div class="col s2">
-			<label for="supplierId">Supplier</label>
-			<input type="text" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier">
-		</div>
-
-		<div class="col-2">				
-							<label for="orderPlacedDate">Order Date</label>
-							<input type="text" class="datepicker" class="manualSubmit form-control" id="orderPlacedDate" name="orderPlacedDate" placeholder="dd/mm/yyyy">
-							<!-- DEFAULT ORDER DATE TO TODAY'S DATE -->		
-			</div>
-			<div class="col-2">	
-					<label for="PO#">PO#</label>			
-					<input type="text" id="PO#" class="form-control" placeholder="#">
-			</div>
-
-
-			<div class="col-2">
-					<label for="shipped">Shipped</label>
-					<input type="text" class="datepicker" id="Shipped" class="form-control" placeholder="dd/mm/yyyy">
-			</div>
-			<div class="col-2">
-					<label for="received">Received</label>
-					<input type="text"  class="datepicker" class="manualSubmit form-control" id="Received" name="receivedDate" placeholder="dd/mm/yyyy">
-			</div>
-			<div class="col-2">
-					
-			</div>
-			
-		</div>
-
+	<div class="container">
 		<div class="row">
-				<div class="col-2">
-					<label for="subtotal">SubTotal</label>
-					<input type="text" class="manualSubmit form-control" id="subTotal" name="subTotal" placeholder="$0.00">
+			<div class="col s6">
+				<label for="supplierId">Supplier</label>
+				<input type="text" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier">
+			</div>
+
+			<div class="col s2">				
+				<label for="orderPlacedDate">Order Date</label>
+				<input type="text" class="datepicker" class="manualSubmit form-control" id="orderPlacedDate" name="orderPlacedDate" placeholder="Mmm dd, yyyy">
+				
+			</div>
+			<div class="col s4">	
+				<label for="PO#">PO#</label>			
+				<input type="text" id="PO#" class="form-control" placeholder="#">
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="container">
+		<div class="row">
+			<div class="col s1">
+				<label for="item_sku">Item SKU</label>
+				<input type="text" class="manualSubmit form-control" id="item_sku" name="item_sku">
+			</div>
+			<div class="col s2">
+				<label for="item_description">Description</label>
+				<input type="text" class="manualSubmit form-control" id="item_description">
+			</div>
+			<div class="col s2">
+				<label>Organic</label>
+			    <select class="input-field" id="organic">
+			    	<option value="" disabled selected>Organic</option>
+			      	<option value="1">Organic</option>
+					<option value="2">Wild-harvest</option>
+					<option value="3">Unknown</option>
+			    </select>
+			</div>
+			<div class="col s2">
+				<label>UOM</label>
+			    <select class="input-field" id="uom">
+			      	<option value="" disabled selected>UOM</option>
+					<option value="1">Ounces</option>
+					<option value="2">Pounds</option>
+					<option value="3">Other</option>
+			    </select>
+			</div>
+			<div class="col s1">
+				<label for="cost">Cost</label>
+				<input type="text" class="manualSubmit form-control" id="cost" name="cost" placeholder="$0.00">
+			</div>
+			<div class="col s1">
+				<label for="qty">Quantity</label>
+				<input type="number" class="manualSubmit form-control" id="qty" name="qty">
+			</div>
+			<div class="col s2">
+				<label for="discount">Discount %</label>
+				<input type="number" class="manualSubmit form-control" id="discount" name="discount" maxlength="10" placeholder="%">
+			</div>
+			<div class="col s2">
+				<label for="calculatedPrice">Price</label>
+				<input type="text" id="calculatedPrice" name="calculatedPrice" class="form-control" placeholder="$0.00">
+			</div>
+			<div class="col s1">				
+				<button type="button" class="waves-effect waves-circle waves-light btn-floating secondary-conten light-green" class="btn btn-dark light-green" id="retailSubmit">+</button>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="container">
+		<div class="row">
+			<div class="col s3">
+				<label for="subtotal">SubTotal</label>
+				<input type="text" class="manualSubmit form-control" id="subTotal" name="subTotal" placeholder="$0.00">
+			</div>
+			<div class="col s3">
+				<label for="discount">Discount</label>
+				<input type="text" class="manualSubmit form-control" id="discount" name="discount" placeholder="%">
+			</div>
+			<div class="col s3">
+				<label for="shCost">S&H</label>
+				<input type="text" class="manualSubmit form-control" id="shCost" name="shCost" placeholder="$0.00">
 				</div>
-				<div class="col-2">
-						<label for="discount">Discount</label>
-						<input type="text" class="manualSubmit form-control" id="discount" name="discount" placeholder="%">
-				</div>
-				<div class="col-2">
-						<label for="shCost">S&H</label>
-						<input type="text" class="manualSubmit form-control" id="shCost" name="shCost" placeholder="$0.00">
-					</div>
-				<div class="col-2">
-						<label for="totalOrderCost">Total Order</label>
-						<input type="text" class="manualSubmit form-control" id="totalOrderCost" name="totalOrderCost" placeholder="$0.00">
-				</div>	
+			<div class="col s3">
+				<label for="totalOrderCost">Total Order</label>
+				<input type="text" class="manualSubmit form-control" id="totalOrderCost" name="totalOrderCost" placeholder="$0.00">
+			</div>	
 		</div>	
-
-		<hr>
-
-	
 		<div class="row">
-			<div class="col-2">		
-				<label for="product">Product</label>		
-				<select id="actionSelector" name="product" class="selectionField form-control">
-					<option value="none"><address>Product</address></option>
-					<!-- Link to products table -->
-				</select>
+			<div class="col s10"></div>
+			<div class="col s2">
+				<button type="button" class="btn light-green float-right" id="submitOrder">Save Order</button>
+				<button style="background-color: gray; margin-right: 12px" type="button" class="btn float-right" id="clear">Cancel</button>
 			</div>
-	
-
-			<div class="col-2">	
-					<label for="category">Category</label>			
-					<select id="actionSelector" name="category" class="selectionField form-control">
-						<option value="none">Category</option>
-						<!-- Link to category table -->
-						
-					</select>
-			</div>
-
-			<div class="col-1">
-					<label for="qtyPurchase">Qty</label>
-					<input type="text" id="qtyPurchase" class="form-control" placeholder="#">
-			</div>
-			<div class="col-1">
-					<label for="productRetailPrice">Retail</label>
-					<input type="text" id="productRetailPrice" class="form-control" placeholder="$">
-			</div>
-			<div class="col-1">
-					<label for="productDiscount">Discount</label>
-					<input type="text" id="productDiscount" class="form-control" placeholder="%">
-			</div>
-			<div class="col-1">
-					<label for="wholesalecost">Wholesale</label>
-					<input type="text" id="wholesalecost" class="form-control" placeholder="$">
-			</div>
-			<div class="col-1">
-					<label for="actual">Actual</label>
-					<input type="text" id="actual" class="form-control" placeholder="#">
-			</div>
-			<div class="col-1">
-					
-			</div>
-			<div class="col-1">				
-					<button type="button" class="waves-effect waves-circle waves-light btn-floating secondary-conten light-green" class="btn btn-dark light-green" id="retailSubmit">+</button>
-			</div>
-			
 		</div>
+	</div>
 
-
-		<div class="row">
-			<div class="col-10">		
-			</div>
-		
-			<div class="col-1">
-				<button type="button" class="btn btn-dark light-green" class="btn waves-effect waves-light" id="submitOrder">Save Order</button>
-			</div>
-
-		</div>
-	<footer id="page-footer" style="color: white">
-				© 2018 Copyright Societe
-	</footer> 
+	<div class="container">
+		<footer id="page-footer" style="color: white; text-align: center">
+					© 2018 Copyright Societe
+		</footer>
+	</div> 
 </body>
 	<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
 	
@@ -167,7 +154,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 	<script src="js/functionality.js"></script>
+	
 	<script src="js/societe.js"></script>
 
 </html>
-

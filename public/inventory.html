@@ -40,53 +40,40 @@
 	    </ul>
 	</nav>
 
-		<div class="panel panel-primary">
-				<div class="panel-heading">
-				  <h3 class="panel-title"><strong>Inventory</strong></h3>
-				</div>
-
-				<div class="panel-body">
-				  <table class="table table-striped table-hover" id="inventory-table">
-					<thead>
-					  <tr>
-						<!-- if societe only show Societe products-->
-						<th>Product</th> 
-						<th>SKU</th>
-						<th>Qty</th>
-						<!-- <th>UoM</th>						 -->
-						<th>Desc.</th>
-						<!-- <th>Organic</th> -->
-						<!-- <th>Supplier</th> -->
-						<th>Wholesale $</th>
-						<th>Discount %</th>
-						<th>Actual $</th>
-						<!-- <th>RP $</th> -->
-						<!-- <th>Profit</th> -->
-						<th>Date Received</th>
-						<!-- <th>Location</th> -->
-					  </tr>
-					</thead>
-					<tbody>
-						
-					</tbody>
-					</table>
-					
-				</div>
-
+	<div class="panel panel-primary container">
+		<div class="panel-heading">
+	        <h3 class="panel-title"><strong>Inventory</strong></h3>
 		</div>
 
+		<div class="panel-body">
+			<table class="table table-striped table-hover" id="inventory-table">
+				<thead>
+				  <tr>
+					<!-- if societe only show Societe products-->
+					<th>Product</th> 
+					<th>SKU</th>
+					<th>Qty</th>
+					<!-- <th>UoM</th>						 -->
+					<th>Desc.</th>
+					<!-- <th>Organic</th> -->
+					<!-- <th>Supplier</th> -->
+					<th>Wholesale $</th>
+					<th>Discount %</th>
+					<th>Actual $</th>
+					<!-- <th>RP $</th> -->
+					<!-- <th>Profit</th> -->
+					<th>Date Received</th>
+					<!-- <th>Location</th> -->
+				  </tr>
+				</thead>
+			</table>
+		</div>
 		<div class="row">
 				<div class="col-12 text-right">
 						<button type="button" class="btn btn-dark light-green" id="edit">Edit</button>
 				</div>
 		</div>
-
-
-
-			</div><!-- End of Manual Submit Div -->
-		<div>
 	</div>
-	
 	<div class="container">
 		<footer id="page-footer" style="color: white; text-align: center">
 					© 2018 Copyright Societe
@@ -106,49 +93,6 @@
 			$.getJSON("/inventory/all", function(items){
 				var html = "";
 				items.forEach(function(item){
-					// id: 1,
-					// commonName: "Cool Tea",
-					// latinName: "",
-					// description: "Good for napping with!",
-					// wholesaleCost: "0",
-					// discount: "0",
-					// societeRetailPrice: "0",
-					// recommendedRetailPrice: "0",
-					// unitOfMeasure: "",
-					// qtyPurchased: "0",
-					// qtyOnHand: "0",
-					// reorderPoint: 0,
-					// lot: "",
-					// locationId: null,
-					// channelId: null,
-					// purchaseDate: null,
-					// packedDate: null,
-					// supplierId: 0,
-					// sourcing: "",
-					// sku: null,
-					// shopify: false,
-					// productLabel: "",
-					// productImage: "",
-					// createdAt: "2018-04-09T18:37:18.000Z",
-					// updatedAt: "2018-04-09T18:37:18.000Z"
-
-					//<th>Qty</th>
-					//<th>UoM</th>						
-					//<th>Desc.</th>
-					//<th>Organic</th>
-					//<th>Supplier</th>
-					//<th>Wholesale $</th>
-					//<th>Actual $</th>
-					//<th>RP $</th>
-					//<th>Profit</th>
-					//<th>Date Received</th>
-					//<th>Location</th>
-					// html += "<tr><td>" + item.commonName +"</td><td>" + 
-					// 	item.sku + "</td><td>" + item.qtyOnHand + "</td><td>" +
-					// 	item.description + "</td><td>" + item.sourcing + "</td><td></td><td>" +
-					// 	item.wholesaleCost + "</td><td></td><td>" + item.societeRetailPrice +
-					// 	"</td><td></td><td>" + item.purchaseDate + "</td><td></td></tr>";
-
 					html += "<tr><td>" + item.commonName + "</td><td>" + 
 						item.sku + "</td><td>" + item.qtyOnHand + "</td><td>" +
 						item.description + "</td><td>" +
