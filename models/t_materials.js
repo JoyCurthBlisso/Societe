@@ -2,7 +2,10 @@ module.exports = function(sequelize, DataTypes)
 {
 	var material = sequelize.define("material",
 	{
-		commonName: DataTypes.STRING,
+		commonName: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
 		latinName: DataTypes.STRING,
 		description: DataTypes.TEXT,
 		wholesaleCost: DataTypes.DECIMAL,

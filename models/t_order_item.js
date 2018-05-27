@@ -43,13 +43,6 @@ module.exports = function(sequelize, DataTypes)
             }
         });
 	};
-	Order_item.associate = function(models) {
-		Order_item.belongsTo(models.Inventory, {
-			foreignKey: {
-				allowNull: false
-			}
-		});
-	};
 
     return Order_item;
 }
