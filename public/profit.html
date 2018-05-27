@@ -75,16 +75,15 @@
 					<thead>
 					  <tr>
 						<th>Product Name</th>
-						<th>Quantity</th>
-						<th>Actual Cost</th>
+						<th>Quantity Purchased</th>
+						<th>Total Actual Cost</th>
 						<!-- <th>Qty</th> -->
 						<th>Retail Cost</th>
-						<th>Profit</th>
+						<th>Total Profit</th>
 					  </tr>
 					</thead>
 					<tbody>
 					</tbody>
-				  </table>
 				</div>
 		</div>
 
@@ -95,14 +94,8 @@
 		<div>
 	</div>
 	
-	<div class="container center">
-			<footer id="page-footer" style="color: white">
-					
-					© 2018 Copyright Societe
-					
-			</footer> 
-	</div>
-	
+
+
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
   		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   		crossorigin="anonymous"></script>
@@ -111,5 +104,31 @@
 	<script src="js/functionality.js"></script>
 	<!-- <script src="js/subletFunctionality.js"></script> -->
 	<script src="js/societe.js"></script>
+
+		<script>
+				$(document).ready(function(){
+					$.getJSON("/inventory/all", function(items){
+						var html = "";
+						var actualCost = "";
+						var profit = "";
+
+						items.forEach(function(item){
+			
+							html += "<tr><td>" + item.commonName + "</td><td>" + item.qtyPurchased + "</td><td>" + actualCost + "</td><td>" + item.societeRetailPrice + "</td><td>" + profit;
+						});
+						
+						$('#profitTable tbody').html(html);
+					});
+				});
+			</script>
+
+<!-- <div class="container center">
+		<footer id="page-footer" style="color: white">
+				
+				© 2018 Copyright Societe
+				
+		</footer> 
+</div> -->
+
 </body>
 </html>

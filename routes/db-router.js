@@ -74,6 +74,18 @@ const shopRequestHeaders = {
 		})
 	});
 
+	//get all profit
+		router.get('/profit', (req, res)=>{
+			console.log('Getting profit!');
+			var db = res.app.get('db');
+			db["material"].findAll().then(items=>{
+				
+				res.send(items);
+			}).catch(error=>{
+				console.log(error);
+			})
+		});
+
 	router.get('/units', (req, res) => {
 		var db = res.app.get("db");
 		db["unitMeasure"].findAll().then(units=>{
