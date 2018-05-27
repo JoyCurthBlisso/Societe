@@ -68,125 +68,110 @@
 				</div>
 		</nav>
 
+		<br>
 
 		<div class="row">
 				<div id="manualEnter" class="hidden">
 					<form>
 						<div class="row">
 						
-							<div class="col-6">
+							<div class="col s4">
 								<label for="common">Recipe Name</label>
 								<input type="text" class="manualSubmit form-control" id="commonName" name="commonName" placeholder="Enter Recipe Name">
 							</div>
 				
 	
-							<div class="col-4">
+							<div class="col s2">
 									<label for="categpru">Category</label>
 									<input type="textarea" class="manualSubmit form-control" id="description" name="category"	 placeholder="Enter Category">
 							</div>
-	
-						</div>
-				
-						
-								<div class="col-2">
-								
-											<label id="shopifyLbl" for="shopify">Add to Shopify</label>
-											<input type="checkbox" class="manualSubmit form-control" id="shopify" name="shopify" value="post">	
-										
-										<!-- <input type="checkbox" class="form-control" id="shopify" value="post"> -->
-										<!-- <input type="checkbox" id="shopify" checked value="post"></input> -->
-	
-										<!-- <label id="name" for="nameInput">Name</label>
-										<input type="text" class="form-control" id="nameInput"> -->
-	
-									<!-- </form> -->
-								</div>
+
+							<div class="col s2">
+									<label for="createDate">Create Date</label>
+									<input type="text" class="manualSubmit form-control" id="createDate" name="createDate" placeholder="dd/mm/yyyy">
 							</div>
+
+							<div class="col s2">
+									<label for="lot">Lot #</label>
+									<input type="text" class="manualSubmit form-control" id="lot" name="lot" placeholder="Enter Lot #">
+							</div>
+	
 						</div>
 						
 						<div class="row">
 						
-							<div class="col-2">
-								<label for="qtyPurchased">Quantity Purchased</label>
-								<input type="text" class="manualSubmit form-control" id="qtyPurchased" name="qtyPurchased" placeholder="Quantity">
+							<div class="col s2">
+								<label for="product">Product</label>
+								<input type="text" class="manualSubmit form-control" id="product" name="product" placeholder="Select Product">
+							</div>
+
+							<div class="col s2">
+									<label for="qty">Qty</label>
+									<input type="text" class="manualSubmit form-control" id="qty" name="qty" placeholder="Enter Amount">
 							</div>
 	
-							<div class="col-2">
+							<div class="col s2">
 								<label for="unitOfMeasure">Unit of Measure</label>
 								<select class="manualSubmit form-control" id="unitOfMeasure" name="unitOfMeasure"  placeholder="Select Unit of Measure">
 								</select>
 							</div>
-	
-							<div class="col-2">
-									<label for="lot">Lot #</label>
-									<input type="text" class="manualSubmit form-control" id="lot" name="lot" placeholder="Enter Lot #">
-							</div>
 							
-							<div class="col-2">
-									<label for="lot">Re Order Point</label>
-									<input type="text" class="manualSubmit form-control" id="reorderPoint" name="reorderPoint" placeholder="Reorder Point">
+							<div class="col s2">
+									<label for="productActualCost">Product Actual Cost</label>
+									<input type="text" class="manualSubmit form-control" id="productActualCost" name="productActualCost" placeholder="$0.00">
 							</div>
 	
-							<div class="col-2">
-									<label for="purchase date">Purchase Date</label>
-									<input type="text" class="manualSubmit form-control" id="purchaseDate" name="purchaseDate" placeholder="dd/mm/yyyy">
+							<div class="col s2">
+									<label for="recipeCost">Recipe Cost</label>
+									<input type="text" class="manualSubmit form-control" id="recipeCost" name="recipeCost" placeholder="$0.00">
 							</div>
 								
-							<div class="col-2">
-									<label for="purchase date">Purchase Date</label>
-									<input type="text" class="manualSubmit form-control" id="packedDate" name="packedDate" placeholder="dd/mm/yyyy">
-							</div>
-	
-	
 						</div>
 					
 					
 						<div class="row">
 						
-							<div class="col-2">
-								<label for="supplierId">Supplier</label>
-								<input type="manualSubmit form-control" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier">
+							<div class="col s2">
+								<label for="suggestedRP">Sugg. Retail Price</label>
+								<input type="manualSubmit form-control" class="manualSubmit form-control" id="suggestedRP" name="suggestedRP" placeholder="Sugg. Retail Price $">
 							</div>
 	
-							<div class="col-2">
-								<label for="sourcing">Organic</label>
-								<input type="text" class="manualSubmit form-control" id="sourcing" name="sourcing" placeholder="Organic">
+							<div class="col s2">
+								<!-- <label for="sourcing">Organic</label>
+								<input type="text" class="manualSubmit form-control" id="sourcing" name="sourcing" placeholder="Organic"> -->
 							</div>
 	
-							<div class="col-2">
+							<div class="col s2">
 									<label for="sourcing">Image</label>
 									<input type="text" class="manualSubmit form-control" id="productImage" name="productImage" placeholder="Enter url">
 							</div>
 							
-							<div class="col-2">
+							<div class="col s2">
 									<label for="sourcing">Label</label>
 									<input type="text" class="manualSubmit form-control" id="productLabel" name="productLabel" placeholder="Enter url">
 							</div>
 	
-							<div class="col-2">
+							<div class="col s2">
 									
 								
 							</div>
 	
-							<div class="col-2">
-									
-								<button type="button" class="btn btn-primary light-green" id="retailSubmit">Save</button>
-							
-							</div>
+						
 						</div>
-	
 	
 						<div class="row">
-							<div class="col-10">
-								
-									
-							</div>
-	
-							
+								<div class="col s10"></div>
+								<div class="col s2">
+									<button type="button" class="btn light-green float-right" id="retailSubmit">Save</button>
+									<button style="background-color: gray; margin-right: 12px" type="button" class="btn float-right" id="clear">Cancel</button>
+								</div>
+			
 						</div>
 	
-							<div class="row">
-								<div class="col-12">
+					
+	
+							<!-- <div class="row">
+								<div class="col s12">
 		<!--							<button type="button" id="manualSubmit">Submit</button>-->
 		<!--d10cf0d2b535a1258d6868e192a04a42ef60fbd6-->
 								</div>
