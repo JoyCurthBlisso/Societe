@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	$(".dropdown-trigger").dropdown();
+	$('.datepicker').datepicker();
+	$('select').formSelect();
+	$('.slider').slider();
 
 // JavaScript Document
 
@@ -112,6 +116,7 @@ $("#itemlist").on("change", function() {
 	}
 });
 
+
 // $("#manualSubmit").on("click", function() {
 // 	var commonName = document.getElementById("commonName").value;
 // 	var latinName = document.getElementById("latinName").value;
@@ -163,6 +168,32 @@ $("#rawMaterialsFour").on("change", function() {
 	document.getElementById("measureFive").classList.remove("hidden");
 });
 
+
+//Cancel Button clear form will reload page
+$("#clear").on("click", function(event) {
+    event.preventDefault();
+    window.location.reload();
+});
+
+//Calculate amount after discount
+$("#discount").on("change", function() {
+	var wholesaler = $("#wholesaleCost").val();
+	var disc = $("#discount").val();
+	if (disc > 100) {
+		console.log("Discount too high");
+		M.toast({html: "Please enter a percentage at or below 100."});
+	}
+	else {
+		var discPCT = (disc * 0.01);
+		var calcedDisc = (wholesaler * discPCT);
+		var totDisc = (wholesaler - calcedDisc);
+		console.log("Discount Dollars:", calcedDisc);
+		console.log("Discounted Price:", totDisc);
+		$("#calculatedDisc").val(calcedDisc);
+		$("#recommendedRetailPrice").val(totDisc);
+	}
+
+});
   
 	document.addEventListener('DOMContentLoaded', function() {
 		var elems = document.querySelectorAll('.datepicker');

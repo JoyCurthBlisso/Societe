@@ -1,96 +1,54 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Enter Order</title>
+	<meta charset="utf-8">
+	<title>New Order</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-   <!--Import Google Icon Font-->
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <!--Import materialize.css-->
-   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
-
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>	
 
 <body>
 	<div class="container">
-	
-		<div class="row">
-
-			<div class="col-12">
-				<center>
-					<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe" width="400px">
-				</center>
-			</div>
+		<center>
+			<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
+		</center>
+	</div>
+	<ul id="inventorydrop" class="dropdown-content">
+	  <li><a href="addRawMaterial.html">Add New Inventory</a></li>
+	  <li><a href="societeProducts.html”">Add New Societe Product</a></li>
+	  <li><a href=“moveInventory.html”>Move Inventory</a></li>
+         <li><a href=“lowInventory.html”>Low Inventory</a></li>
+	  <li class="divider"></li>
+	</ul>
+	<nav class="container nav-wrapper" style="background-color: black; ">
+	    <ul class="center hide-on-med-and-down">
+	      <li><a href="addRawMaterial.html">Add New Inventory</a></li>
+		  <li><a href="suppliers.html">Suppliers</a></li>
+		  <li><a href="profit.html">Profit</a></li>
+	      <!-- Dropdown Trigger -->
+	      <li><a class="dropdown-trigger" href="#!" data-target="inventorydrop">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>
+	    </ul>
+	</nav>
+	<div class="panel-heading">
+		<h3 class="panel-title"><strong>Place New Order</strong></h3>
+	</div>
+	<div class="container"
+	<div class="row">
+		<div class="col s2">
+			<label for="supplierId">Supplier</label>
+			<input type="text" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier">
 		</div>
 
-		
-			<!-- Dropdown Structure -->
-			<ul id="inventorydrop" class="dropdown-content">
-					<li><a href="addRawMaterial.html">New Product</a></li>
-					<li><a href="societeProducts.html">New Societe</a></li>
-					<li><a href="moveInventory.html">Move</a></li>
-					<li><a href="lowInventory.html">Low Inventory</a></li>
-		
-					<li class="divider"></li>
-			</ul>
-
-
-		<nav class="navbar navbar-dark bg-dark">
-			
-				<!-- Navbar content -->
-				<!-- <nav class="navbar navbar-inverse"> -->
-				<div class="container-fluid">
-				  <div class="navbar-header" class="nav-button">
-					
-					<!-- <a class="navbar-brand" href="#">Enter Order</a> -->
-				  </div>
-				  <!-- <ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li> -->
-					<li><a href="addRawMaterial.html">New Product</a></li>
-					<li><a href="inventory.html">Inventory</a></li>
-					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
-					<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
-					<li><a href="societeRecipe.html">Recipe</a></li>
-					<li><a href="suppliers.html">Suppliers</a></li>
-					<li><a href="profit.html">Profit</a></li>
-				  </ul>
-				  	<!-- <ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					</ul> -->
-				</div>
-		</nav>
-
-
-		<div class="panel-heading">
-				<h3 class="panel-title"><strong>Enter New Order</strong></h3>
-		</div>
-
-		<hr>
-
-	
-		<div class="row">
-
-				<div class="col-2">	
-						<label for="supplier">Supplier</label>			
-						<select id="supplier" name="supplier" class="selectionField form-control"  type="text" class="validate">
-								<option value="none">Supplier</option>
-								<!-- Link to supplier table -->
-						</select>
-				</div>
-
-			<div class="col-2">				
+		<div class="col-2">				
 							<label for="orderPlacedDate">Order Date</label>
 							<input type="text" class="datepicker" class="manualSubmit form-control" id="orderPlacedDate" name="orderPlacedDate" placeholder="dd/mm/yyyy">
 							<!-- DEFAULT ORDER DATE TO TODAY'S DATE -->		
@@ -186,10 +144,6 @@
 		</div>
 
 
-		<!-- <div class="row"> -->
-			<!-- <div id="manualEnter" class="hidden"> -->
-				<!-- <form> -->	
-
 		<div class="row">
 			<div class="col-10">		
 			</div>
@@ -199,42 +153,21 @@
 			</div>
 
 		</div>
-
-					<!-- <div class="row">
-					
-						<!-- <div class="row">
-							<!-- <div class="col-12">
-	<!--							<button type="button" id="manualSubmit">Submit</button>-->
-	<!--d10cf0d2b535a1258d6868e192a04a42ef60fbd6-->
-
-					</div>  
-				</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="container center">
-			<footer class="page-footer light-green">
-					
-					© 2018 Copyright Societe
-					
-					
-			</footer> 
-	</div>
-
-	<!-- Last in Line -->
-	<script src="js/subletFunctionality.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  		crossorigin="anonymous"></script>
+	<footer id="page-footer" style="color: white">
+				© 2018 Copyright Societe
+	</footer> 
+</body>
+	<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
 	<script src="js/functionality.js"></script>
 	<script src="js/societe.js"></script>
 
-
-</body>
 </html>
+

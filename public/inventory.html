@@ -2,71 +2,43 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Societe</title>
+	<title>New Product</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-	<meta name="google-signin-scope" content="profile email">
-	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-	
-  
 	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-	<link type="text/css" rel="stylesheet" href="css/style.css"/>
-
-
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-
-	<script src="https://apis.google.com/js/platform.js" async defer></script>	
-
 <body>
-
 	<div class="container">
-		<div class="row">
-			<div class="col-12 text-center">
-				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
-			</div>
-		</div>
-		
-		<nav class="navbar navbar-dark bg-dark">
-			
-				<!-- Navbar content -->
-				<!-- <nav class="navbar navbar-inverse"> -->
-
-				<div class="container-fluid">
-				  <div class="navbar-header" class="nav-button">
-					
-					<!-- <a class="navbar-brand" href="#">Inventory</a> -->
-				  </div>
-				  <!-- <ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li> -->
-					<li><a href="orderNew.html">Order</a></li>
-					<li><a href="addRawMaterial.html">New Product</a></li>
-					<!-- <li><a href="inventory.html">Inventory</a></li> -->
-					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
-					<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
-					<li><a href="societeRecipe.html">Recipe</a></li>
-					<li><a href="suppliers.html">Suppliers</a></li>
-					<li><a href="profit.html">Profit</a></li>
-				  </ul>
-				  	<!-- <ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					</ul> -->
-				</div>
-		</nav>
+		<center>
+			<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
+		</center>
+	</div>
+	<ul id="inventorydrop" class="dropdown-content">
+	  <li><a href="addRawMaterial.html">Add New Inventory</a></li>
+	  <li><a href="societeProducts.html”">Add New Societe Product</a></li>
+	  <li><a href=“moveInventory.html”>Move Inventory</a></li>
+      <li><a href=“lowInventory.html”>Low Inventory</a></li>
+	  <li class="divider"></li>
+	</ul>
+	<nav class="container nav-wrapper" style="background-color: black; ">
+	    <ul class="center hide-on-med-and-down">
+	      <li><a href="orderNew.html">Order Product</a></li>
+	      <li><a href="societeRecipe.html">Recipe</a></li>
+		  <li><a href="suppliers.html">Suppliers</a></li>
+		  <li><a href="profit.html">Profit</a></li>
+	      <!-- Dropdown Trigger -->
+	      <li><a class="dropdown-trigger" href="#!" data-target="inventorydrop">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>
+	    </ul>
+	</nav>
 
 		<div class="panel panel-primary">
 				<div class="panel-heading">
@@ -115,13 +87,11 @@
 		<div>
 	</div>
 	
-	<div class="container center">
-			<footer id="page-footer" style="color: white">
-					
+	<div class="container">
+		<footer id="page-footer" style="color: white; text-align: center">
 					© 2018 Copyright Societe
-					
-			</footer> 
-	</div>
+		</footer>
+	</div> 
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
   		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
