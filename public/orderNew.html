@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>New Order</title>
+	<title>Add New Order</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,24 +22,64 @@
 			<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
 		</center>
 	</div>
-	<ul id="inventorydrop" class="dropdown-content">
-	  <li><a href="addRawMaterial.html">Add New Inventory</a></li>
-	  <li><a href="societeProducts.html”">Add New Societe Product</a></li>
-	  <li><a href=“moveInventory.html”>Move Inventory</a></li>
-         <li><a href=“lowInventory.html”>Low Inventory</a></li>
+
+	<ul id="productDrop" class="dropdown-content">
+	 
+	  <li><a href="addRawMaterial.html">Add New Product</a></li>	
+	  <li><a href="societeRecipe.html">Add Societe Product</a></li> 
+	  <li><a href="societeRecipe.html">Add New Recipe</a></li>
+	  <li><a href=“inventory.html”>All Inventory</a></li>
+	  <li><a href=“inventory.html”>All Supplies</a></li>
+	  <li><a href=“inventory.html”>All Societe Products</a></li>
+	  <li><a href=“inventory.html”>All Recipes</a></li>
+	  <li><a href=“inventory.html”>Low Inventory</a></li>
 	  <li class="divider"></li>
 	</ul>
-	<nav class="container nav-wrapper" style="background-color: black; ">
-	    <ul class="center hide-on-med-and-down">
-	      <li><a href="addRawMaterial.html">Add New Inventory</a></li>
-		  <li><a href="suppliers.html">Suppliers</a></li>
-		  <li><a href="profit.html">Profit</a></li>
-	      <!-- Dropdown Trigger -->
-	      <li><a class="dropdown-trigger" href="#!" data-target="inventorydrop">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>
-	    </ul>
+
+	<ul id="customersDrop" class="dropdown-content">
+			<li><a href="../my-app/index.html">Add New Customer</a></li>
+			<li><a href="../my-app/index.html">All Customers</a></li>
+			<li><a href="../my-app/index.html">Loyalty Customers</a></li>
+			<li><a href="../my-app/index.html">Subscription Customers</a></li>
+			<li><a href="../my-app/index.html">Workshop Customers</a></li>
+			<li><a href="../my-app/index.html">Potential Patients</a></li>
+			<li><a href="../my-app/index.html">Patients</a></li>
+	
+			<li class="divider"></li>
+	 </ul>
+
+	 <ul id="orderDrop" class="dropdown-content">
+			<!-- <li><a href="orderNew.html">Add New Order</a></li> -->
+			<li><a href="ordersList.html">Orders</a></li>
+			<li class="divider"></li>
+	 </ul>
+
+	 <ul id="suppliersDrop" class="dropdown-content">
+			<li><a href="supplierNew.html">Add New Supplier</a></li>
+			<li><a href="suppliers.html">Suppliers</a></li>
+			<li class="divider"></li>
+	 </ul>
+
+	 
+	 <ul id="financialsDrop" class="dropdown-content">
+			<li><a href="profit.html">Sales</a></li>
+			<li><a href="profit.html">Profit</a></li>
+			<li class="divider"></li>
+	 </ul>
+
+	 <nav class="container nav-wrapper navbar-dark bg-dark">
+			<ul class="center hide-on-med-and-down">
+			<li><a class="dropdown-trigger" href="#!" data-target="productDrop">Product<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="dropdown-trigger" href="#!" data-target="orderDrop">Orders<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="dropdown-trigger" href="#!" data-target="customersDrop">Customers<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="dropdown-trigger" href="#!" data-target="suppliersDrop">Suppliers<i class="material-icons right">arrow_drop_down</i></a></li> 
+			<li><a class="dropdown-trigger" href="#!" data-target="financialsDrop">Financials<i class="material-icons right">arrow_drop_down</i></a></li> 
+			</ul>
+
 	</nav>
+
 	<div class="panel-heading container">
-		<h3 class="panel-title"><strong>Place New Order</strong></h3>
+		<h3 class="panel-title"><strong>Add New Order</strong></h3>
 	</div>
 	<div class="container">
 		<div class="row">

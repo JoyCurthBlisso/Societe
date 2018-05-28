@@ -4,18 +4,45 @@
 p{
 font-family: 'Avenir', Times, Times New Roman, serif;
 }
-/* 
+
 h1 {
-	font-size: 36px;
-	margin-top:50px;
+	font-size: 48px;
 	font-weight: bold;
 	font-family: 'Avenir', Times, Times New Roman, serif;
 	color:#afb74f; 
-	text-align: center;
-  } */
+	/* text-align: center; */
+  }
+
+h2 {
+	font-size: 48px;
+	font-weight: bold;
+	font-family: 'Avenir', Times, Times New Roman, serif;
+	color:white; 
+	/* text-align: center; */
+  }
+
+h3 {
+	font-size: 36px;
+	font-weight: bold;
+	font-family: 'Avenir', Times, Times New Roman, serif;
+	color:#afb74f; 
+	/* text-align: center; */
+  }
+
+  h5 {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: 'Avenir', Times, Times New Roman, serif;
+	color:white; 
+	/* text-align: center; */
+  }
+
+
 button #clear {
 	background-color: gray;
 }
+
+
 
 #container{
 
@@ -25,7 +52,7 @@ button #clear {
 
 #herbs
 {
-  width:50%;
+  width:25%;
   text-align: center;
 }
 

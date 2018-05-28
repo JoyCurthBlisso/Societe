@@ -1,79 +1,96 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Societe</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-
-	<meta name="google-signin-scope" content="profile email">
-	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-	
-  
-	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-	<link type="text/css" rel="stylesheet" href="css/style.css"/>
-
-
-</head>
-
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-
-	<script src="https://apis.google.com/js/platform.js" async defer></script>	
-
+		<head>
+				<meta charset="utf-8">
+				<title>Societe</title>
+			
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+			
+				<!--Import Google Icon Font-->
+				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+				  <!--Import materialize.css-->
+				<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			
+				<link type="text/css" rel="stylesheet" href="css/style.css"/>
+			</head>		
 
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-12 text-center">
-				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
-			</div>
+		<div class="container">
+				<center>
+					<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
+				</center>
 		</div>
-	
-		<nav class="navbar navbar-dark bg-dark">
-			
-				<!-- Navbar content -->
-	
-		<!-- <nav class="navbar navbar-inverse"> -->
-				<div class="container-fluid">
-				  <div class="navbar-header" class="nav-button">
-					
-					<!-- <a class="navbar-brand" href="#">Suppliers</a> -->
-				  </div>
-				  <!-- <ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li> -->
-					<li><a href="orderNew.html">Order</a></li>
-					<li><a href="addRawMaterial.html">New Product</a></li>
-					<li><a href="inventory.html">Inventory</a></li>
-					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
-					<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
-					<li><a href="societeRecipe.html">Recipe</a></li>
-					<li><a href="profit.html">Profit</a></li>
-					<!-- <li><a href="suppliers.html">Suppliers</a></li> -->
+
+	<ul id="productDrop" class="dropdown-content">
+	 
+			<li><a href="addRawMaterial.html">Add New Product</a></li>	
+			<li><a href="societeRecipe.html">Add Societe Product</a></li> 
+			<li><a href="societeRecipe.html">Add New Recipe</a></li>
+			<li><a href=inventory.html>All Inventory</a></li>
+			<li><a href=inventory.html>All Inventory</a></li>
+			<li><a href=inventory.html>All Societe Products</a></li>
+			<li><a href=inventory.html>All Recipes</a></li>
+			<li><a href=inventory.html>Low Inventory</a></li>
+
+			<li class="divider"></li>
+		</ul>
+	  
+		<ul id="customersDrop" class="dropdown-content">
+				  <li><a href="../my-app/index.html">Add New Customer</a></li>
+				  <li><a href="../my-app/index.html">All Customers</a></li>
+				  <li><a href="../my-app/index.html">Loyalty Customers</a></li>
+				  <li><a href="../my-app/index.html">Subscription Customers</a></li>
+				  <li><a href="../my-app/index.html">Workshop Customers</a></li>
+				  <li><a href="../my-app/index.html">Potential Patients</a></li>
+				  <li><a href="../my-app/index.html">Patients</a></li>
+		  
+				  <li class="divider"></li>
+		</ul>
+	  
+		<ul id="orderDrop" class="dropdown-content">
+				  <li><a href="orderNew.html">Add New Order</a></li>
+				  <li><a href="ordersList.html">Orders</a></li>
+
+				  <li class="divider"></li>
+		</ul>
+	  
+		<ul id="suppliersDrop" class="dropdown-content">
+				  <li><a href="supplierNew.html">Add New Supplier</a></li>
+				  <li><a href="suppliers.html">Suppliers</a></li>
+
+				  <li class="divider"></li>
+		</ul>
+	  
+		   
+		<ul id="financialsDrop" class="dropdown-content">
+				  <li><a href="profit.html">Sales</a></li>
+				  <li><a href="profit.html">Profit</a></li>
+
+				  <li class="divider"></li>
+		</ul>
+	  
+		<nav class="container nav-wrapper navbar-dark bg-dark">
+				  <ul class="center hide-on-med-and-down">
+				  <li><a class="dropdown-trigger" href="#!" data-target="productDrop">Product<i class="material-icons right">arrow_drop_down</i></a></li>
+				  <li><a class="dropdown-trigger" href="#!" data-target="orderDrop">Orders<i class="material-icons right">arrow_drop_down</i></a></li>
+				  <li><a class="dropdown-trigger" href="#!" data-target="customersDrop">Customers<i class="material-icons right">arrow_drop_down</i></a></li>
+				  <li><a class="dropdown-trigger" href="#!" data-target="suppliersDrop">Suppliers<i class="material-icons right">arrow_drop_down</i></a></li> 
+				  <li><a class="dropdown-trigger" href="#!" data-target="financialsDrop">Financials<i class="material-icons right">arrow_drop_down</i></a></li> 
 				  </ul>
-				  	<!-- <ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					</ul> -->
-				</div>
+	  
 		</nav>
 
+		<container>
 			<div class="panel panel-primary">
+
 					<div class="panel-heading">
 					  <h3 class="panel-title"><strong>Suppliers</strong></h3>
 					</div>
+
 					<div class="panel-body">
-					  <table class="table table-hover" id='suppliers-table'>
+					  <table class="table table-striped table-hover" id='suppliers-table'>
 						<thead>
 						  <tr>
 							<th>Name</th>
@@ -92,9 +109,15 @@
 					</div>
 			</div>
 
-			</div><!-- End of Manual Submit Div -->
+			<!-- </div> -->
 		<div>
+				<div class="row">
+						<div class="col-12 text-right">
+								<button type="button" class="btn btn-dark light-green" id="edit">Edit</button>
+						</div>
+				</div>
 	</div>
+</container>
 
 	<div class="container center">
 			<footer id="page-footer" style="color: white">
@@ -144,4 +167,17 @@
 		</script>
 
 </body>
+
+<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+<script src="js/functionality.js"></script>
+
+<script src="js/societe.js"></script>
 </html>
