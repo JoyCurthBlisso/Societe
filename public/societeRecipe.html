@@ -1,33 +1,20 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Societe</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-
-	<meta name="google-signin-scope" content="profile email">
-	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	
-	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-</head>
-
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-
-	<script src="https://apis.google.com/js/platform.js" async defer></script>	
-
+		<head>
+				<meta charset="utf-8">
+				<title>Societe</title>
+			
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+			
+				<!--Import Google Icon Font-->
+				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+				  <!--Import materialize.css-->
+				<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			
+				<link type="text/css" rel="stylesheet" href="css/style.css"/>
+			</head>		
 
 <body>
 	<div class="container">
@@ -37,40 +24,68 @@
 			</div>
 		</div>
 
+			<ul id="productDrop" class="dropdown-content">
+	 
+				<li><a href="addRawMaterial.html">Add New Product</a></li>	
+				<li><a href="">Add Societe Product</a></li> 
+				<!-- <li><a href="societeRecipe.html">Add New Recipe</a></li> -->
+				<li><a href=“inventory.html”>All Inventory</a></li>
+				<li><a href=“inventory.html”>All Supplies</a></li>
+				<li><a href=“inventory.html”>All Societe Products</a></li>
+				<li><a href=“inventory.html”>All Recipes</a></li>
+				<li><a href=“inventory.html”>Low Inventory</a></li>
+				<li class="divider"></li>
+			</ul>
+		  
+			<ul id="customersDrop" class="dropdown-content">
+					  <li><a href="../my-app/index.html">Add New Customer</a></li>
+					  <li><a href="../my-app/index.html">All Customers</a></li>
+					  <li><a href="../my-app/index.html">Loyalty Customers</a></li>
+					  <li><a href="../my-app/index.html">Subscription Customers</a></li>
+					  <li><a href="../my-app/index.html">Workshop Customers</a></li>
+					  <li><a href="../my-app/index.html">Potential Patients</a></li>
+					  <li><a href="../my-app/index.html">Patients</a></li>
+			  
+					  <li class="divider"></li>
+			</ul>
+		  
+			<ul id="orderDrop" class="dropdown-content">
+					  <li><a href="orderNew.html">Add New Order</a></li>
+					  <li><a href="orderList.html">Orders</a></li>
+					  <li class="divider"></li>
+			</ul>
+		  
+			<ul id="suppliersDrop" class="dropdown-content">
+					  <li><a href="supplierNew.html">Add New Supplier</a></li>
+					  <li><a href="suppliers.html">Suppliers</a></li>
+					  <li class="divider"></li>
+			</ul>
+		  
+			   
+			<ul id="financialsDrop" class="dropdown-content">
+					  <li><a href="profit.html">Sales</a></li>
+					  <li><a href="profit.html">Profit</a></li>
+					  <li class="divider"></li>
+			</ul>
+		  
+			  <nav class="container nav-wrapper" style="background-color: black; ">
+					  <ul class="center hide-on-med-and-down">
+					  <li><a class="dropdown-trigger" href="#!" data-target="productDrop">Product<i class="material-icons right">arrow_drop_down</i></a></li>
+					  <li><a class="dropdown-trigger" href="#!" data-target="orderDrop">Orders<i class="material-icons right">arrow_drop_down</i></a></li>
+					  <li><a class="dropdown-trigger" href="#!" data-target="customersDrop">Customers<i class="material-icons right">arrow_drop_down</i></a></li>
+					  <li><a class="dropdown-trigger" href="#!" data-target="suppliersDrop">Suppliers<i class="material-icons right">arrow_drop_down</i></a></li> 
+					  <li><a class="dropdown-trigger" href="#!" data-target="financialsDrop">Financials<i class="material-icons right">arrow_drop_down</i></a></li> 
+					  </ul>
+		  
+			  </nav>
+
+		<div class="container panel panel-primary panel-heading">
+			<h3 class="panel-title"><strong>Add New Recipe</strong></h3>
+		</div>
+
+
+		<div class="panel-heading container">
 		
-		<nav class="navbar navbar-dark bg-dark">
-			
-				<!-- Navbar content -->
-	
-
-		<!-- <nav class="navbar navbar-inverse"> -->
-				<div class="container-fluid">
-					<!-- <div class="navbar-header" class="nav-button">
-					
-						<a class="navbar-brand" href="#">New Recipe</a>
-					</div> -->
-			
-					<li><a href="orderNew.html">Order</a></li>
-					<li><a href="addRawMaterial.html">New Product</a></li>
-					<li><a href="inventory.html">Inventory</a></li>
-					<!-- <li><a href="societeRecipe.html">Recipe</a></li> -->
-					
-					<!-- <li><a href="moveInventory.html">Move Inventory</a></li> -->
-					<!-- <li><a href="lowInventory.html">Low Inventory</a></li> -->
-					<!-- <li><a href="societeRecipe.html">Recipe</a></li> -->
-					<li><a href="suppliers.html">Suppliers</a></li>
-					<li><a href="profit.html">Profit</a></li>
-				  </ul>
-				  	<!-- <ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					</ul> -->
-				</div>
-		</nav>
-
-		<br>
-
-		<div class="row">
 				<div id="manualEnter" class="hidden">
 					<form>
 						<div class="row">
@@ -82,8 +97,13 @@
 				
 	
 							<div class="col s2">
-									<label for="categpru">Category</label>
-									<input type="textarea" class="manualSubmit form-control" id="description" name="category"	 placeholder="Enter Category">
+									<label>Type</label>
+									<select class="input-field">
+									  <option value="" disabled selected>Select Type</option>
+									  <option value="1">Healing Tea</option>
+									  <option value="2">Herbal Product</option>
+									  <option value="3">Essential Oil</option>
+									</select>
 							</div>
 
 							<div class="col s2">
@@ -111,96 +131,110 @@
 							</div>
 	
 							<div class="col s2">
-								<label for="unitOfMeasure">Unit of Measure</label>
-								<select class="manualSubmit form-control" id="unitOfMeasure" name="unitOfMeasure"  placeholder="Select Unit of Measure">
-								</select>
+									<label>Unit of Measure</label>
+									<select class="input-field">
+									  <option value="" disabled selected>Select UOM</option>
+									  <option value="1">Ounces</option>
+									  <option value="2">Pounds</option>
+									  <option value="3">Other</option>
+									</select>
 							</div>
 							
 							<div class="col s2">
-									<label for="productActualCost">Product Actual Cost</label>
-									<input type="text" class="manualSubmit form-control" id="productActualCost" name="productActualCost" placeholder="$0.00">
+									<label for="sourcing">Organic</label>
+									<input type="text" class="manualSubmit form-control" id="sourcing" name="sourcing" placeholder="Organic">
 							</div>
-	
+
+						</div>
+					
+					
+						<div class="row">
+
 							<div class="col s2">
 									<label for="recipeCost">Recipe Cost</label>
 									<input type="text" class="manualSubmit form-control" id="recipeCost" name="recipeCost" placeholder="$0.00">
 							</div>
-								
-						</div>
-					
-					
-						<div class="row">
 						
 							<div class="col s2">
 								<label for="suggestedRP">Sugg. Retail Price</label>
-								<input type="manualSubmit form-control" class="manualSubmit form-control" id="suggestedRP" name="suggestedRP" placeholder="Sugg. Retail Price $">
+								<input type="manualSubmit form-control" class="manualSubmit form-control" id="suggestedRP" name="suggestedRP" placeholder="$0.00">
 							</div>
 	
-							<div class="col s2">
-								<!-- <label for="sourcing">Organic</label>
-								<input type="text" class="manualSubmit form-control" id="sourcing" name="sourcing" placeholder="Organic"> -->
-							</div>
 	
-							<div class="col s2">
-									<label for="sourcing">Image</label>
-									<input type="text" class="manualSubmit form-control" id="productImage" name="productImage" placeholder="Enter url">
+							<div class="col s2 "file-field input-field"">
+
+									<label for="image">Image(s)</label>
+							
+												<div class="file-field input-field" id="image">
+														<div class="btn light-green">
+														  <span>File</span>
+														  <input type="file" multiple>
+														</div>
+														<div class="file-path-wrapper">
+														  <input class="file-path validate" type="text" placeholder="Upload">
+														</div>
+												</div>
+								
 							</div>
+
+						
 							
 							<div class="col s2">
-									<label for="sourcing">Label</label>
-									<input type="text" class="manualSubmit form-control" id="productLabel" name="productLabel" placeholder="Enter url">
-							</div>
-	
-							<div class="col s2">
-									
-								
+									<label for="label">Label(s)</label>
+							
+									<div class="file-field input-field" id="image">
+											<div class="btn light-green">
+											  <span>File</span>
+											  <input type="file" multiple>
+											</div>
+											<div class="file-path-wrapper">
+											  <input class="file-path validate" type="text" placeholder="Upload">
+											</div>
+									</div>
 							</div>
 	
 						
 						</div>
-	
+					
+
 						<div class="row">
-								<div class="col s10"></div>
-								<div class="col s2">
+							<div class="col s10">
+
+							</div>
+							<div class="col s2">
 									<button type="button" class="btn light-green float-right" id="retailSubmit">Save</button>
 									<button style="background-color: gray; margin-right: 12px" type="button" class="btn float-right" id="clear">Cancel</button>
-								</div>
-			
-						</div>
-	
-					
-	
-							<!-- <div class="row">
-								<div class="col s12">
-		<!--							<button type="button" id="manualSubmit">Submit</button>-->
-		<!--d10cf0d2b535a1258d6868e192a04a42ef60fbd6-->
-								</div>
 							</div>
 						</div>
-					</form>
-				</div>
-			</div>
 
-			</div><!-- End of Manual Submit Div -->
+					</form>	
+				</div>
 		<div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="js/functionality.js"></script>
-	<script src="js/subletFunctionality.js"></script>
-	<script src="js/societe.js"></script>
+	
+	
 </body>
 
-<div class="container center">
-		<footer id="page-footer" style="color: white">
-				
-				© 2018 Copyright Societe
-				
-		</footer> 
+<div class="container">
+		<footer id="page-footer" style="color: white; text-align: center">
+					© 2018 Copyright Societe
+		</footer>
 </div>
+
+
+
+<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+<script src="js/functionality.js"></script>
+
+<script src="js/societe.js"></script>
 
 </html>

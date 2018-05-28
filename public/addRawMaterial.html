@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>New Product</title>
+	<title>Societe</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,26 +22,66 @@
 			<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe">
 		</center>
 	</div>
-	<ul id="inventorydrop" class="dropdown-content">
-	  <li><a href="addRawMaterial.html">Add New Inventory</a></li>
-	  <li><a href="societeProducts.html”">Add New Societe Product</a></li>
-	  <li><a href=“moveInventory.html”>Move Inventory</a></li>
-      <li><a href=“lowInventory.html”>Low Inventory</a></li>
-	  <li class="divider"></li>
-	</ul>
-	<nav class="container nav-wrapper" style="background-color: black; ">
-	    <ul class="center hide-on-med-and-down">
-	      <li><a href="orderNew.html">Order Product</a></li>
-	      <li><a href="societeRecipe.html">Recipe</a></li>
-		  <li><a href="suppliers.html">Suppliers</a></li>
-		  <li><a href="profit.html">Profit</a></li>
-	      <!-- Dropdown Trigger -->
-	      <li><a class="dropdown-trigger" href="#!" data-target="inventorydrop">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>
-	    </ul>
-	</nav>
+
+		<ul id="productDrop" class="dropdown-content">
+	 
+			<!-- <li><a href="addRawMaterial.html">Add New Product</a></li>	 -->
+			<li><a href="">Add Societe Product</a></li> 
+			<li><a href="societeRecipe.html">Add New Recipe</a></li>
+			<li><a href=“inventory.html”>All Inventory</a></li>
+			<li><a href=“inventory.html”>All Supplies</a></li>
+			<li><a href=“inventory.html”>All Societe Products</a></li>
+			<li><a href=“inventory.html”>All Recipes</a></li>
+			<li><a href=“inventory.html”>Low Inventory</a></li>
+			<li class="divider"></li>
+		</ul>
+	  
+		<ul id="customersDrop" class="dropdown-content">
+				  <li><a href="../my-app/index.html">Add New Customer</a></li>
+				  <li><a href="../my-app/index.html">All Customers</a></li>
+				  <li><a href="../my-app/index.html">Loyalty Customers</a></li>
+				  <li><a href="../my-app/index.html">Subscription Customers</a></li>
+				  <li><a href="../my-app/index.html">Workshop Customers</a></li>
+				  <li><a href="../my-app/index.html">Potential Patients</a></li>
+				  <li><a href="../my-app/index.html">Patients</a></li>
+		  
+				  <li class="divider"></li>
+		</ul>
+	  
+		<ul id="orderDrop" class="dropdown-content">
+				  <li><a href="orderNew.html">Add New Order</a></li>
+				  <li><a href="orderList.html">Orders</a></li>
+				  <li class="divider"></li>
+		</ul>
+	  
+		<ul id="suppliersDrop" class="dropdown-content">
+				  <li><a href="supplierNew.html">Add New Supplier</a></li>
+				  <li><a href="suppliers.html">Suppliers</a></li>
+				  <li class="divider"></li>
+		</ul>
+	  
+		   
+		<ul id="financialsDrop" class="dropdown-content">
+				  <li><a href="profit.html">Sales</a></li>
+				  <li><a href="profit.html">Profit</a></li>
+				  <li class="divider"></li>
+		</ul>
+	  
+		<nav class="container nav-wrapper" style="background-color: black; ">
+				  <ul class="center hide-on-med-and-down">
+				  <li><a class="dropdown-trigger" href="#!" data-target="productDrop">Product<i class="material-icons right">arrow_drop_down</i></a></li>
+				  <li><a class="dropdown-trigger" href="#!" data-target="orderDrop">Orders<i class="material-icons right">arrow_drop_down</i></a></li>
+				  <li><a class="dropdown-trigger" href="#!" data-target="customersDrop">Customers<i class="material-icons right">arrow_drop_down</i></a></li>
+				  <li><a class="dropdown-trigger" href="#!" data-target="suppliersDrop">Suppliers<i class="material-icons right">arrow_drop_down</i></a></li> 
+				  <li><a class="dropdown-trigger" href="#!" data-target="financialsDrop">Financials<i class="material-icons right">arrow_drop_down</i></a></li> 
+				  </ul>
+	  
+		</nav>
+
 	<div class="container panel panel-primary panel-heading">
-	    <h3 class="panel-title"><strong>New Product</strong></h3>
+	    <h3 class="panel-title"><strong>Add New Product</strong></h3>
 	</div>
+
 	<div class="container">
 		<div id="manualEnter" class="hidden">
 			<form>
@@ -122,18 +162,18 @@
 					</div>
 			
 					<div class="col s2">
-							<label for="lot">Re Order Point</label>
-							<input type="text" class="manualSubmit form-control" id="reorderPoint" name="reorderPoint" placeholder="Reorder Point">
+							<label for="lot">Re-Order Point</label>
+							<input type="text" class="manualSubmit form-control" id="reorderPoint" name="reorderPoint" placeholder="Re-Order Point">
 					</div>
 
 					<div class="col s2">
 							<label for="purchase date">Purchase Date</label>
-							<input type="text" class="manualSubmit datepicker form-control" id="purchaseDate" name="purchaseDate" placeholder="Mmm dd, yyyy">
+							<input type="text" class="manualSubmit datepicker form-control" id="purchaseDate" name="purchaseDate" placeholder="Select Date">
 					</div>
 					
 					<div class="col s2">
 							<label for="purchase date">Packed Date</label>
-							<input type="text" class="manualSubmit datepicker form-control" id="packedDate" name="packedDate" placeholder="Mmm dd, yyyy">
+							<input type="text" class="manualSubmit datepicker form-control" id="packedDate" name="packedDate" placeholder="Select Date">
 					</div>
 
 				</div>
@@ -150,14 +190,35 @@
 						<input type="text" class="manualSubmit form-control" id="sourcing" name="sourcing" placeholder="Organic">
 					</div>
 
-					<div class="col s4">
-							<label for="sourcing">Image</label>
-							<input type="text" class="manualSubmit form-control" id="productImage" name="productImage" placeholder="Enter url">
-					</div>
+					<div class="col s4 "file-field input-field"">
+
+							<label for="image">Image(s)</label>
+					
+										<div class="file-field input-field" id="image">
+												<div class="btn light-green">
+												  <span>File</span>
+												  <input type="file" multiple>
+												</div>
+												<div class="file-path-wrapper">
+												  <input class="file-path validate" type="text" placeholder="Upload">
+												</div>
+										</div>
 						
+					</div>
+
+			
 					<div class="col s4">
-						<label for="sourcing">Label</label>
-						<input type="text" class="manualSubmit form-control" id="productLabel" name="productLabel" placeholder="Enter url">
+							<label for="label">Label(s)</label>
+					
+							<div class="file-field input-field" id="image">
+									<div class="btn light-green">
+									  <span>File</span>
+									  <input type="file" multiple>
+									</div>
+									<div class="file-path-wrapper">
+									  <input class="file-path validate" type="text" placeholder="Upload">
+									</div>
+							</div>
 					</div>
 
 				</div>
