@@ -2,7 +2,7 @@ h1 {
   font-size: 36px;
   margin-top:50px;
   font-weight: bold;
-  font-family: 'Avenir', Times, Times New Roman, serif;
+  font-family: 'Avenir', Times, Times New Roman, serif !important;
   color: green; 
   text-align: center;
 }
@@ -11,10 +11,37 @@ h2 {
   font-size: 30px;
   margin-top:50px;
   font-weight: bold;
-  font-family: 'Avenir', Times, Times New Roman, serif;
+  font-family: 'Avenir', Times, Times New Roman, serif !important;
   color: green; 
   text-align: center;
 }
+
+h3 {
+  font-size: 36px;
+  margin-top:50px;
+  font-weight: bold;
+  font-family: 'Avenir', Times, Times New Roman, serif !important;
+  /* color: green;  */
+  text-align: center;
+}
+
+h5 {
+  font-size: 30px;
+  margin-top:50px;
+  font-weight: bold;
+  font-family: 'Avenir', Times, Times New Roman, serif !important;
+  /* color: green;  */
+  text-align: center;
+}
+h35{
+  font-size: 30px;
+  margin-top:50px;
+  font-weight: bold;
+  font-family: 'Avenir', Times, Times New Roman, serif !important;
+  /* color: green;  */
+  text-align: center;
+}
+
 
 #herbs
 {
