@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john.doe@gmail.com",
+    "patient": "yes",
+    "subscription": "yes"
+
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "email": "jane.doe@gmail.com",
+    "patient": "yes",
+    "subscription": "yes"
+
+  },
+]
+  
