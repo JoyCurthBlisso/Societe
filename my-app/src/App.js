@@ -6,8 +6,13 @@ import logo from './societe_S_circle_black.png';
 // import friends from "./customer.json";
 import './App.css';
 
+
+const Header = ({title}) => (<header>{title}</header>);
+const Main = ({title}) => (<main>{title}</main>);
+const Footer = ({title}) => (<footer>{title}</footer>);
+
+
 class App extends Component {
-  
 
   //     state = {
   //       customers
@@ -21,23 +26,25 @@ class App extends Component {
   //     };
     
       render() {
-      return (
+        const {header,main,footer} = this.props;
 
-  //     <Wrapper>
-  //     <Title>Customer List</Title>
-  //     {this.state.customer.map(customer => (
-  //       <CustomerCard
-  //         removeCustomer={this.removeCustomer}
-  //         id={Customer.id}
-  //         key={Customer.id}
-  //         name={Customer.name}
-  //         email={email.name}
-  //         patient={patient.name}
-  //       />
-  //     ))}
-  //   </Wrapper>
-  //   );
-  // }
+        return (
+
+        //     <Wrapper>
+        //     <Title>Customer List</Title>
+        //     {this.state.customer.map(customer => (
+        //       <CustomerCard
+        //         removeCustomer={this.removeCustomer}
+        //         id={Customer.id}
+        //         key={Customer.id}
+        //         name={Customer.name}
+        //         email={email.name}
+        //         patient={patient.name}
+        //       />
+        //     ))}
+        //   </Wrapper>
+        //   );
+        // }
 
       <div className="App">
         <header className="App-header">
