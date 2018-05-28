@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes)
 {
 	var Order = sequelize.define("Order",
 	{
-		order_id: {
+		id: {
 			type: DataTypes.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
