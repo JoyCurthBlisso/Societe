@@ -63,7 +63,65 @@ body {
 .semiTran {
 	opacity: 0.9;
 } */
+
+
+.parallax {
+	height: 10% !important;
+  }
+
+ul.dropdown-content.select-dropdown li span {
+  color: #0c0c09;
+}
+
+ #shopify {
+	opacity: 1 !important;
+ }
+
+ #page-footer
+ {
+	background-color:rgb(175,183,79) !important;
+	padding-top: 20px !important;
+  	padding-bottom: 20px !important;
+ }
+
+nav: .nav-wrapper, #nav-wrapper {
+	background-color: black !important;
+	color: white !important;
+}
+
 /* 
+
+  
+  /* #herbs
+  {
+	height:100%;
+	width:100%;
+	text-align: center;
+  } */
+  
+  /* input
+  {
+	margin-right: 10px;
+	margin-left:25px;
+	margin-top:5px;
+  } */
+  
+  /* nav
+  {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	
+	} */
+  
+	/* .navbar-default .navbar-brand {
+	  color: #777;
+  } */
+   
+  /* ul.dropdown-content.select-dropdown li span {
+	color: #afb74f; /* no need for !important :) */
+  /* }  */
+
+  /* 
 .nameTag {
 	padding-left: 5px;
 	padding-top: 0px;
@@ -112,23 +170,14 @@ tr:nth-child(even) {
 
 } */
 
-nav ul li:hover {
-	background-color:rgb(175,183,79) !important;
- }
+/* nav ul li:hover {
+	/* background-color:rgb(175,183,79) !important; */
+	/* text-decoration-color: rgb(175,183,79) !important; */
+ /* } */ 
 
- #shopify {
-	opacity: 1 !important;
- }
 
- #page-footer
- {
-	background-color:rgb(175,183,79) !important;
-	padding-top: 20px !important;
-  	padding-bottom: 20px !important;
- }
-
-nav: .nav-wrapper, #nav-wrapper {
-	background-color: black !important;
-	color: white !important;
-}
-
+  
+  
+  
+  
+  

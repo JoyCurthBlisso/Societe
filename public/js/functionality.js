@@ -1,8 +1,11 @@
 $(document).ready(function(){
+
+	// materialize jquery 
 	$(".dropdown-trigger").dropdown();
 	$('.datepicker').datepicker();
 	$('select').formSelect();
 	$('.slider').slider();
+	$('.parallax').parallax();
 
 // JavaScript Document
 
