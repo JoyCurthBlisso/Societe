@@ -6,11 +6,18 @@ font-family: 'Avenir', Times, Times New Roman, serif;
 }
 
 h1 {
-	font-size: 48px;
-	font-weight: bold;
-	font-family: 'Avenir', Times, Times New Roman, serif;
-	color:#afb74f; 
+	/* font-size: 48px;
+	font-weight: bold; */
+	/* font-family: 'Avenir', Times, Times New Roman, serif;
+	/* color:#afb74f;  */
 	/* text-align: center; */
+
+	
+	font-size: 1.5em;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 50px;
+	color: white;	
   }
 
 h2 {
@@ -43,7 +50,6 @@ button #clear {
 }
 
 
-
 #container{
 
 	background-color: white;
@@ -52,8 +58,10 @@ button #clear {
 
 #herbs
 {
-  width:25%;
+  width:75%;
+  height: 50%;
   text-align: center;
+  font-family: 'Avenir', Times, Times New Roman, serif;
 }
 
 body {
@@ -65,9 +73,10 @@ body {
 } */
 
 
-.parallax {
+
+/* .parallax {
 	height: 10% !important;
-  }
+  } */
 
 ul.dropdown-content.select-dropdown li span {
   color: #0c0c09;
@@ -91,15 +100,64 @@ nav: .nav-wrapper, #nav-wrapper {
 	color: white !important;
 }
 
-/* 
+.light-green-text {
+color: rgb(175,183,79) !important;
+}
 
-  
-  /* #herbs
-  {
-	height:100%;
-	width:100%;
-	text-align: center;
-  } */
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: rgb(175,183,79) !important;
+}
+
+nav ul li:hover {
+	background-color:  white !important;
+ }
+
+	
+
+	/* .checkbox-light-green[type="checkbox"].filled-in:checked + label:after{
+		border: 2px solid rgb(175,183,79);
+		background-color: rgb(175,183,79);
+}
+
+.picker__date-display, .picker__weekday-display{
+	background-color: rgb(175,183,79) !important;
+} */
+
+/* .picker__date-display, .picker__weekday-display{
+	background-color: rgba(66, 133, 244, 0.79);
+}
+
+div.picker__day.picker__day--infocus.picker__day--selected.picker__day--highlighted {
+	background-color: rgba(66, 133, 244, 0.79);
+}
+
+button.picker__today, button.picker__close {
+	color: rgba(66, 133, 244, 0.79);
+} */
+
+.picker__date-display {
+  background-color:blue;
+}
+.picker__weekday-display {
+  background-color:red;
+}
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  background-color:blue;
+}
+
+
+/* picker__date-display { background-color:  rgb(175,183,79); } */
+/* .picker__day.picker__day--today { color: rgb(175,183,79); }
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected { background-color: rgb(175,183,79);}
+.picker__close { color: rgb(175,183,79) !important;}
+.picker__today { color: rgb(175,183,79) !important;}
+.clockpicker-tick:hover { background: rgb(175,183,79) !important; }
+.clockpicker-canvas line { stroke: rgb(175,183,79) !important; }
+.clockpicker-canvas-bearing { fill: rgb(175,183,79) !important; }
+.clockpicker-canvas-bg { fill: rgb(175,183,79) !important; }
+/*  */
+
   
   /* input
   {
@@ -172,10 +230,6 @@ tr:nth-child(even) {
 
 } */
 
-/* nav ul li:hover {
-	/* background-color:rgb(175,183,79) !important; */
-	/* text-decoration-color: rgb(175,183,79) !important; */
- /* } */ 
 
 
   

@@ -6,6 +6,7 @@ $(document).ready(function(){
 	$('select').formSelect();
 	$('.slider').slider();
 	$('.parallax').parallax();
+	$('input#input_text, textarea#textarea1').characterCounter();
 
 // JavaScript Document
 

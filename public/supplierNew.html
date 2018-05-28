@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Add New Order</title>
+	<title>Add New Supplier</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -49,13 +49,13 @@
 	 </ul>
 
 	 <ul id="orderDrop" class="dropdown-content">
-			<!-- <li><a href="orderNew.html">Add New Order</a></li> -->
+			<li><a href="orderNew.html">Add New Order</a></li>
 			<li><a href="ordersList.html">Orders</a></li>
 			<li class="divider"></li>
 	 </ul>
 
 	 <ul id="suppliersDrop" class="dropdown-content">
-			<li><a href="supplierNew.html">Add New Supplier</a></li>
+			<!-- <li><a href="supplierNew.html">Add New Supplier</a></li> -->
 			<li><a href="suppliers.html">Suppliers</a></li>
 			<li class="divider"></li>
 	 </ul>
@@ -79,77 +79,20 @@
 	</nav>
 
 	<div class="panel-heading container">
-		<h3 class="panel-title"><strong>Add New Order</strong></h3>
+		<h3 class="panel-title"><strong>Add New Supplier</strong></h3>
 	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col s6">
-				<label for="supplierId">Supplier</label>
-				<input type="text" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier">
+				<label for="supplierId">Supplier Name</label>
+				<input type="text" class="manualSubmit form-control" id="supplierId" name="supplierId" placeholder="Enter Supplier Name">
 			</div>
-
-			<div class="col s2">				
-				<label for="orderPlacedDate">Order Date</label>
-				<input type="text" class="datepicker" class="manualSubmit form-control" id="orderPlacedDate" name="orderPlacedDate" placeholder="Mmm dd, yyyy">
-				
-			</div>
-			<div class="col s4">	
-				<label for="PO#">PO#</label>			
-				<input type="text" id="PO#" class="form-control" placeholder="#">
-			</div>
+		
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col s1">
-				<label for="item_sku">Item SKU</label>
-				<input type="text" class="manualSubmit form-control" id="item_sku" name="item_sku">
-			</div>
-			<div class="col s2">
-				<label for="item_description">Description</label>
-				<input type="text" class="manualSubmit form-control" id="item_description">
-			</div>
-			<div class="col s2">
-				<label>Organic</label>
-			    <select class="input-field" id="organic">
-			    	<option value="" disabled selected>Organic</option>
-			      	<option value="1">Organic</option>
-					<option value="2">Wild-harvest</option>
-					<option value="3">Unknown</option>
-			    </select>
-			</div>
-			<div class="col s2">
-				<label>UOM</label>
-			    <select class="input-field" id="uom">
-			      	<option value="" disabled selected>UOM</option>
-					<option value="1">Ounces</option>
-					<option value="2">Pounds</option>
-					<option value="3">Other</option>
-			    </select>
-			</div>
-			<div class="col s1">
-				<label for="cost">Cost</label>
-				<input type="text" class="manualSubmit form-control" id="cost" name="cost" placeholder="$0.00">
-			</div>
-			<div class="col s1">
-				<label for="qty">Quantity</label>
-				<input type="number" class="manualSubmit form-control" id="qty" name="qty">
-			</div>
-			<div class="col s2">
-				<label for="discount">Discount %</label>
-				<input type="number" class="manualSubmit form-control" id="discount" name="discount" maxlength="10" placeholder="%">
-			</div>
-			<div class="col s2">
-				<label for="calculatedPrice">Price</label>
-				<input type="text" id="calculatedPrice" name="calculatedPrice" class="form-control" placeholder="$0.00">
-			</div>
-			<div class="col s1">				
-				<button type="button" class="waves-effect waves-circle waves-light btn-floating secondary-conten light-green" class="btn btn-dark light-green" id="retailSubmit" "padding-top: 12px">+</button>
-			</div>
-		</div>
-	</div>
-	<hr>
+
+<!-- 
 	<div class="container">
 		<div class="row">
 			<div class="col s3">
@@ -176,7 +119,7 @@
 				<button style="background-color: gray; margin-right: 12px" type="button" class="btn float-right" id="clear">Cancel</button>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="container">
 			<footer id="page-footer">

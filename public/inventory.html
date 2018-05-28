@@ -14,16 +14,59 @@
 				<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 			
 				<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	
+				<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
+
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+				<!-- Compiled and minified JavaScript -->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+				<script src="js/functionality.js"></script>
+
+				<script src="js/societe.js"></script>
+
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+				<div class="container">
+				<!-- <div class="parallax-container"> -->
+						<center>
+							<!-- <div class="parallax" ><img src="./assets/images/herbspice.png"></div> -->
+							<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe"></div>
+							<!-- <div class="parallax"></div><img src="./assets/images/herbspice.png" id="herbs" alt="Societe"></div> -->
+						<!-- </center> -->
+				</div> 
+
+
 			</head>		
 
 <body>
 
+<!-- 
+
+	<div class="parallax-container light-green">
+		  
+				<div class="parallax-container row center">
+				  <h5 class="header white-text">Société</h5>
+				</div>
+		  
+			  <!-- <div class="parallax"><img src="./assets/images/herbspice.png"></div> -->
+	<!-- </div> -->
+
+
+	<!-- <header class="light-green">
+			<div class="container">
+				<h1 class="display-3 center-align"> Société </h1>
+			</div>
+	</header> -->
+<!-- 
+	<div class="parallax-container">
+					<div class="parallax" ><img src="./assets/images/herbspice.png"></div>
+	</div> -->
 	
-	<div class="container">
-			<center>
-				<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe"></div>
-			</center>
-	</div>
 		
 
 	<ul id="productDrop" class="dropdown-content">
@@ -31,8 +74,8 @@
 			<li><a href="addRawMaterial.html">Add New Product</a></li>	
 			<li><a href="societeRecipe.html">Add Societe Product</a></li> 
 			<li><a href="societeRecipe.html">Add New Recipe</a></li>
-			<!-- <li><a href=inventory.html>All Inventory</a></li> -->
-			<li><a href="inventory.html">All Inventory</a></li>
+			<!-- <li><a href=inventory.html class = "light-green-text">All Inventory</a></li> -->
+			<li><a href="inventory.html" >All Inventory</a></li>
 			<li><a href="inventory.html">All Societe Products</a></li>
 			<li><a href="inventory.html">All Recipes</a></li>
 			<li><a href="inventory.html">Low Inventory</a></li>
@@ -75,6 +118,7 @@
 		</ul>
 	  
 		<nav class="container nav-wrapper navbar-dark bg-dark">
+				
 				  <ul class="center hide-on-med-and-down">
 				  <li><a class="dropdown-trigger" href="#!" data-target="productDrop">Product<i class="material-icons right">arrow_drop_down</i></a></li>
 				  <li><a class="dropdown-trigger" href="#!" data-target="orderDrop">Orders<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -82,15 +126,15 @@
 				  <li><a class="dropdown-trigger" href="#!" data-target="suppliersDrop">Suppliers<i class="material-icons right">arrow_drop_down</i></a></li> 
 				  <li><a class="dropdown-trigger" href="#!" data-target="financialsDrop">Financials<i class="material-icons right">arrow_drop_down</i></a></li> 
 				  </ul>
+				  <!-- <a href="assets/images/societe_box_black_green.png" class="brand-logo left">Societe</a> -->
 	  
 		</nav>
 
-
-				<!-- <div class="parallax-container">
-						<div class="parallax" ><img src="./assets/images/herbspice.png"></div>
-				</div> -->
-
 	<div class="panel panel-primary container">
+
+		
+
+
 		<div class="panel-heading">
 	        <h3 class="panel-title"><strong>Inventory</strong></h3>
 	</div>
@@ -133,18 +177,14 @@
 		</footer>
 	</div> 
 	
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="js/functionality.js"></script>
-	<!-- <script src="js/subletFunctionality.js"></script> -->
-	<script src="js/societe.js"></script>
+
 	<script>
 		$(document).ready(function(){
+
 			$.getJSON("/inventory/all", function(items){
 				var html = "";
+
+			
 				items.forEach(function(item){
 					html += "<tr><td>" + item.commonName + "</td><td>" + 
 						item.sku + "</td><td>" + item.qtyOnHand + "</td><td>" +
@@ -163,16 +203,4 @@
 	
 </body>
 
-<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
-<script src="js/functionality.js"></script>
-
-<script src="js/societe.js"></script>
 </html>
