@@ -1,28 +1,43 @@
 import React, { Component } from 'react';
-import CustomerCard from "./components/CustomerCard";
+// import CustomerCard from "./components/CustomerCard";
 import logo from './logo.svg';
-import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
-import friends from "./customer.json";
+// import Wrapper from "./components/Wrapper";
+// // import Title from "./components/Title";
+// import friends from "./customer.json";
 import './App.css';
 
 class App extends Component {
+  
 
-  render() {
-    return (
-      <Wrapper>
-      <Title>Customer List</Title>
-      {this.state.customer.map(customer => (
-        <CustomerCard
-          removeCustomer={this.removeCustomer}
-          id={Customer.id}
-          key={Customer.id}
-          name={Customer.name}
-          email={email.name}
-          patient={patient.name}
-        />
-      ))}
-    </Wrapper>
+  //     state = {
+  //       customers
+  //     };
+    
+  //     removeCustomer = id => {
+  //       // Filter this.state.friends for friends with an id not equal to the id being removed
+  //       const friends = this.state.customers.filter(customer => customer.id !== id);
+  //       // Set this.state.friends equal to the new friends array
+  //       this.setState({ customers });
+  //     };
+    
+      render() {
+      return (
+
+  //     <Wrapper>
+  //     <Title>Customer List</Title>
+  //     {this.state.customer.map(customer => (
+  //       <CustomerCard
+  //         removeCustomer={this.removeCustomer}
+  //         id={Customer.id}
+  //         key={Customer.id}
+  //         name={Customer.name}
+  //         email={email.name}
+  //         patient={patient.name}
+  //       />
+  //     ))}
+  //   </Wrapper>
+  //   );
+  // }
 
       <div className="App">
         <header className="App-header">

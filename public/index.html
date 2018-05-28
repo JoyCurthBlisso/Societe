@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>New Product</title>
+	<title>Societe</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,29 +23,67 @@
 		</center>
 	</div>
 
-	<ul id="inventorydrop" class="dropdown-content">
-	  <li><a href="addRawMaterial.html">Add New Inventory</a></li>
-	  <li><a href="societeProducts.html”">Add New Societe Product</a></li>
-	  <li><a href=“moveInventory.html”>Move Inventory</a></li>
-      <li><a href=“lowInventory.html”>Low Inventory</a></li>
-	  <li class="divider"></li>
-	</ul>
-	<nav class="container nav-wrapper" style="background-color: black; ">
-	    <ul class="center hide-on-med-and-down">
-	      <li><a href="orderNew.html">Order Product</a></li>
-	      <li><a href="societeRecipe.html">Recipe</a></li>
-		  <li><a href="suppliers.html">Suppliers</a></li>
-		  <li><a href="profit.html">Profit</a></li>
-	      <!-- Dropdown Trigger -->
-	      <li><a class="dropdown-trigger" href="#!" data-target="inventorydrop">Inventory<i class="material-icons right">arrow_drop_down</i></a></li>
-	    </ul>
-	</nav>
+		<ul id="productDrop" class="dropdown-content">
+	 
+			<!-- <li><a href="addRawMaterial.html">Add New Product</a></li>	 -->
+			<li><a href="societeRecipe.html">Add Societe Product</a></li> 
+			<li><a href="societeRecipe.html">Add New Recipe</a></li>
+			<li><a href=inventory.html>All Inventory</a></li>
+			<li><a href=inventory.html>All Supplies</a></li>
+			<li><a href=inventory.html>All Societe Products</a></li>
+			<li><a href=inventory.html>All Recipes</a></li>
+			<li><a href=inventory.html>Low Inventory</a></li>
+			<li class="divider"></li>
+		</ul>
+	  
+		<ul id="customersDrop" class="dropdown-content">
+				  <li><a href="../my-app/index.html">Add New Customer</a></li>
+				  <li><a href="../my-app/index.html">All Customers</a></li>
+				  <li><a href="../my-app/index.html">Loyalty Customers</a></li>
+				  <li><a href="../my-app/index.html">Subscription Customers</a></li>
+				  <li><a href="../my-app/index.html">Workshop Customers</a></li>
+				  <li><a href="../my-app/index.html">Potential Patients</a></li>
+				  <li><a href="../my-app/index.html">Patients</a></li>
+		  
+				  <li class="divider"></li>
+		</ul>
+	  
+		<ul id="orderDrop" class="dropdown-content">
+				  <li><a href="orderNew.html">Add New Order</a></li>
+				  <li><a href="ordersList.html">Orders</a></li>
+				  <li class="divider"></li>
+		</ul>
+	  
+		<ul id="suppliersDrop" class="dropdown-content">
+				  <li><a href="supplierNew.html">Add New Supplier</a></li>
+				  <li><a href="suppliers.html">Suppliers</a></li>
+				  <li class="divider"></li>
+		</ul>
+	  
+		   
+		<ul id="financialsDrop" class="dropdown-content">
+				  <li><a href="profit.html">Sales</a></li>
+				  <li><a href="profit.html">Profit</a></li>
+				  <li class="divider"></li>
+		</ul>
+	  
+		<nav class="container nav-wrapper navbar-dark bg-dark">
+				  <ul class="center hide-on-med-and-down">
+				  <li><a class="dropdown-trigger" href="#!" data-target="productDrop">Product<i class="material-icons right">arrow_drop_down</i></a></li>
+				  <li><a class="dropdown-trigger" href="#!" data-target="orderDrop">Orders<i class="material-icons right">arrow_drop_down</i></a></li>
+				  <li><a class="dropdown-trigger" href="#!" data-target="customersDrop">Customers<i class="material-icons right">arrow_drop_down</i></a></li>
+				  <li><a class="dropdown-trigger" href="#!" data-target="suppliersDrop">Suppliers<i class="material-icons right">arrow_drop_down</i></a></li> 
+				  <li><a class="dropdown-trigger" href="#!" data-target="financialsDrop">Financials<i class="material-icons right">arrow_drop_down</i></a></li> 
+				  </ul>
+	  
+		</nav>
 
 	<!-- <div class="container panel panel-primary panel-heading">
 	    <h3 class="panel-title center"><strong>Welcome</strong></h3>
 	</div> -->
 
 	<br>
+
 
 <div class="container">
 	<div class="container slider">
@@ -55,38 +93,39 @@
 	      <li>
 	        <img src="./assets/images/cuppatea.jpg"> <!-- random image -->
 	        <div class="caption right-align">
-	          <h3>Healing teas</h3>
-	          <h5 class="white-textt">Over 100 kinds</h5>
+	          <h2>Healing Teas</h2>
+	          <h5 class="black-text">100 Medicinal blends</h5>
 	        </div>
 	      </li>
 	      <li>
 	        <img src="./assets/images/herbalism.jpg"> <!-- random image -->
 	        <div class="caption left-align">
-	          <h3>Herbalism</h3>
-	          <h5 class="white-text">Products & workshops</h5>
+	          <h2>Natural Medicine & Wellness</h2>
+	          <h5 class="black-text">Services, products & workshops</h5>
 	        </div>
 	      </li>
 	      <li>
 	        <img src="./assets/images/lavender.jpg"> <!-- random image -->
 	        <div class="caption right-align">
-	          <h3>Aromatherapy</h3>
-	          <h5 class="white-text">Essential oils to balance, harmonize the mind, body, and spirit</h5>
+	          <h2>Aromatherapy</h2>
+	          <h5 class="black-text">Essential oils to balance the mind, body, and spirit</h5>
 	        </div>
 	      </li>
 	      <li>
 	        <img src="./assets/images/nettleavotoast.jpg"> <!-- random image -->
 	        <div class="caption left-align">
-	          <h3 class="black-text">Ayurveda</h3>
+	          <h2>Ayurveda</h2>
 	          <h5 class="black-text">Ancient mind, body medicine</h5>
 	        </div>
 	      </li>
-	      <li>
+	      <!-- <li>
 	        <img src="./assets/images/hanging-herbs.jpg"> <!-- random image -->
 	        <div class="caption center-align">
-	          <h3 class="black-text">Natural Medicine</h3>
-	          <h5 class="black-text">Natural Medicine & Wellness Consulations</h5>
+						<h2 class="black-text">Natural Medicine</h2>
+						<h5 class="black-text">Natural Medicine & Wellness Consulations</h5>
+						
 	        </div>
-	      </li>
+	      </li> -->
 	    </ul>
 	</div>
 
