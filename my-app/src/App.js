@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import CustomerCard from "./components/CustomerCard";
-import logo from './logo.svg';
+import logo from './societe_S_circle_black.png';
 // import Wrapper from "./components/Wrapper";
 // // import Title from "./components/Title";
 // import friends from "./customer.json";
@@ -42,7 +42,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to MyShops for Societe</h1>
+          <h1 className="App-title">Welcome to Societe</h1>
         </header>
         <p className="App-intro">
           {/* To get started, edit <code>src/App.js</code> and save to reload. */}
