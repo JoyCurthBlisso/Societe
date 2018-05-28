@@ -2,8 +2,10 @@ module.exports = function(sequelize, DataTypes)
 {
 	var Order_item = sequelize.define("Order_item",
 	{
-		order_item_id: {
-			type: DataTypes.INTEGER
+		id: {
+			type: DataTypes.INTEGER,
+			autoIncrement: true,
+			primaryKey: true
 		},
 		item_sku: {
 			type: DataTypes.STRING,

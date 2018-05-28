@@ -98,3 +98,48 @@ CREATE TABLE t_Channel
 	channel VARCHAR(255),
 	PRIMARY KEY (id)
 );
+
+CREATE TABLE Orders
+(
+	id INTEGER(11) NOT NULL AUTO_INCREMENT,
+	purchase_order_item VARCHAR(40),
+	vendorName VARCHAR(65),
+	order_date DATE,
+	shipping_amt DECIMAL(8,2),
+	total_amt DECIMAL(8,2),
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE Order_items
+(
+	id INTEGER(11) NOT NULL AUTO_INCREMENT,
+	item_sku VARCHAR(65),
+	item_description VARCHAR(100),
+	organic VARCHAR(40),
+	item_cost DECIMAL(8,2),
+	item_uom VARCHAR(25),
+	item_qty INTEGER(11),
+	item_discount_amt DECIMAL(8,2),
+	item_price DECIMAL(8,2),
+	received_date DATE,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE Customers
+(
+	id INTEGER(11) NOT NULL AUTO_INCREMENT,
+	first_name VARCHAR(65),
+	last_name VARCHAR(65),
+	email VARCHAR(100),
+	dob DATE,
+	loyalty BOOLEAN,
+	mailing_list BOOLEAN,
+	city VARCHAR(65),
+	state VARCHAR(2),
+	phone VARCHAR(15),
+	workshop_ind BOOLEAN,
+	subscription_type VARCHAR(65),
+	subscribe_start_date DATE,
+	patient_first_visit_date DATE,
+	PRIMARY KEY (id)
+);
