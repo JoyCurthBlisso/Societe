@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 // import CustomerCard from "./components/CustomerCard";
 import logo from './societe_S_circle_black.png';
-// import Wrapper from "./components/Wrapper";
-// import Title from "./components/Title";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title/Title.js";
 // import customer from "./customer.json";
 import './App.css';
 // import './components/nav/nav.css';
-// import '/components/nav/nav.js';
+import './components/nav/nav.js';
 
 
-const Header = ({title}) => (<header>{title}</header>);
-const Main = ({title}) => (<main>{title}</main>);
-const Footer = ({title}) => (<footer>{title}</footer>);
+  const Header = ({title}) => (<header>{title}</header>);
+  const Main = ({title}) => (<main>{title}</main>);
+  const Footer = ({title}) => (<footer>{title}</footer>);
 
 
 class App extends Component {

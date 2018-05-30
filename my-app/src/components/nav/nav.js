@@ -1,5 +1,5 @@
 import React from "react";
-import "./Nav.css";
+import "./nav.css";
 
 const Nav = () => (
   <nav className="navbar navbar-dark bg-dark">

@@ -1,47 +1,44 @@
 <!doctype html>
 <html>
-		<head>
-				<meta charset="utf-8">
-				<title>Societe</title>
-			
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			
-				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-			
-				<!--Import Google Icon Font-->
-				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-				  <!--Import materialize.css-->
-				<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-			
-				<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	<head>
+		<meta charset="utf-8">
+		<title>Societe</title>
 	
-				<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script> src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
 
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-				<!-- Compiled and minified JavaScript -->
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-				<script src="js/functionality.js"></script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-				<script src="js/societe.js"></script>
+		<script src="js/functionality.js"></script>
+
+		<script src="js/societe.js"></script>
+
+		<div class="container">
+		<!-- <div class="parallax-container"> -->
+				<center>
+					<!-- <div class="parallax" ><img src="./assets/images/herbspice.png"></div> -->
+					<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe"></div>
+					<!-- <div class="parallax"></div><img src="./assets/images/herbspice.png" id="herbs" alt="Societe"></div> -->
+				<!-- </center> -->
+		</div> 
 
 
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-				<div class="container">
-				<!-- <div class="parallax-container"> -->
-						<center>
-							<!-- <div class="parallax" ><img src="./assets/images/herbspice.png"></div> -->
-							<img src="./assets/images/societe_box_black_green.png" id="herbs" alt="Societe"></div>
-							<!-- <div class="parallax"></div><img src="./assets/images/herbspice.png" id="herbs" alt="Societe"></div> -->
-						<!-- </center> -->
-				</div> 
-
-
-			</head>		
+	</head>		
 
 <body>
 
@@ -159,14 +156,11 @@
 					<!-- <th>Profit</th> -->
 					<th>Date Received</th>
 					<!-- <th>Location</th> -->
+					<th></th>
 				  </tr>
 				</thead>
+				<tbody></tbody>
 			</table>
-		</div>
-		<div class="row">
-				<div class="col-12 text-right">
-						<button type="button" class="btn btn-dark light-green" id="edit">Edit</button>
-				</div>
 		</div>
 	</div>
 	</container>
@@ -186,12 +180,17 @@
 
 			
 				items.forEach(function(item){
-					html += "<tr><td>" + item.commonName + "</td><td>" + 
-						item.sku + "</td><td>" + item.qtyOnHand + "</td><td>" +
-						item.description + "</td><td>" +
-						item.wholesaleCost  + "</td><td>" +
-						item.discount  + "</td><td>" + item.societeRetailPrice +
-						"</td><td>" + item.purchaseDate;
+					html += "<tr><td style=\"vertical-align:middle;\">" + 
+						item.commonName + "</td><td style=\"vertical-align:middle;\">" + 
+						item.sku + "</td><td style=\"vertical-align:middle;\">" + 
+						item.qtyOnHand + "</td><td style=\"vertical-align:middle;\">" +
+						item.description + "</td><td style=\"vertical-align:middle;\">" +
+						item.wholesaleCost  + "</td><td style=\"vertical-align:middle;\">" +
+						item.discount  + "</td><td style=\"vertical-align:middle;\">" + 
+						item.societeRetailPrice + "</td><td style=\"vertical-align:middle;\">" + 
+						item.purchaseDate +
+						"<td style=\"vertical-align:middle;\"><button class=\"edit-item btn btn-default light-green\" data-id=\"" +
+						item.id + "\">Edit</button></td>";
 				});
 				
 				$('#inventory-table tbody').html(html);
