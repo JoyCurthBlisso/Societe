@@ -106,14 +106,14 @@ const shopRequestHeaders = {
 				delete req.body.method;
 				delete req.body.tableName;
 				req.body.qtyOnHand = req.body.qtyPurchased;
-				req.body.shopify = req.body.shopify=="true" ? true : false;
+				//req.body.shopify = req.body.shopify=="true" ? true : false;
 				//add new record in the DB
 				db[tableName].create(req.body).then((data)=>{
 					console.log("adding record")
 					res.sendStatus(200);
 					res.end();
 					//call shopify
-					if (req.body.shopify){
+					if (req.body.shopify == "on"){
 						console.log("calling shopify");
 						var product = shopifyTranslate(req.body);
 						var options = {
