@@ -8,6 +8,7 @@ $(document).ready(function(){
 	$('.parallax').parallax();
 	$('input#input_text, textarea#textarea1').characterCounter();
 
+
 // JavaScript Document
 
 console.log("Javascript Initiated.");
