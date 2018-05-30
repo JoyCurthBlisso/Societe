@@ -8,26 +8,26 @@ const shopRequestHeaders = {
       };
     //webhooks
     	//order 
-    router.post("/order", (req,res)=>{
-    	console.log("An order just came in!");
-    	var db = res.app.get("db");
-		var Op = db.Sequelize.Op;
-		var items = req.body.line_items;
-		console.log("=============")
-		console.log(items)
-		console.log("=============")
-		items.forEach(item=>{
-			db["material"].findOne({where:{"commonName":item.title}}).then(dbItem=>{
-				var newQ = dbItem.qtyOnHand - item.quantity;
-				db["material"].update({qtyOnHand:newQ},{where:{"commonName":item.title}}).then(data=>{
-				console.log("updated DB successfully with new quantity "+newQ);
-				res.sendStatus(200)
-				});
-			}).catch(error=>{
-				console.log(error);
-			});
-		});
-    });
+    // router.post("/order", (req,res)=>{
+    // 	console.log("An order just came in!");
+    // 	var db = res.app.get("db");
+	// 	var Op = db.Sequelize.Op;
+	// 	var items = req.body.line_items;
+	// 	console.log("=============")
+	// 	console.log(items)
+	// 	console.log("=============")
+	// 	items.forEach(item=>{
+	// 		db["material"].findOne({where:{"commonName":item.title}}).then(dbItem=>{
+	// 			var newQ = dbItem.qtyOnHand - item.quantity;
+	// 			db["material"].update({qtyOnHand:newQ},{where:{"commonName":item.title}}).then(data=>{
+	// 			console.log("updated DB successfully with new quantity "+newQ);
+	// 			res.sendStatus(200)
+	// 			});
+	// 		}).catch(error=>{
+	// 			console.log(error);
+	// 		});
+	// 	});
+    // });
     	//refund
     router.post("/refund", (req,res)=>{
     	console.log("processing a refund!!")

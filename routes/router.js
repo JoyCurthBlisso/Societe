@@ -12,4 +12,8 @@ router.get('/', (req, res, next) => {
    		res.redirect("/shopify?shop=societe-portsmouth.myshopify.com")
    	}
 });
+
+router.get("/addinventory", (req, res, next) => {
+	res.render("./public/addRawMaterial.html");
+});
 module.exports=router;

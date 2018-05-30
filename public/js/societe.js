@@ -9,6 +9,8 @@ $(document).ready(function(){
 			itemObject.method = "post";
 			itemObject.tableName="material";
 			dbPost(itemObject);
+	
+		
 		});
 
 		$("#submitQuery").on("click", function()
